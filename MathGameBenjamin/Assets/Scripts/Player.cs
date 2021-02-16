@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+    public GameObject multiplierCanvas;
+    public GameObject repAddCanvas;
+
     //These fields are serialized so that they can be changed in the Unity inspector
     [SerializeField] float runSpeed = 5f; //default run speed
     [SerializeField] float jumpSpeed = 5f; // default jump speed/height
@@ -19,6 +23,11 @@ public class Player : MonoBehaviour
     float gravityScaleAtStart; //a variable to hold the current gravity value
 
     bool isAlive = true;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -45,6 +54,42 @@ public class Player : MonoBehaviour
         climbLadder();
         Die();
 
+    }
+
+    // When player touches coin, coin is disabled and the coin count is increased by 1.
+    void OnTriggerEnter2D(Collider2D other)
+    {
+
+        // Reference object with tag (can be changed) and disables object
+        // Enables Multiplier Canvas
+        // Freezes Player
+        // Increases count by 1
+        if (other.gameObject.CompareTag("QuestionTrigger1"))
+        {
+            FreezePlayer();
+            multiplierCanvas.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("QuestionTrigger2"))
+        {
+            FreezePlayer();
+            repAddCanvas.SetActive(true);
+        }
+
+    }
+
+    // Freezes Player at position (Is Referenced by Math Scripts)
+    void FreezePlayer()
+    {
+        myRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+
+    }
+
+    // Unfreezes Player (Is Referenced by Math Scripts)
+    public void UnFreezePlayer()
+    {
+        myRigidBody.constraints = RigidbodyConstraints2D.None;
+        myRigidBody.GetComponent<Rigidbody2D>().freezeRotation = true;
     }
 
     private void Run()
