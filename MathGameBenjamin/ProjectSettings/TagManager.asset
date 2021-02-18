@@ -8,6 +8,11 @@ TagManager:
   - Ground
   - repAdd
   - Multiplier
+  - QuestionTrigger1
+  - QuestionTrigger2
+  - QuestionTrigger3
+  - QuestionTrigger4
+  - QuestionTrigger5
   layers:
   - Default
   - TransparentFX

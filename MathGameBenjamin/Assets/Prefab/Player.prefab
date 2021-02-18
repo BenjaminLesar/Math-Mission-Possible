@@ -155,6 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f622db60a1ef3649ba53f58e9f6456e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiplierCanvas: {fileID: 7039846508929949579, guid: 7ba41e0b29f7f164580fb63967ae5d02,
+    type: 3}
+  repAddCanvas: {fileID: 5203715199744299455, guid: 1a75bc30717f1f245bfaa3d956caa8b9,
+    type: 3}
   runSpeed: 5
   jumpSpeed: 14
   climbSpeed: 5
