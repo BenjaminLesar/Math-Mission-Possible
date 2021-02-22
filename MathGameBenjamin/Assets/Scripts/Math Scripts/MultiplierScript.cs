@@ -23,6 +23,8 @@ public class MultiplierScript : MonoBehaviour
     public GameObject incorrectAnswerPanel;
     public GameObject multiplierCanvas;
 
+    private GameObject go;
+
     private int[] firstNumber = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     private int[] secondNumber = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
     public InputField input;
@@ -40,7 +42,7 @@ public class MultiplierScript : MonoBehaviour
     void Start()
     {
 
-        
+        go = GameObject.FindWithTag("QuestionTrigger2");
         f = firstNumber[Random.Range(0, firstNumber.Length)];
         s = secondNumber[Random.Range(0, secondNumber.Length)];
         correctAnswerPanel.SetActive(false);
@@ -53,7 +55,7 @@ public class MultiplierScript : MonoBehaviour
     {
         checkAnswer.onClick.AddListener(CheckAnswer);
         returnButton.onClick.AddListener(Return);
-        continueButton.onClick.AddListener(End);
+        continueButton.onClick.AddListener(Continue);
     }
 
     // Displays variables gathered within the question text
@@ -81,8 +83,9 @@ public class MultiplierScript : MonoBehaviour
 
     // When continue button is pressed on correct panel, main panel is deactivated
     // Calls Player script
-    void End()
+    void Continue()
     {
+        go.SetActive(false);
         multiplierCanvas.SetActive(false);
         Player.instance.UnFreezePlayer();
     }

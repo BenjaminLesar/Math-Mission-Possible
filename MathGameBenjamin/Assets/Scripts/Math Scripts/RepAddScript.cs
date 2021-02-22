@@ -23,6 +23,8 @@ public class RepAddScript : MonoBehaviour
     public GameObject incorrectAnswerPanel;
     public GameObject repAddCanvas;
 
+    private GameObject go;
+
     private int[] number = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     private int[] numberRange = { 3, 4, 5, 6 };
     
@@ -40,7 +42,7 @@ public class RepAddScript : MonoBehaviour
     void Start()
     {
 
-
+        go = GameObject.FindWithTag("QuestionTrigger1");
         n = number[Random.Range(0, number.Length)];
         nRange = numberRange[Random.Range(0, numberRange.Length)];
         correctAnswerPanel.SetActive(false);
@@ -52,7 +54,7 @@ public class RepAddScript : MonoBehaviour
     {
         checkAnswer.onClick.AddListener(CheckAnswer);
         returnButton.onClick.AddListener(Return);
-        continueButton.onClick.AddListener(End);
+        continueButton.onClick.AddListener(Continue);
     }
 
     void Question()
@@ -95,8 +97,9 @@ public class RepAddScript : MonoBehaviour
     }
 
 
-    void End()
+    void Continue()
     {
+        go.SetActive(false);
         repAddCanvas.SetActive(false);
         Player.instance.UnFreezePlayer();
     }
