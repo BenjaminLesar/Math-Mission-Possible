@@ -13,7 +13,6 @@ TagManager:
   - QuestionTrigger3
   - QuestionTrigger4
   - QuestionTrigger5
-  - Trampoline
   layers:
   - Default
   - TransparentFX
@@ -65,9 +64,6 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 307718291
-    locked: 0
-  - name: Trampoline
-    uniqueID: 2690917885
     locked: 0
   - name: Foreground
     uniqueID: 2723392795

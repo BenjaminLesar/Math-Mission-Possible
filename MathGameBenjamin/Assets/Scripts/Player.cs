@@ -64,16 +64,17 @@ public class Player : MonoBehaviour
         // Enables Multiplier Canvas
         // Freezes Player
         // Increases count by 1
+
         if (other.gameObject.CompareTag("QuestionTrigger1"))
         {
             FreezePlayer();
-            multiplierCanvas.SetActive(true);
+            repAddCanvas.SetActive(true);
         }
 
         if (other.gameObject.CompareTag("QuestionTrigger2"))
         {
             FreezePlayer();
-            repAddCanvas.SetActive(true);
+            multiplierCanvas.SetActive(true);
         }
 
     }
