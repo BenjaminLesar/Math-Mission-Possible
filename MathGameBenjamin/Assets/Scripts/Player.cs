@@ -122,14 +122,15 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (!myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))) //tests to see if player character's feet are NOT touching the ground.
-        {
-            return;
-        }
-
-        if (CrossPlatformInputManager.GetButtonDown("Jump")) //by default gets player's "spacebar" input.
+        if (myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) && CrossPlatformInputManager.GetButtonDown("Jump")) //by default gets player's "spacebar" input.
         {
             Vector2 jumpVelocity = new Vector2(0f, jumpSpeed); //creates a new y vector coordinate equal to the Jumpspeed variable
+            myRigidBody.velocity += jumpVelocity; //sets the player character velocity equal to the new vector.
+        }
+
+        if (myFeet.IsTouchingLayers(LayerMask.GetMask("Trampoline")) && CrossPlatformInputManager.GetButtonDown("Jump")) //by default gets player's "spacebar" input.
+        {
+            Vector2 jumpVelocity = new Vector2(0f, (jumpSpeed * 1.5f)); //creates a new y vector coordinate equal to the Jumpspeed variable
             myRigidBody.velocity += jumpVelocity; //sets the player character velocity equal to the new vector.
         }
     }
