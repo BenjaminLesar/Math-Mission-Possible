@@ -25,7 +25,7 @@ public class RepAddScript : MonoBehaviour
 
     private GameObject go;
 
-    private int[] number = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    private int[] number = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
     private int[] numberRange = { 3, 4, 5, 6 };
     
     public InputField input;

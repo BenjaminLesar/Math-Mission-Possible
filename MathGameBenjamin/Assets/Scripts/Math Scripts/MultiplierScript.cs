@@ -42,7 +42,7 @@ public class MultiplierScript : MonoBehaviour
     void Start()
     {
 
-        go = GameObject.FindWithTag("QuestionTrigger2");
+        go = GameObject.FindWithTag("QuestionTrigger3");
         f = firstNumber[Random.Range(0, firstNumber.Length)];
         s = secondNumber[Random.Range(0, secondNumber.Length)];
         correctAnswerPanel.SetActive(false);

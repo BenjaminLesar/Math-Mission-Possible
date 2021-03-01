@@ -25,7 +25,7 @@ public class ShapeScript : MonoBehaviour
     public GameObject shapeCanvas;
 
 
-    private int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    private int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 
     public GameObject[] shapes;
 
@@ -34,7 +34,7 @@ public class ShapeScript : MonoBehaviour
     private int n;
 
     private GameObject selectedShape;
-
+    private GameObject go;
 
     private int realAnswer;
     private int playerAnswer;
@@ -44,7 +44,7 @@ public class ShapeScript : MonoBehaviour
     void Start()
     {
 
-
+        go = GameObject.FindWithTag("QuestionTrigger2");
         n = number[Random.Range(0, number.Length)];
         selectedShape = shapes[Random.Range(0, shapes.Length)];
         correctAnswerPanel.SetActive(false);
@@ -56,7 +56,7 @@ public class ShapeScript : MonoBehaviour
     {
         checkAnswer.onClick.AddListener(CheckAnswer);
         returnButton.onClick.AddListener(Return);
-        continueButton.onClick.AddListener(End);
+        continueButton.onClick.AddListener(Continue);
     }
 
     void Question()
@@ -98,8 +98,9 @@ public class ShapeScript : MonoBehaviour
     }
 
 
-    void End()
+    void Continue()
     {
+        go.SetActive(false);
         shapeCanvas.SetActive(false);
         Player.instance.UnFreezePlayer();
     }
@@ -108,6 +109,7 @@ public class ShapeScript : MonoBehaviour
     void CheckAnswer()
     {
 
+        selectedShape.SetActive(false);
 
         playerAnswer = Convert.ToInt32(input.text);
 

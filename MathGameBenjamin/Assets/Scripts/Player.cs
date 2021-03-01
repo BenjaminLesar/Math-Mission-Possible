@@ -9,6 +9,9 @@ public class Player : MonoBehaviour
     public static Player instance;
     public GameObject multiplierCanvas;
     public GameObject repAddCanvas;
+    public GameObject shapeCanvas;
+    public GameObject wordCanvas;
+    public GameObject wordV2Canvas;
 
     //These fields are serialized so that they can be changed in the Unity inspector
     [SerializeField] float runSpeed = 5f; //default run speed
@@ -61,10 +64,9 @@ public class Player : MonoBehaviour
     {
 
         // Reference object with tag (can be changed) and disables object
-        // Enables Multiplier Canvas
-        // Freezes Player
-        // Increases count by 1
-
+        // Enables Multiplier, RepAdd, and Shape Canvas
+        // Freezes Player while canvas is open
+        
         if (other.gameObject.CompareTag("QuestionTrigger1"))
         {
             FreezePlayer();
@@ -74,9 +76,26 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("QuestionTrigger2"))
         {
             FreezePlayer();
+            shapeCanvas.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("QuestionTrigger3"))
+        {
+            FreezePlayer();
             multiplierCanvas.SetActive(true);
         }
 
+        if (other.gameObject.CompareTag("QuestionTrigger4"))
+        {
+            FreezePlayer();
+            wordCanvas.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("QuestionTrigger5"))
+        {
+            FreezePlayer();
+            wordV2Canvas.SetActive(true);
+        }
     }
 
     // Freezes Player at position (Is Referenced by Math Scripts)
