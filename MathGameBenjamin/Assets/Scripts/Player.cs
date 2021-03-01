@@ -191,4 +191,13 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(myRigidBody.velocity.x), 1f); //flips player anim direction
         }
     }
+
+    void OnCollsionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            this.transform.parent = null;
+
+        }
+    }
 }
