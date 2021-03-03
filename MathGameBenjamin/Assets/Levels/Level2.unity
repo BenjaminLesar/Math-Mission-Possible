@@ -3278,7 +3278,7 @@ GameObject:
   - component: {fileID: 928100805}
   - component: {fileID: 928100804}
   - component: {fileID: 928100803}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Test moving Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
