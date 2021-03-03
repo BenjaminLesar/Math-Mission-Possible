@@ -43,7 +43,7 @@ public class WordScript : MonoBehaviour
 
     private int realAnswer;
     private int playerAnswer;
-    private GameObject go;
+    
 
 
     void Start()
@@ -52,7 +52,10 @@ public class WordScript : MonoBehaviour
         isText = true;
         n1 = numberOne[Random.Range(0, numberOne.Length)];
         n2 = numberTwo[Random.Range(0, numberTwo.Length)];
-        q = question[Random.Range(0, 4)];
+
+        //Change [Random.Range(0, question.Length)] to 0-4 for testing specific questions
+        //Eg. [Random.Range(4,4)], only question 5 will show
+        q = question[Random.Range(2,2)];
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
         Question();
@@ -65,6 +68,9 @@ public class WordScript : MonoBehaviour
         continueButton.onClick.AddListener(Continue);
     }
 
+    //Used for last question, However when isText = true realAnswer continuosly changes
+    //Used Debug.Log(realAnswer) within return method 
+    //Used to change the numbers to text within the question eg. 5 = five
     void NumberToText()
     {
         if (isText)
@@ -72,6 +78,7 @@ public class WordScript : MonoBehaviour
             if (n1 == numberOne[0])
             {
                 nT1 = numberText[0];
+
             }
 
             else if (n1 == numberOne[1])
@@ -201,7 +208,8 @@ public class WordScript : MonoBehaviour
     {
         if (q == question[0])
         {
-            isText = true;
+            //isText should be true
+            isText = false;
             NumberToText();
             questionText.text = "There are " + nT1 + " groups of flamingos." + "\n" + 
                 "If there are " + nT2 + " flamingos in each group, " + "\n" + 
@@ -221,7 +229,8 @@ public class WordScript : MonoBehaviour
 
         if (q == question[2])
         {
-            isText = true;
+            //isText should be true
+            isText = false;
             NumberToText();
             questionText.text = "An octopus has " + nT1 + " legs." + "\n" +
                 "How many legs are there in all, " + "\n" +
@@ -231,7 +240,8 @@ public class WordScript : MonoBehaviour
 
         if (q == question[3])
         {
-            isText = true;
+            //isText should be true
+            isText = false;
             NumberToText();
             questionText.text = "David has " + nT1 + " pairs of socks." + "\n" +
                 "How many socks does he have altogether?";
@@ -258,7 +268,11 @@ public class WordScript : MonoBehaviour
     {
         n1 = numberOne[Random.Range(0, numberOne.Length)];
         n2 = numberTwo[Random.Range(0, numberTwo.Length)];
-        q = question[Random.Range(0, question.Length)];
+        //Change [Random.Range(0, question.Length)] to 0-4 for testing specific questions
+        //Eg. [Random.Range(4,4)], only question 5 will show
+        q = question[Random.Range(2,2)];
+
+        Debug.Log(realAnswer);
         Question();
         incorrectAnswerPanel.SetActive(false);
     }

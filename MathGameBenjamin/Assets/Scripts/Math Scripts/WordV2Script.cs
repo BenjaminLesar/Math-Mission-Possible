@@ -51,7 +51,9 @@ public class WordV2Script : MonoBehaviour
         isText = true;
         n1 = numberOne[Random.Range(0, numberOne.Length)];
         n2 = numberTwo[Random.Range(0, numberTwo.Length)];
-        q = question[Random.Range(4, 4)];
+        //Change [Random.Range(0, question.Length)] to 0-4 for testing specific questions
+        //Eg. [Random.Range(4,4)], only question 5 will show
+        q = question[Random.Range(0, question.Length)];
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
         Question();
@@ -64,6 +66,10 @@ public class WordV2Script : MonoBehaviour
         continueButton.onClick.AddListener(Continue);
     }
 
+    //Used for last question, However when isText = true realAnswer continuosly changes
+    //Used Debug.Log(realAnswer) within return method 
+    //Used to change the numbers to text within the question eg. 5 = five
+    
     void NumberToText()
     {
         if (isText)
@@ -72,72 +78,84 @@ public class WordV2Script : MonoBehaviour
             {
                 nT1 = numberText[0];
                 nT2 = Convert.ToString(n2);
+                
             }
 
             else if (n1 == numberOne[1])
             {
                 nT1 = numberText[1];
                 nT2 = Convert.ToString(n2);
+                
             }
 
             else if (n1 == numberOne[2])
             {
                 nT1 = numberText[2];
                 nT2 = Convert.ToString(n2);
+                
             }
 
             else if (n1 == numberOne[3])
             {
                 nT1 = numberText[3];
                 nT2 = Convert.ToString(n2);
+                
             }
 
             else if (n1 == numberOne[4])
             {
                 nT1 = numberText[4];
                 nT2 = Convert.ToString(n2);
+                
             }
 
             else if (n1 == numberOne[5])
             {
                 nT1 = numberText[5];
                 nT2 = Convert.ToString(n2);
+                
             }
 
             else if (n1 == numberOne[6])
             {
                 nT1 = numberText[6];
                 nT2 = Convert.ToString(n2);
+                
             }
 
             else if (n1 == numberOne[7])
             {
                 nT1 = numberText[7];
                 nT2 = Convert.ToString(n2);
+                
             }
 
             else if (n1 == numberOne[8])
             {
                 nT1 = numberText[8];
                 nT2 = Convert.ToString(n2);
+                
             }
 
             else if (n1 == numberOne[9])
             {
                 nT1 = numberText[9];
                 nT2 = Convert.ToString(n2);
+                
             }
 
             else if (n1 == numberOne[10])
             {
                 nT1 = numberText[10];
                 nT2 = Convert.ToString(n2);
+                
             }
 
             else if (n1 == numberOne[11])
             {
                 nT1 = numberText[11];
                 nT2 = Convert.ToString(n2);
+                
             }
 
         }
@@ -195,6 +213,7 @@ public class WordV2Script : MonoBehaviour
 
         else if (q == question[4])
         {
+            //isText should be true
             isText = false;
             NumberToText();
             questionText.text = "Sonya received " + nT1 + " gift cards worth " + "\n" +
@@ -212,7 +231,12 @@ public class WordV2Script : MonoBehaviour
     {
         n1 = numberOne[Random.Range(0, numberOne.Length)];
         n2 = numberTwo[Random.Range(0, numberTwo.Length)];
+
+        //Change [Random.Range(0, question.Length)] to 0-4 for testing specific questions
+        //Eg. [Random.Range(4,4)], only question 5 will show
         q = question[Random.Range(4, 4)];
+
+        //Used to debug realAnswer in Console
         Debug.Log(realAnswer);
         Question();
         incorrectAnswerPanel.SetActive(false);
