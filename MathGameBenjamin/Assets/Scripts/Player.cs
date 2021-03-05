@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     [SerializeField] float climbSpeed = 5f; //default climb speed
     [SerializeField] float underWaterGrav = 0.06f;
     [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
+    [SerializeField] float sinkSpeed = -3f;
+    [SerializeField] float deathFall = -40f;
     
 
     Rigidbody2D myRigidBody; //the player character's physical frame
@@ -135,13 +137,20 @@ public class Player : MonoBehaviour
         if (!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Water"))) //tests to see if player character's feet are NOT touching a ladder 
         {
             inWater = false;
-            myAnimator.SetBool("Running", false); //sets climbing to false
+            //myAnimator.SetBool("Running", false); //sets climbing to false
             myRigidBody.gravityScale = gravityScaleAtStart; //sets normal gravity.
             return;
         }
 
         inWater = true;
         myRigidBody.gravityScale = underWaterGrav;
+
+        if (myRigidBody.velocity.y < sinkSpeed)
+        {
+            
+            Vector2 waterVelocity = new Vector2(myRigidBody.velocity.x, sinkSpeed);
+            myRigidBody.velocity = waterVelocity;
+        }
 
         if (CrossPlatformInputManager.GetButtonDown("Jump")) //by default gets player's "spacebar" input.
         {
@@ -174,7 +183,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
+        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")) || myRigidBody.transform.position.y < deathFall)
         {
             isAlive = false;
             myAnimator.SetTrigger("Dying");
