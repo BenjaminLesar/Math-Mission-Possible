@@ -52,6 +52,11 @@ public class RepAddScript : MonoBehaviour
 
     void Update()
     {
+        // Check answer by enter key
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKey("enter"))
+        {
+            CheckAnswer();
+        }
         checkAnswer.onClick.AddListener(CheckAnswer);
         returnButton.onClick.AddListener(Return);
         continueButton.onClick.AddListener(Continue);

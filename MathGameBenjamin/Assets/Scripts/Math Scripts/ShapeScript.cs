@@ -14,7 +14,7 @@ public class ShapeScript : MonoBehaviour
     public Text questionText;
     public Text correctText;
     public Text incorrectText;
-
+    
 
     public Button checkAnswer;
     public Button returnButton;
@@ -44,7 +44,6 @@ public class ShapeScript : MonoBehaviour
     void Start()
     {
 
-
         n = number[Random.Range(0, number.Length)];
         selectedShape = shapes[Random.Range(0, shapes.Length)];
         correctAnswerPanel.SetActive(false);
@@ -72,17 +71,23 @@ public class ShapeScript : MonoBehaviour
         {
             selectedShape.SetActive(true);
             questionText.text = "" + n + "in.";
-            realAnswer = 6 * n;
+           // questionText.transform.position = new Vector2(-206f, 19f);
+            realAnswer = 5 * n;
         }
 
         else if (selectedShape == shapes[1])
         {
             selectedShape.SetActive(true);
             questionText.text = "" + n + "in.";
-            realAnswer = 8 * n;
+            realAnswer = 6 * n;
         }
 
-
+        else if (selectedShape == shapes[2])
+        {
+            selectedShape.SetActive(true);
+            questionText.text = "" + n + "in.";
+            realAnswer = 8 * n;
+        }
 
 
     }
@@ -91,7 +96,9 @@ public class ShapeScript : MonoBehaviour
 
     void Return()
     {
+      //  questionText.transform.position = new Vector2(-166f, 43.4f);
         n = number[Random.Range(0, number.Length)];
+        selectedShape.SetActive(false);
         selectedShape = shapes[Random.Range(0, shapes.Length)];
         Question();
         incorrectAnswerPanel.SetActive(false);

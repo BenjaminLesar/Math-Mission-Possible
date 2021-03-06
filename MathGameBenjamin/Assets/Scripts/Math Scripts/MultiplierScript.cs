@@ -53,6 +53,11 @@ public class MultiplierScript : MonoBehaviour
     // Waits for user interaction with each button
     void Update()
     {
+        // Check answer by enter key
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKey("enter"))
+        {
+            CheckAnswer();
+        }
         checkAnswer.onClick.AddListener(CheckAnswer);
         returnButton.onClick.AddListener(Return);
         continueButton.onClick.AddListener(Continue);
@@ -95,7 +100,6 @@ public class MultiplierScript : MonoBehaviour
     // Need to implement method so player cannot input letters
     void CheckAnswer()
     {
-
         // Takes the players answer and converts it to an int
         playerAnswer = Convert.ToInt32(input.text);
 
@@ -123,5 +127,5 @@ public class MultiplierScript : MonoBehaviour
 
     }
 
-  
+
 }
