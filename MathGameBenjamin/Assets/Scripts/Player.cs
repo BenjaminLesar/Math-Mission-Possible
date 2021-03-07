@@ -9,6 +9,12 @@ public class Player : MonoBehaviour
     public static Player instance;
     public GameObject multiplierCanvas;
     public GameObject repAddCanvas;
+    public GameObject shapeCanvas;
+    public GameObject wordCanvas;
+    public GameObject wordV2Canvas;
+
+    int questionCount;
+
 
     //These fields are serialized so that they can be changed in the Unity inspector
     [SerializeField] float runSpeed = 5f; //default run speed
@@ -33,11 +39,13 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
+       
         instance = this;
     }
 
     void Start()
     {
+
         //setting variables equal to their actual in-game components.
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
@@ -75,14 +83,37 @@ public class Player : MonoBehaviour
 
         if (other.gameObject.CompareTag("QuestionTrigger1"))
         {
+            
             FreezePlayer();
             repAddCanvas.SetActive(true);
         }
 
         if (other.gameObject.CompareTag("QuestionTrigger2"))
         {
+            other.gameObject.SetActive(false);
+            FreezePlayer();
+            shapeCanvas.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("QuestionTrigger3"))
+        {
+            other.gameObject.SetActive(false);
             FreezePlayer();
             multiplierCanvas.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("QuestionTrigger4"))
+        {
+            other.gameObject.SetActive(false);
+            FreezePlayer();
+            wordCanvas.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("QuestionTrigger5"))
+        {
+            other.gameObject.SetActive(false);
+            FreezePlayer();
+            wordV2Canvas.SetActive(true);
         }
 
     }

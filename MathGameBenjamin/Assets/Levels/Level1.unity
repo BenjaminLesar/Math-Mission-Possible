@@ -7452,6 +7452,12 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &104507449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1068629746, guid: a325b0b0da1b69c428f60232d45454c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 689918254331091578}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &107670722
 GameObject:
   m_ObjectHideFlags: 0
@@ -7945,6 +7951,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AddQuestion (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409987233119461083, guid: 5d91611b5389fc04694b0b168e293662,
+        type: 3}
+      propertyPath: m_TagString
+      value: QuestionTrigger1
       objectReference: {fileID: 0}
     - target: {fileID: 7409987233119461084, guid: 5d91611b5389fc04694b0b168e293662,
         type: 3}
@@ -67095,9 +67106,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5113244724312496350, guid: d2b82d19013a1a24e9d870da3b560053,
         type: 3}
+      propertyPath: wordCanvas
+      value: 
+      objectReference: {fileID: 689918254331091598}
+    - target: {fileID: -5113244724312496350, guid: d2b82d19013a1a24e9d870da3b560053,
+        type: 3}
+      propertyPath: shapeCanvas
+      value: 
+      objectReference: {fileID: 104507449}
+    - target: {fileID: -5113244724312496350, guid: d2b82d19013a1a24e9d870da3b560053,
+        type: 3}
       propertyPath: repAddCanvas
       value: 
       objectReference: {fileID: 1650671454}
+    - target: {fileID: -5113244724312496350, guid: d2b82d19013a1a24e9d870da3b560053,
+        type: 3}
+      propertyPath: wordV2Canvas
+      value: 
+      objectReference: {fileID: 689918254331091588}
     - target: {fileID: -5113244724312496350, guid: d2b82d19013a1a24e9d870da3b560053,
         type: 3}
       propertyPath: multiplierCanvas
@@ -76045,6 +76071,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AddQuestion (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409987233119461083, guid: 5d91611b5389fc04694b0b168e293662,
+        type: 3}
+      propertyPath: m_TagString
+      value: QuestionTrigger1
       objectReference: {fileID: 0}
     - target: {fileID: 7409987233119461084, guid: 5d91611b5389fc04694b0b168e293662,
         type: 3}
@@ -89331,6 +89362,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 689918254530322835, guid: a325b0b0da1b69c428f60232d45454c9,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 689918254895162649, guid: a325b0b0da1b69c428f60232d45454c9,
         type: 3}
