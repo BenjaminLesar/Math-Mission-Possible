@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class UITimer : MonoBehaviour
 {
-   public Text TimerText;
+ public Text TimerText;
    public bool playing;
    private float Timer;
 
