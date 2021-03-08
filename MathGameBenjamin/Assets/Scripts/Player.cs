@@ -9,6 +9,12 @@ public class Player : MonoBehaviour
     public static Player instance;
     public GameObject multiplierCanvas;
     public GameObject repAddCanvas;
+    public GameObject shapeCanvas;
+    public GameObject wordCanvas;
+    public GameObject wordV2Canvas;
+
+    int questionCount;
+
 
     //These fields are serialized so that they can be changed in the Unity inspector
     [SerializeField] float runSpeed = 5f; //default run speed
@@ -19,31 +25,45 @@ public class Player : MonoBehaviour
     [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
     [SerializeField] float sinkSpeed = -3f;
     [SerializeField] float deathFall = -40f;
-    
+    public float health = 3;
+
 
     Rigidbody2D myRigidBody; //the player character's physical frame
     Animator myAnimator; //the animation component
     CapsuleCollider2D myBodyCollider; //handles collision for the main part of the player character
     BoxCollider2D myFeet; //handles collision (and therefore jumping) for the player character's feet.
     float gravityScaleAtStart; //a variable to hold the current gravity value
+    Slider healthBar;
 
     bool isAlive = true;
-
     bool inWater = false;
+    bool isTakingDM = false; // stop taking damage when the value is true for 1.5s.
+
+    // Flashing effect
+    Material matWhite;
+    Material matDefault;
+    SpriteRenderer sr;
 
     void Awake()
     {
+       
         instance = this;
     }
 
     void Start()
     {
+
         //setting variables equal to their actual in-game components.
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeet = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myRigidBody.gravityScale;
+        healthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
+
+        sr = GetComponent<SpriteRenderer>();
+        matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
+        matDefault = sr.material;
 
     }
 
@@ -75,14 +95,46 @@ public class Player : MonoBehaviour
 
         if (other.gameObject.CompareTag("QuestionTrigger1"))
         {
+            
             FreezePlayer();
             repAddCanvas.SetActive(true);
         }
 
         if (other.gameObject.CompareTag("QuestionTrigger2"))
         {
+            other.gameObject.SetActive(false);
+            FreezePlayer();
+            shapeCanvas.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("QuestionTrigger3"))
+        {
+            other.gameObject.SetActive(false);
             FreezePlayer();
             multiplierCanvas.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("QuestionTrigger4"))
+        {
+            other.gameObject.SetActive(false);
+            FreezePlayer();
+            wordCanvas.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("QuestionTrigger5"))
+        {
+            other.gameObject.SetActive(false);
+            FreezePlayer();
+            wordV2Canvas.SetActive(true);
+        }
+
+        if (other.CompareTag("Enemy"))
+        {
+            if (isTakingDM == false)
+            {
+                StartCoroutine(TakeDamage());
+            }
+
         }
 
     }
@@ -183,12 +235,13 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")) || myRigidBody.transform.position.y < deathFall)
+        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")) || myRigidBody.transform.position.y < deathFall || health <= 0)
         {
             isAlive = false;
             myAnimator.SetTrigger("Dying");
             GetComponent<Rigidbody2D>().velocity = deathKick;
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
+            ResetHealth();
         }
     }
 
@@ -199,6 +252,34 @@ public class Player : MonoBehaviour
         {
             transform.localScale = new Vector2(Mathf.Sign(myRigidBody.velocity.x), 1f); //flips player anim direction
         }
+    }
+
+    IEnumerator TakeDamage()
+    {
+        isTakingDM = true;
+        health -= 1;
+        healthBar.value = health;      // update health bar UI
+        // Flashing 5 times
+        for (int i = 0; i < 5; i++)
+        {
+            sr.material = matWhite;
+            yield return new WaitForSeconds(.1f);
+            ResetMaterial();
+            yield return new WaitForSeconds(.1f);
+        }
+        isTakingDM = false;
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    void ResetMaterial()
+    {
+        sr.material = matDefault;
+    }
+
+    private void ResetHealth()
+    {
+        health = 6;
+        healthBar.value = health;
     }
 
     void OnCollsionExit2D(Collision2D other)

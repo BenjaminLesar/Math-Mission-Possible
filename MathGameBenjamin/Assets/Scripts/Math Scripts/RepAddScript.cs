@@ -53,6 +53,8 @@ public class RepAddScript : MonoBehaviour
     void Update()
     {
         // Check answer by enter key
+
+        // Do this for return and continue as well
         if (Input.GetKeyUp(KeyCode.Return) || Input.GetKey("enter"))
         {
             CheckAnswer();
