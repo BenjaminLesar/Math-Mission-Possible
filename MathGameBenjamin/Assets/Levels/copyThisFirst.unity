@@ -593,9 +593,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5113244724312496350, guid: d2b82d19013a1a24e9d870da3b560053,
         type: 3}
+      propertyPath: wordCanvas
+      value: 
+      objectReference: {fileID: 1885777254}
+    - target: {fileID: -5113244724312496350, guid: d2b82d19013a1a24e9d870da3b560053,
+        type: 3}
+      propertyPath: shapeCanvas
+      value: 
+      objectReference: {fileID: 1885777255}
+    - target: {fileID: -5113244724312496350, guid: d2b82d19013a1a24e9d870da3b560053,
+        type: 3}
       propertyPath: repAddCanvas
       value: 
       objectReference: {fileID: 1885777252}
+    - target: {fileID: -5113244724312496350, guid: d2b82d19013a1a24e9d870da3b560053,
+        type: 3}
+      propertyPath: wordV2Canvas
+      value: 
+      objectReference: {fileID: 1885777253}
     - target: {fileID: -5113244724312496350, guid: d2b82d19013a1a24e9d870da3b560053,
         type: 3}
       propertyPath: multiplierCanvas
@@ -1210,6 +1225,24 @@ GameObject:
 --- !u!1 &1885777252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 689918254895162660, guid: a325b0b0da1b69c428f60232d45454c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1885777250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1885777253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1301403391, guid: a325b0b0da1b69c428f60232d45454c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1885777250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1885777254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1477247327, guid: a325b0b0da1b69c428f60232d45454c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1885777250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1885777255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1068629746, guid: a325b0b0da1b69c428f60232d45454c9,
     type: 3}
   m_PrefabInstance: {fileID: 1885777250}
   m_PrefabAsset: {fileID: 0}

@@ -36,7 +36,13 @@ public class GameSession : MonoBehaviour
     public void AddToScore(int pointsToAdd)
     {
         score += pointsToAdd;
+        if (score >= 100)
+        {
+            score -= 100;
+            playerLives += 1;
+        }
         scoreText.text = score.ToString();
+        livesText.text = playerLives.ToString();
     }
 
     public void ProcessPlayerDeath()
