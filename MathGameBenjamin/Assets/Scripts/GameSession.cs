@@ -29,7 +29,12 @@ public class GameSession : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        livesText.text = playerLives.ToString();
+        if (FindObjectOfType<Player>().GetLoaded())
+        {
+            FindObjectOfType<GameSession>().SetLives(PlayerPrefs.GetInt("lives"));
+            FindObjectOfType<GameSession>().SetScore(PlayerPrefs.GetInt("score"));
+        }
+            livesText.text = playerLives.ToString();
         scoreText.text = score.ToString();
     }
 
@@ -43,6 +48,26 @@ public class GameSession : MonoBehaviour
         }
         scoreText.text = score.ToString();
         livesText.text = playerLives.ToString();
+    }
+
+    public int GetScore()
+    {
+        return score;
+    }
+
+    public int GetLives()
+    {
+        return playerLives;
+    }
+
+    public void SetScore(int x)
+    {
+        score = x;
+    }
+
+    public void SetLives(int x)
+    {
+        playerLives = x;
     }
 
     public void ProcessPlayerDeath()

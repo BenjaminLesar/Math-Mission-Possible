@@ -25,8 +25,31 @@ public class Player : MonoBehaviour
     [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
     [SerializeField] float sinkSpeed = -3f;
     [SerializeField] float deathFall = -40f;
+    private static bool Loadcheck;
+
     public float health = 3;
 
+    public float GetHealth()
+    {
+        return health;
+    }
+
+    public void SetHealth(float x)
+    {
+        health = x;
+    }
+
+    public bool GetLoaded()
+    {
+        return Loadcheck;
+    }
+
+    public void SetLoaded(bool x)
+    {
+        Loadcheck = x;
+    }
+
+    public GameObject myPrefab;
 
     Rigidbody2D myRigidBody; //the player character's physical frame
     Animator myAnimator; //the animation component
@@ -52,6 +75,9 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        
+
+        //Debug.Log(health);
 
         //setting variables equal to their actual in-game components.
         myRigidBody = GetComponent<Rigidbody2D>();
@@ -64,6 +90,26 @@ public class Player : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = sr.material;
+
+        if (GetLoaded())
+        {
+            FindObjectOfType<Player>().SetHealth(PlayerPrefs.GetFloat("health"));
+            healthBar.value = health;
+            coinPickup[] result = FindObjectsOfType<coinPickup>();
+
+            foreach (coinPickup c in result)
+            {
+                Destroy(c.gameObject);
+            }
+
+            int len = PlayerPrefs.GetInt("len");
+
+            for (int i = 0; i < len; i++)
+            {
+                Instantiate(myPrefab, new Vector2(PlayerPrefs.GetFloat("x" + i.ToString()), PlayerPrefs.GetFloat("y" + i.ToString())), Quaternion.identity);
+                //just need to change this from debug to instantiate
+            }
+        }
 
     }
 
@@ -241,6 +287,7 @@ public class Player : MonoBehaviour
             myAnimator.SetTrigger("Dying");
             GetComponent<Rigidbody2D>().velocity = deathKick;
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
+            FindObjectOfType<Player>().SetLoaded(false);
             ResetHealth();
         }
     }

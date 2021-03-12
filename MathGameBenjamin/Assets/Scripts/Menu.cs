@@ -7,6 +7,7 @@ public class Menu : MonoBehaviour
 {
     public void StartFirstLevel()
     {
+        FindObjectOfType<Player>().SetLoaded(false);
         SceneManager.LoadScene(1);
     }
 }

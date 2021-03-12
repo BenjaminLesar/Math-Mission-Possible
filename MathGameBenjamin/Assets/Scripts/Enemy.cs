@@ -6,14 +6,13 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 1f;
     Rigidbody2D myRigidBody;
-    PolygonCollider2D damageCollider; 
+    PolygonCollider2D damageCollider;
     bool isAlive = true;
 
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         damageCollider = GetComponent<PolygonCollider2D>();
-        
     }
 
     // Update is called once per frame
