@@ -7,14 +7,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public static Player instance;
-    public GameObject multiplierCanvas;
-    public GameObject repAddCanvas;
-    public GameObject shapeCanvas;
-    public GameObject wordCanvas;
-    public GameObject wordV2Canvas;
-
-    int questionCount;
-
+   
 
     //These fields are serialized so that they can be changed in the Unity inspector
     [SerializeField] float runSpeed = 5f; //default run speed
@@ -134,46 +127,7 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        // Reference object with tag (can be changed) and disables object
-        // Enables Multiplier Canvas
-        // Freezes Player
-        // Increases count by 1
-
-        if (other.gameObject.CompareTag("QuestionTrigger1"))
-        {
-            
-            FreezePlayer();
-            repAddCanvas.SetActive(true);
-        }
-
-        if (other.gameObject.CompareTag("QuestionTrigger2"))
-        {
-            other.gameObject.SetActive(false);
-            FreezePlayer();
-            shapeCanvas.SetActive(true);
-        }
-
-        if (other.gameObject.CompareTag("QuestionTrigger3"))
-        {
-            other.gameObject.SetActive(false);
-            FreezePlayer();
-            multiplierCanvas.SetActive(true);
-        }
-
-        if (other.gameObject.CompareTag("QuestionTrigger4"))
-        {
-            other.gameObject.SetActive(false);
-            FreezePlayer();
-            wordCanvas.SetActive(true);
-        }
-
-        if (other.gameObject.CompareTag("QuestionTrigger5"))
-        {
-            other.gameObject.SetActive(false);
-            FreezePlayer();
-            wordV2Canvas.SetActive(true);
-        }
-
+        
         if (other.CompareTag("Enemy"))
         {
             if (isTakingDM == false)
@@ -186,7 +140,7 @@ public class Player : MonoBehaviour
     }
 
     // Freezes Player at position (Is Referenced by Math Scripts)
-    void FreezePlayer()
+    public void FreezePlayer()
     {
         myRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
 
