@@ -11,6 +11,8 @@ public class TriggerScript : MonoBehaviour
     public static TriggerScript instance;
     public GameObject canvas;
 
+    [SerializeField] Animator boxAnimator;
+
 
 
     void Awake()
@@ -32,6 +34,12 @@ public class TriggerScript : MonoBehaviour
 
             Player.instance.FreezePlayer();
             canvas.SetActive(true);
+            boxAnimator.SetTrigger("Popup");
         }
+    }
+
+    public void DestroyTriggerPoint()
+    {
+        Destroy(gameObject);
     }
 }

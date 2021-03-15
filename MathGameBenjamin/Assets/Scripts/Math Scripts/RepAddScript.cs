@@ -31,6 +31,8 @@ public class RepAddScript : MonoBehaviour
     
     public InputField input;
 
+    [SerializeField] Animator boxAnimator;
+
     private int n;
     private int nRange;
     
@@ -68,7 +70,7 @@ public class RepAddScript : MonoBehaviour
         continueButton.onClick.AddListener(Continue);
     }
 
-    void Question()
+    void Question1()
     {
         if(nRange == numberRange[0])
         {
@@ -93,28 +95,48 @@ public class RepAddScript : MonoBehaviour
             questionText.text = "" + n + " + " + n + " + " + n + " + " + n + " + " + n + " + " + n + " = ";
             realAnswer = n + n + n + n + n;
         }
-        
-
     }
 
-
-
-    void Return()
+    void Question()
     {
         n = number[Random.Range(0, number.Length)];
         nRange = numberRange[Random.Range(0, numberRange.Length)];
+        String tempText = "";
+
+        for (int i = 0; i < nRange - 1; i++)
+        {
+            tempText += n + " + ";
+        }
+        tempText += n + " = ";
+
+        questionText.text = tempText;
+        realAnswer = n * nRange;
+    }
+
+    void Return()
+    {
+        //n = number[Random.Range(0, number.Length)];
+        //nRange = numberRange[Random.Range(0, numberRange.Length)];
         Question();
         incorrectAnswerPanel.SetActive(false);
     }
 
 
+
     void Continue()
     {
+        boxAnimator.SetTrigger("Close");
+        Invoke("DisableCanvas", 0.25f);
+
+    }
+
+    void DisableCanvas()
+    {
         correctAnswerPanel.SetActive(false);
-       // TriggerScript.instance.triggerObject.SetActive(false);
+        // TriggerScript.instance.triggerObject.SetActive(false);
         TriggerScript.instance.canvas.SetActive(false);
         Player.instance.UnFreezePlayer();
-        
+        Question();
     }
 
 
