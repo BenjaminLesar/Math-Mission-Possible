@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class TriggerScript : MonoBehaviour
 {
 
-    public GameObject[] triggerObject;
+    public GameObject [] triggerObject;
     public static TriggerScript instance;
     public GameObject canvas;
 
@@ -36,10 +36,6 @@ public class TriggerScript : MonoBehaviour
             canvas.SetActive(true);
             boxAnimator.SetTrigger("Popup");
         }
-    }
-
-    public void DestroyTriggerPoint()
-    {
         Destroy(gameObject);
     }
 }

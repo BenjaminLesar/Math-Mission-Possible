@@ -75,25 +75,25 @@ public class RepAddScript : MonoBehaviour
         if(nRange == numberRange[0])
         {
             questionText.text = "" + n + " + " + n + " + " + n + " = ";
-            realAnswer = n + n + n;
+            realAnswer = n*3;
         }
 
         else if (nRange == numberRange[1])
         {
             questionText.text = "" + n + " + " + n + " + " + n + " + " + n + " = ";
-            realAnswer = n + n + n + n;
+            realAnswer = n*4;
         }
 
         else if (nRange == numberRange[2])
         {
             questionText.text = "" + n + " + " + n + " + " + n + " + " + n + " + " + n + " = ";
-            realAnswer = n + n + n + n + n;
+            realAnswer = n*5;
         }
 
         else if (nRange == numberRange[3])
         {
             questionText.text = "" + n + " + " + n + " + " + n + " + " + n + " + " + n + " + " + n + " = ";
-            realAnswer = n + n + n + n + n;
+            realAnswer = n*6;
         }
     }
 
