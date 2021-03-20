@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1609337450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1609337451}
+  m_Layer: 12
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1609337451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609337450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.46, y: -0.64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4290841669118889180}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4290841669118889183
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,7 +63,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.29, y: 1.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1609337451}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -122,9 +153,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0009485483, y: -0.24478596}
-  m_Size: {x: 0.63048303, y: 0.63048303}
-  m_Direction: 0
+  m_Offset: {x: 0.06, y: -0.24478596}
+  m_Size: {x: 0.86, y: 0.57}
+  m_Direction: 1
 --- !u!95 &4290841669118889181
 Animator:
   serializedVersion: 3
@@ -156,7 +187,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d2a48a7c067ef46a771a48b69c1c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundCheckpos: {fileID: 1609337451}
   moveSpeed: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!61 &4290841669118889174
 BoxCollider2D:
   m_ObjectHideFlags: 0
