@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Sand-EdgeRight2
+  m_Name: Sand-EdgeRight2 (1)
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: a2f7ff7fc99a62a429d4ee8c61786c8d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a0c1c9b930a050c4ab35525d64a11de6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

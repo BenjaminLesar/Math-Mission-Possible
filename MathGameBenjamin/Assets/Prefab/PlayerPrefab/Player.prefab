@@ -92,7 +92,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 307718291
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 1857188551261513057, guid: e0be2928697408842a359bea49931e98,
     type: 3}
@@ -155,14 +155,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f622db60a1ef3649ba53f58e9f6456e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplierCanvas: {fileID: 7039846508929949579, guid: 7ba41e0b29f7f164580fb63967ae5d02,
-    type: 3}
-  repAddCanvas: {fileID: 5203715199744299455, guid: 1a75bc30717f1f245bfaa3d956caa8b9,
-    type: 3}
   runSpeed: 5
   jumpSpeed: 14
+  swimSpeed: 1.1
   climbSpeed: 5
+  underWaterGrav: 0.06
   deathKick: {x: 25, y: 25}
+  sinkSpeed: -3
+  deathFall: -40
+  health: 3
+  myPrefab: {fileID: 0}
 --- !u!61 &948512149
 BoxCollider2D:
   m_ObjectHideFlags: 0
