@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyVertical : MonoBehaviour
+public class FakeBlock : MonoBehaviour
 {
     public float speed;
     public Vector3 startpos;
@@ -51,7 +51,6 @@ public class EnemyVertical : MonoBehaviour
         {
         
             Destroy(gameObject);
-            Destroy(GameObject.Find("Blocking Wall"));
             
         }
     }

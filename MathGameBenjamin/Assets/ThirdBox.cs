@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyVertical : MonoBehaviour
+public class ThirdBox : MonoBehaviour
 {
-    public float speed;
+      public float speed;
     public Vector3 startpos;
     public Vector3 targetpos;
     public Vector3 settingpos;
@@ -51,7 +51,7 @@ public class EnemyVertical : MonoBehaviour
         {
         
             Destroy(gameObject);
-            Destroy(GameObject.Find("Blocking Wall"));
+            Destroy(GameObject.Find("Third Wall"));
             
         }
     }
