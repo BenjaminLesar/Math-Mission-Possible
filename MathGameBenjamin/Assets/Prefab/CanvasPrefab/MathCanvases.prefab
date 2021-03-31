@@ -3636,6 +3636,7 @@ MonoBehaviour:
   incorrectAnswerPanel: {fileID: 355755103}
   repAddCanvas: {fileID: 1301403391}
   input: {fileID: 691707370}
+  boxAnimator: {fileID: 0}
 --- !u!1 &1335754426
 GameObject:
   m_ObjectHideFlags: 0
@@ -4688,6 +4689,7 @@ MonoBehaviour:
   incorrectAnswerPanel: {fileID: 410177500}
   repAddCanvas: {fileID: 1477247327}
   input: {fileID: 236972695}
+  boxAnimator: {fileID: 0}
 --- !u!1 &1533542047
 GameObject:
   m_ObjectHideFlags: 0
@@ -6012,7 +6014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2112409603}
   m_Layer: 0
-  m_Name: Octogon
+  m_Name: Octagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8514,6 +8516,7 @@ MonoBehaviour:
   incorrectAnswerPanel: {fileID: 689918254585072322}
   repAddCanvas: {fileID: 689918254895162660}
   input: {fileID: 689918254610439648}
+  boxAnimator: {fileID: 0}
 --- !u!1 &689918254906872578
 GameObject:
   m_ObjectHideFlags: 0

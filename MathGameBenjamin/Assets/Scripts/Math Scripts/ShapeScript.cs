@@ -44,10 +44,10 @@ public class ShapeScript : MonoBehaviour
     void Start()
     {
 
-        n = number[Random.Range(0, number.Length)];
-        selectedShape = shapes[Random.Range(0, shapes.Length)];
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
+        n = number[Random.Range(0, number.Length)];
+        selectedShape = shapes[Random.Range(0, shapes.Length)];
         Question();
     }
 
@@ -55,11 +55,18 @@ public class ShapeScript : MonoBehaviour
     {
         checkAnswer.onClick.AddListener(CheckAnswer);
         returnButton.onClick.AddListener(Return);
-        continueButton.onClick.AddListener(End);
+        continueButton.onClick.AddListener(Continue);
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKey("enter"))
+        {
+            CheckAnswer();
+        }
     }
 
     void Question()
     {
+        n = number[Random.Range(0, number.Length)];
+        selectedShape = shapes[Random.Range(0, shapes.Length)];
+
         if (selectedShape == shapes[0])
         {
             selectedShape.SetActive(true);
@@ -75,14 +82,14 @@ public class ShapeScript : MonoBehaviour
             realAnswer = 5 * n;
         }
 
-        else if (selectedShape == shapes[1])
+        else if (selectedShape == shapes[2])
         {
             selectedShape.SetActive(true);
             questionText.text = "" + n + "in.";
             realAnswer = 6 * n;
         }
 
-        else if (selectedShape == shapes[2])
+        else if (selectedShape == shapes[3])
         {
             selectedShape.SetActive(true);
             questionText.text = "" + n + "in.";
@@ -105,16 +112,20 @@ public class ShapeScript : MonoBehaviour
     }
 
 
-    void End()
+    void Continue()
     {
+        MiniGame.instance.RaisePillar();
         shapeCanvas.SetActive(false);
+        correctAnswerPanel.SetActive(false);
         Player.instance.UnFreezePlayer();
+        
     }
 
 
     void CheckAnswer()
     {
 
+        selectedShape.SetActive(false);
 
         playerAnswer = Convert.ToInt32(input.text);
 

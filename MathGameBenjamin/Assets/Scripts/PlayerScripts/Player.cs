@@ -146,6 +146,8 @@ public class Player : MonoBehaviour
 
     }
 
+
+
     // Unfreezes Player (Is Referenced by Math Scripts)
     public void UnFreezePlayer()
     {

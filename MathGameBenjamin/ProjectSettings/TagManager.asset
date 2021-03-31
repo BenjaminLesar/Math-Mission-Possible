@@ -14,6 +14,7 @@ TagManager:
   - QuestionTrigger4
   - QuestionTrigger5
   - Enemy
+  - MiniGame
   layers:
   - Default
   - TransparentFX
