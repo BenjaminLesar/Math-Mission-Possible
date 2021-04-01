@@ -92,10 +92,6 @@ public class Add_MultiChoice : MonoBehaviour
         answer2Text.text = answerList[1].ToString();
         answer3Text.text = answerList[2].ToString();
         answer4Text.text = answerList[3].ToString();
-        //answer1Text.text = "1";
-        //answer2Text.text = "2";
-        //answer3Text.text = "3";
-        //answer4Text.text = "4";
         answerList.Clear();
     }
 
@@ -110,14 +106,6 @@ public class Add_MultiChoice : MonoBehaviour
     }
 
 
-    //void Continue()
-    //{
-    //    go.SetActive(false);
-    //    AddPannel.SetActive(false);
-    //    Player.instance.UnFreezePlayer();
-    //}
-
-
     void Continue()
     {
         boxAnimator.SetTrigger("Close");
@@ -129,9 +117,8 @@ public class Add_MultiChoice : MonoBehaviour
     {
         correctAnswerPanel.SetActive(false);
         // TriggerScript.instance.triggerObject.SetActive(false);
-        TriggerScript.instance.canvas.SetActive(false);
+        //TriggerScript.instance.canvas.SetActive(false);
         Player.instance.UnFreezePlayer();
-        //Question();
     }
 
 

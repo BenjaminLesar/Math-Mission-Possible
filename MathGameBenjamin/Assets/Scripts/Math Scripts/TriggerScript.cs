@@ -23,15 +23,11 @@ public class TriggerScript : MonoBehaviour
     }
     
 
-
     void OnTriggerEnter2D(Collider2D other)
-    {
-
-        
+    {     
 
         if (other.gameObject.CompareTag("Player"))
         {
-
             Player.instance.FreezePlayer();
             canvas.SetActive(true);
             boxAnimator.SetTrigger("Popup");
