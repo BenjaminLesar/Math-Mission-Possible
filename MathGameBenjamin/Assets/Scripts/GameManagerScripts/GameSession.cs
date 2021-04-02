@@ -29,12 +29,13 @@ public class GameSession : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (FindObjectOfType<Player>().GetLoaded())
-        {
-            FindObjectOfType<GameSession>().SetLives(PlayerPrefs.GetInt("lives"));
-            FindObjectOfType<GameSession>().SetScore(PlayerPrefs.GetInt("score"));
-        }
-            livesText.text = playerLives.ToString();
+        livesText.text = playerLives.ToString();
+        scoreText.text = score.ToString();
+    }
+
+    public void LoadScore()
+    {
+        livesText.text = playerLives.ToString();
         scoreText.text = score.ToString();
     }
 

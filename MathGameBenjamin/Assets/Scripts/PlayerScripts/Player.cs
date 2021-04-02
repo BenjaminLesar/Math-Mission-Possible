@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.UI;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -19,8 +22,9 @@ public class Player : MonoBehaviour
     [SerializeField] float sinkSpeed = -3f;
     [SerializeField] float deathFall = -40f;
     private static bool Loadcheck;
-
     public float health = 3;
+    public string LoadName;
+    
 
     public float GetHealth()
     {
@@ -42,7 +46,7 @@ public class Player : MonoBehaviour
         Loadcheck = x;
     }
 
-    public GameObject myPrefab;
+    
 
     Rigidbody2D myRigidBody; //the player character's physical frame
     Animator myAnimator; //the animation component
@@ -60,9 +64,12 @@ public class Player : MonoBehaviour
     Material matDefault;
     SpriteRenderer sr;
 
+    Pause myPause;
+    public GameObject SaveMenuCanvas;
+    public GameObject myPrefab;
+
     void Awake()
-    {
-       
+    {  
         instance = this;
     }
 
@@ -86,24 +93,35 @@ public class Player : MonoBehaviour
 
         if (GetLoaded())
         {
-            FindObjectOfType<Player>().SetHealth(PlayerPrefs.GetFloat("health"));
-            healthBar.value = health;
-            coinPickup[] result = FindObjectsOfType<coinPickup>();
+            LoadName = PlayerPrefs.GetString("name");
 
-            foreach (coinPickup c in result)
+            if (File.Exists(Application.persistentDataPath + "/" + LoadName))
             {
-                Destroy(c.gameObject);
-            }
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Open(Application.persistentDataPath + "/" + LoadName, FileMode.Open);
+                SaveObject mySave = (SaveObject)bf.Deserialize(file);
+                file.Close();
 
-            int len = PlayerPrefs.GetInt("len");
+                SetHealth(mySave.health);
+                healthBar.value = mySave.health;
 
-            for (int i = 0; i < len; i++)
-            {
-                Instantiate(myPrefab, new Vector2(PlayerPrefs.GetFloat("x" + i.ToString()), PlayerPrefs.GetFloat("y" + i.ToString())), Quaternion.identity);
-                //just need to change this from debug to instantiate
+                FindObjectOfType<GameSession>().SetLives(mySave.lives);
+                FindObjectOfType<GameSession>().SetScore(mySave.score);
+                FindObjectOfType<GameSession>().LoadScore();
+
+                coinPickup[] result = FindObjectsOfType<coinPickup>();
+
+                foreach (coinPickup c in result)
+                {
+                    Destroy(c.gameObject);
+                }
+
+                for (int i = 0; i < mySave.xcoord.Count; i++)
+                {
+                    Instantiate(myPrefab, new Vector2(mySave.xcoord[i], mySave.ycoord[i]), Quaternion.identity);
+                }
             }
         }
-
     }
 
     void Update()
@@ -128,7 +146,7 @@ public class Player : MonoBehaviour
     {
 
         
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") || myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
         {
             if (isTakingDM == false)
             {
@@ -235,8 +253,12 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")) || myRigidBody.transform.position.y < deathFall || health <= 0)
+        //myPause = FindObjectOfType<Pause>();
+
+        if (myRigidBody.transform.position.y < deathFall || health <= 0)
         {
+            //DontDestroyOnLoad(myPause.PauseMenuCanvas);
+            //DontDestroyOnLoad(SaveMenuCanvas);
             isAlive = false;
             myAnimator.SetTrigger("Dying");
             GetComponent<Rigidbody2D>().velocity = deathKick;
