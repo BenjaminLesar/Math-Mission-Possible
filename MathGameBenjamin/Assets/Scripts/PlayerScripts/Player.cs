@@ -188,6 +188,8 @@ public class Player : MonoBehaviour
 
     private void climbLadder()
     {
+        
+
         if (!myFeet.IsTouchingLayers(LayerMask.GetMask("Climbing"))) //tests to see if player character's feet are NOT touching a ladder 
         {
             myAnimator.SetBool("Climbing", false); //sets climbing to false
