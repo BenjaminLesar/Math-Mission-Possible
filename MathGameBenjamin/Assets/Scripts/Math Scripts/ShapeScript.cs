@@ -53,9 +53,15 @@ public class ShapeScript : MonoBehaviour
 
     void Update()
     {
+        checkAnswer.onClick.RemoveAllListeners();
         checkAnswer.onClick.AddListener(CheckAnswer);
+
+        returnButton.onClick.RemoveAllListeners();
         returnButton.onClick.AddListener(Return);
+
+        continueButton.onClick.RemoveAllListeners();
         continueButton.onClick.AddListener(Continue);
+
         if (Input.GetKeyUp(KeyCode.Return) || Input.GetKey("enter"))
         {
             CheckAnswer();
@@ -103,9 +109,6 @@ public class ShapeScript : MonoBehaviour
 
     void Return()
     {
-      //  questionText.transform.position = new Vector2(-166f, 43.4f);
-        n = number[Random.Range(0, number.Length)];
-        selectedShape.SetActive(false);
         selectedShape = shapes[Random.Range(0, shapes.Length)];
         Question();
         incorrectAnswerPanel.SetActive(false);
@@ -118,7 +121,7 @@ public class ShapeScript : MonoBehaviour
         shapeCanvas.SetActive(false);
         correctAnswerPanel.SetActive(false);
         Player.instance.UnFreezePlayer();
-        
+        Question();
     }
 
 
@@ -144,7 +147,7 @@ public class ShapeScript : MonoBehaviour
 
         }
 
-
+        //input.text = "";
     }
 
 }
