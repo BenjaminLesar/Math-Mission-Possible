@@ -246,12 +246,14 @@ public class Player : MonoBehaviour
         {
             Vector2 jumpVelocity = new Vector2(0f, jumpSpeed); //creates a new y vector coordinate equal to the Jumpspeed variable
             myRigidBody.velocity += jumpVelocity; //sets the player character velocity equal to the new vector.
+            myAnimator.SetTrigger("isJumping");
         }
 
         if (myFeet.IsTouchingLayers(LayerMask.GetMask("Trampoline")) && CrossPlatformInputManager.GetButtonDown("Jump")) //by default gets player's "spacebar" input.
         {
             Vector2 jumpVelocity = new Vector2(0f, (jumpSpeed * 1.5f)); //creates a new y vector coordinate equal to the Jumpspeed variable
             myRigidBody.velocity += jumpVelocity; //sets the player character velocity equal to the new vector.
+            myAnimator.SetTrigger("isJumping");
         }
     }
 

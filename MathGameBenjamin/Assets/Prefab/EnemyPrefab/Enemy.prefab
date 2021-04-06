@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609337450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.46, y: -0.64, z: 0}
+  m_LocalPosition: {x: 0.46, y: -0.879, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4290841669118889180}
@@ -105,10 +105,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 618810845
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -570807933488141205, guid: bb08f2e5e0229ea439c0f97e0cd6cb09,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: ccded6613e0ac304ba19b11c0a2edc09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -153,9 +152,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06, y: -0.24478596}
-  m_Size: {x: 0.86, y: 0.57}
-  m_Direction: 1
+  m_Offset: {x: 0.06, y: 0.1}
+  m_Size: {x: 1.18, y: 1.59}
+  m_Direction: 0
 --- !u!95 &4290841669118889181
 Animator:
   serializedVersion: 3
@@ -205,11 +204,11 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.36421394, y: -0.6382761}
+  m_Offset: {x: 0.38, y: -0.73}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.4925, y: 1.86}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -235,7 +234,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.4925, y: 1.86}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -243,10 +242,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.19779062, y: 0.1352905}
-      - {x: -0.28087187, y: 0.016332984}
-      - {x: -0.16899419, y: 0.014635682}
-      - {x: 0.12424326, y: 0.0146353245}
-      - {x: 0.21654081, y: 0.018381834}
-      - {x: 0.28832817, y: 0.014916539}
-      - {x: 0.21412373, y: 0.13529074}
+    - - {x: -0.02, y: 0.96}
+      - {x: -0.17, y: 0.74}
+      - {x: 0.34, y: 0.74}
+      - {x: 0.38, y: 0.74}
+      - {x: 0.37, y: 0.74}
+      - {x: 0.53, y: 0.73}
+      - {x: 0.43, y: 0.96}

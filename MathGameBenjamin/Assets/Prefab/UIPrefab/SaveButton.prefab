@@ -144,6 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 0}
+  saveGameMessage: {fileID: 0}
+  MessageDelay: 0.3
 --- !u!1 &8042780404107420651
 GameObject:
   m_ObjectHideFlags: 0
