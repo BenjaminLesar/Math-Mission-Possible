@@ -15,7 +15,6 @@ public class ShapeScript : MonoBehaviour
     public Text correctText;
     public Text incorrectText;
     
-
     public Button checkAnswer;
     public Button returnButton;
     public Button continueButton;
@@ -24,22 +23,17 @@ public class ShapeScript : MonoBehaviour
     public GameObject incorrectAnswerPanel;
     public GameObject shapeCanvas;
 
-
-    private int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
     public GameObject[] shapes;
-
     public InputField input;
 
+    [SerializeField] Animator boxAnimator;
+
     private int n;
-
+    private int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     private GameObject selectedShape;
-
 
     private int realAnswer;
     private int playerAnswer;
-
-
 
     void Start()
     {
@@ -109,13 +103,24 @@ public class ShapeScript : MonoBehaviour
 
     void Return()
     {
-        selectedShape = shapes[Random.Range(0, shapes.Length)];
         Question();
         incorrectAnswerPanel.SetActive(false);
     }
 
 
     void Continue()
+    {
+        //MiniGame.instance.RaisePillar();
+        //shapeCanvas.SetActive(false);
+        //correctAnswerPanel.SetActive(false);
+        //Player.instance.UnFreezePlayer();
+        //Question();
+
+        boxAnimator.SetTrigger("Close");
+        Invoke("DisableCanvas", 0.25f);
+    }
+
+    void DisableCanvas()
     {
         MiniGame.instance.RaisePillar();
         shapeCanvas.SetActive(false);
@@ -147,7 +152,7 @@ public class ShapeScript : MonoBehaviour
 
         }
 
-        //input.text = "";
+        input.text = "";
     }
 
 }

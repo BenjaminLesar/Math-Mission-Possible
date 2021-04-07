@@ -15,9 +15,7 @@ public class MiniGame : MonoBehaviour
     public Vector2 startPos;
     public Vector2 endPos;
 
-
-
-    //[SerializeField] Animator boxAnimator;
+    [SerializeField] Animator boxAnimator;
 
     void Awake()
     {
@@ -35,12 +33,9 @@ public class MiniGame : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-
             Player.instance.FreezePlayer();
             canvas.SetActive(true);
-            //boxAnimator.SetTrigger("Popup");
-
-           
+            boxAnimator.SetTrigger("Popup");           
         }
 
 
