@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-
-    Transform startPos;
     [SerializeField] Transform endPoint;
+    [SerializeField] GameObject dialogueBox;
+
+    GameObject target = null;
+    Vector3 offset;
 
     // Start is called before the first frame update
     void Start()
     {
-        startPos = gameObject.transform;
         target = null;
-
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ActivateElevator()
     {
@@ -44,8 +39,7 @@ public class Elevator : MonoBehaviour
         }
     }
 
-    private GameObject target = null;
-    private Vector3 offset;
+    // adhere the player the to elevator
     void OnTriggerStay2D(Collider2D col)
     {
         target = col.gameObject;
@@ -54,6 +48,7 @@ public class Elevator : MonoBehaviour
     void OnTriggerExit2D(Collider2D col)
     {
         target = null;
+        dialogueBox.SetActive(false);
     }
     void LateUpdate()
     {
