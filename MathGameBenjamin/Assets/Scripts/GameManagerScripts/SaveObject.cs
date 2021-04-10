@@ -11,5 +11,7 @@ public class SaveObject
     public int level;
     public List<float> xcoord = new List<float>();
     public List<float> ycoord = new List<float>();
+    public List<float> mathXCoord = new List<float>();
+    public List<float> mathYCoord = new List<float>();
     public float health;
 }

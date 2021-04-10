@@ -66,7 +66,8 @@ public class Player : MonoBehaviour
 
     Pause myPause;
     public GameObject SaveMenuCanvas;
-    public GameObject myPrefab;
+    public GameObject coinPrefab;
+    public GameObject mathPrefab;
 
     void Awake()
     {  
@@ -118,7 +119,21 @@ public class Player : MonoBehaviour
 
                 for (int i = 0; i < mySave.xcoord.Count; i++)
                 {
-                    Instantiate(myPrefab, new Vector2(mySave.xcoord[i], mySave.ycoord[i]), Quaternion.identity);
+                    var newObj = Instantiate(coinPrefab, new Vector2(mySave.xcoord[i], mySave.ycoord[i]), Quaternion.identity);
+                    newObj.transform.parent = GameObject.Find("Pickups").transform;
+                }
+
+                TriggerScript[] result2 = FindObjectsOfType<TriggerScript>();
+
+                foreach (TriggerScript t in result2)
+                {
+                    Destroy(t.gameObject);
+                }
+
+                for (int i = 0; i < mySave.mathXCoord.Count; i++)
+                {
+                    var newObj = Instantiate(mathPrefab, new Vector2(mySave.mathXCoord[i], mySave.mathYCoord[i]), Quaternion.identity);
+                    newObj.transform.parent = GameObject.Find("Questions").transform;
                 }
             }
         }

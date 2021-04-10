@@ -32,6 +32,6 @@ public class TriggerScript : MonoBehaviour
             canvas.SetActive(true);
             boxAnimator.SetTrigger("Popup");
         }
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 }

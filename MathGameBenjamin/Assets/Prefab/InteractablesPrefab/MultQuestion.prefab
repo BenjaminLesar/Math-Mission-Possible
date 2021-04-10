@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7409987233119461084}
   - component: {fileID: 7409987233119461086}
   - component: {fileID: 7409987233119461085}
+  - component: {fileID: 1114020957}
   m_Layer: 14
   m_Name: MultQuestion
   m_TagString: QuestionTrigger2
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7409987233119461083}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.49, y: -0.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -95,7 +96,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1079209489
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0.05369792, g: 0.04705882, b: 0.94509804, a: 1}
@@ -108,3 +109,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1114020957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7409987233119461083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f15b372c52f3d946865fe6ad0235a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerObject: []
+  canvas: {fileID: 1182401846455195793, guid: fae32d292a0be8143b617f566b9f8eba, type: 3}
+  boxAnimator: {fileID: 1632396544276042945, guid: 14290588dbad9244a9320117a20d91eb,
+    type: 3}

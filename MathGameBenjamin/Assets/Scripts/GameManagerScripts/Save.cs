@@ -28,13 +28,19 @@ public class Save : MonoBehaviour
         mySave.level = SceneManager.GetActiveScene().buildIndex;
          
         coinPickup[] result = FindObjectsOfType<coinPickup>();
-        int x = 0;
 
         foreach (coinPickup c in result)
         {
             mySave.xcoord.Add(c.transform.position.x);
             mySave.ycoord.Add(c.transform.position.y);
-            x++;
+        }
+
+        TriggerScript[] result2 = FindObjectsOfType<TriggerScript>();
+
+        foreach (TriggerScript t in result2)
+        {
+            mySave.mathXCoord.Add(t.transform.position.x);
+            mySave.mathYCoord.Add(t.transform.position.y);
         }
 
         mySave.health = FindObjectOfType<Player>().GetHealth();
