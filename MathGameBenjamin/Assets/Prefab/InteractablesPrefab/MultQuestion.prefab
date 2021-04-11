@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7409987233119461084}
   - component: {fileID: 7409987233119461086}
   - component: {fileID: 7409987233119461085}
-  - component: {fileID: 1114020957}
+  - component: {fileID: 741058180}
   m_Layer: 14
   m_Name: MultQuestion
   m_TagString: QuestionTrigger2
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1114020957
+--- !u!114 &741058180
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,6 +122,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerObject: []
-  canvas: {fileID: 1182401846455195793, guid: fae32d292a0be8143b617f566b9f8eba, type: 3}
-  boxAnimator: {fileID: 1632396544276042945, guid: 14290588dbad9244a9320117a20d91eb,
-    type: 3}
+  canvas: {fileID: 0}
+  boxAnimator: {fileID: 0}

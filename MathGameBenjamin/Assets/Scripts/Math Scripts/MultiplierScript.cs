@@ -35,13 +35,15 @@ public class MultiplierScript : MonoBehaviour
     private int realAnswer;
     private int playerAnswer;
 
-   
+
+    string mathQuestion;
     // Calls random int from array and assigns to f & s
     // Panels for correct/incorrect panels disabled
     // Question method called
-    void Start()
+    public void DoMath()
     {
-        go = GameObject.FindWithTag("QuestionTrigger2");
+        mathQuestion = PlayerPrefs.GetString("mathQuestion");
+        go = GameObject.Find(mathQuestion);
         f = firstNumber[Random.Range(0, firstNumber.Length)];
         s = secondNumber[Random.Range(0, secondNumber.Length)];
         correctAnswerPanel.SetActive(false);
@@ -66,11 +68,8 @@ public class MultiplierScript : MonoBehaviour
     // Multiplies variables and assigns this number as the correct answer
     void Question()
     {
-
         questionText.text = "" + f + " X " + s + " = ";
         realAnswer = f * s;
-
-
     }
 
 
@@ -79,6 +78,7 @@ public class MultiplierScript : MonoBehaviour
     // Incorrect panel is disabled
     void Return()
     {
+        //Debug.Log("return");
         f = firstNumber[Random.Range(0, firstNumber.Length)];
         s = secondNumber[Random.Range(0, secondNumber.Length)];
         Question();
@@ -89,8 +89,10 @@ public class MultiplierScript : MonoBehaviour
     // Calls Player script
     void Continue()
     {
-        go.SetActive(false);
+        Destroy(go);
+        input.text = null;
         multiplierCanvas.SetActive(false);
+        Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
     }
 
@@ -99,6 +101,7 @@ public class MultiplierScript : MonoBehaviour
     // Need to implement method so player cannot input letters
     void CheckAnswer()
     {
+        //Debug.Log("checkanswer");
         // Takes the players answer and converts it to an int
         playerAnswer = Convert.ToInt32(input.text);
 

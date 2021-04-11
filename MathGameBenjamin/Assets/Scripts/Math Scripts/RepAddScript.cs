@@ -24,7 +24,7 @@ public class RepAddScript : MonoBehaviour
     public GameObject repAddCanvas;
 
     public static RepAddScript instance;
-    //private GameObject go;
+    private GameObject go;
 
     private int[] number = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     private int[] numberRange = { 3, 4, 5, 6 };
@@ -39,16 +39,17 @@ public class RepAddScript : MonoBehaviour
 
     private int realAnswer;
     private int playerAnswer;
-
+    string mathQuestion;
     void Awake()
     {
         instance = this;
     }
 
-    void Start()
+    public void DoMath()
     {
 
-       // go = GameObject.FindWithTag("QuestionTrigger1");
+        mathQuestion = PlayerPrefs.GetString("mathQuestion");
+        go = GameObject.Find(mathQuestion);
         n = number[Random.Range(0, number.Length)];
         nRange = numberRange[Random.Range(0, numberRange.Length)];
         correctAnswerPanel.SetActive(false);
@@ -133,8 +134,11 @@ public class RepAddScript : MonoBehaviour
     void DisableCanvas()
     {
         correctAnswerPanel.SetActive(false);
+        input.text = null;
         // TriggerScript.instance.triggerObject.SetActive(false);
         TriggerScript.instance.canvas.SetActive(false);
+        Destroy(go);
+        Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
         Question();
     }

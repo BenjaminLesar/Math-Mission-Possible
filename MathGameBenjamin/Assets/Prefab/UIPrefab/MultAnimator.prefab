@@ -1286,7 +1286,7 @@ GameObject:
   - component: {fileID: 7579750720475867808}
   - component: {fileID: 1632396544276042945}
   m_Layer: 0
-  m_Name: Box Animator
+  m_Name: MultAnimator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

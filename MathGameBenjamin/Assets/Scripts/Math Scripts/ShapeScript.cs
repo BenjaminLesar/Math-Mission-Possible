@@ -23,6 +23,8 @@ public class ShapeScript : MonoBehaviour
     public GameObject incorrectAnswerPanel;
     public GameObject shapeCanvas;
 
+    private GameObject go;
+
     public GameObject[] shapes;
     public InputField input;
 
@@ -34,10 +36,12 @@ public class ShapeScript : MonoBehaviour
 
     private int realAnswer;
     private int playerAnswer;
+    string mathQuestion;
 
-    void Start()
+    public void DoMath()
     {
-
+        mathQuestion = PlayerPrefs.GetString("mathQuestion");
+        go = GameObject.Find(mathQuestion);
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
         n = number[Random.Range(0, number.Length)];
@@ -125,6 +129,9 @@ public class ShapeScript : MonoBehaviour
         MiniGame.instance.RaisePillar();
         shapeCanvas.SetActive(false);
         correctAnswerPanel.SetActive(false);
+        Destroy(go);
+        input.text = null;
+        Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
         Question();
     }

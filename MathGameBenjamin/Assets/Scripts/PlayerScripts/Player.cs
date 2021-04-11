@@ -13,11 +13,11 @@ public class Player : MonoBehaviour
    
 
     //These fields are serialized so that they can be changed in the Unity inspector
-    [SerializeField] float runSpeed = 5f; //default run speed
-    [SerializeField] float jumpSpeed = 5f; // default jump speed/height
-    [SerializeField] float swimSpeed = 1.1f;
+    [SerializeField] float runSpeed = 5.2f; //default run speed
+    [SerializeField] float jumpSpeed = 14.4f; // default jump speed/height
+    [SerializeField] float swimSpeed = 1.2f;
     [SerializeField] float climbSpeed = 5f; //default climb speed
-    [SerializeField] float underWaterGrav = 0.06f;
+    [SerializeField] float underWaterGrav = 0.06f; //pretty sure this no longer does anything (sinkSpeed handles this). Variable is still used but I think has no appreciable effect.
     [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
     [SerializeField] float sinkSpeed = -3f;
     [SerializeField] float deathFall = -40f;
@@ -117,10 +117,12 @@ public class Player : MonoBehaviour
                     Destroy(c.gameObject);
                 }
 
+ 
                 for (int i = 0; i < mySave.xcoord.Count; i++)
                 {
                     var newObj = Instantiate(coinPrefab, new Vector2(mySave.xcoord[i], mySave.ycoord[i]), Quaternion.identity);
                     newObj.transform.parent = GameObject.Find("Pickups").transform;
+                    newObj.name = "Coin" + i.ToString();
                 }
 
                 TriggerScript[] result2 = FindObjectsOfType<TriggerScript>();
@@ -134,6 +136,7 @@ public class Player : MonoBehaviour
                 {
                     var newObj = Instantiate(mathPrefab, new Vector2(mySave.mathXCoord[i], mySave.mathYCoord[i]), Quaternion.identity);
                     newObj.transform.parent = GameObject.Find("Questions").transform;
+                    newObj.name = "Question" + i.ToString();
                 }
             }
         }
@@ -258,6 +261,13 @@ public class Player : MonoBehaviour
     private void Jump()
     {
         if (myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) && CrossPlatformInputManager.GetButtonDown("Jump") && inWater == false) //by default gets player's "spacebar" input.
+        {
+            Vector2 jumpVelocity = new Vector2(0f, jumpSpeed); //creates a new y vector coordinate equal to the Jumpspeed variable
+            myRigidBody.velocity += jumpVelocity; //sets the player character velocity equal to the new vector.
+            myAnimator.SetTrigger("isJumping");
+        }
+
+        if (myFeet.IsTouchingLayers(LayerMask.GetMask("Enemy")) && CrossPlatformInputManager.GetButtonDown("Jump") && inWater == false) //by default gets player's "spacebar" input.
         {
             Vector2 jumpVelocity = new Vector2(0f, jumpSpeed); //creates a new y vector coordinate equal to the Jumpspeed variable
             myRigidBody.velocity += jumpVelocity; //sets the player character velocity equal to the new vector.

@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class TriggerScript : MonoBehaviour
 {
-
-    public GameObject [] triggerObject;
     public static TriggerScript instance;
     public GameObject canvas;
 
@@ -28,10 +26,40 @@ public class TriggerScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            Player.instance.FreezePlayer();
+            MultiplierScript multScript = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<MultiplierScript>();
+            RepAddScript addScript = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<RepAddScript>();
+            ShapeScript geoScript = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<ShapeScript>();
+            WordScript wScript = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<WordScript>();
+            WordV2Script wv2Script = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<WordV2Script>();
+
+            PlayerPrefs.SetString("mathQuestion", this.name);
+            boxAnimator = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
+            canvas = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject;
             canvas.SetActive(true);
             boxAnimator.SetTrigger("Popup");
+            Time.timeScale = 0;
+            Player.instance.FreezePlayer();
+            if (multScript != null)
+            {
+                multScript.DoMath();
+            }
+            if (addScript != null)
+            {
+                addScript.DoMath();
+            }
+            if (geoScript != null)
+            {
+                geoScript.DoMath();
+            }
+            if (wScript != null)
+            {
+                wScript.DoMath();
+            }
+            if (wv2Script != null)
+            {
+                wv2Script.DoMath();
+            }
         }
-        Destroy(gameObject);
+        
     }
 }

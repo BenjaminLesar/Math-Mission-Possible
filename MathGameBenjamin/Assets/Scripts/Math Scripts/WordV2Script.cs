@@ -44,10 +44,12 @@ public class WordV2Script : MonoBehaviour
     private int playerAnswer;
 
     private GameObject go;
+    string mathQuestion;
 
-    void Start()
+    public void DoMath()
     {
-        go = GameObject.FindWithTag("QuestionTrigger5");
+        mathQuestion = PlayerPrefs.GetString("mathQuestion");
+        go = GameObject.Find(mathQuestion);
         isText = true;
         n1 = numberOne[Random.Range(0, numberOne.Length)];
         n2 = numberTwo[Random.Range(0, numberTwo.Length)];
@@ -247,6 +249,9 @@ public class WordV2Script : MonoBehaviour
     {
         go.SetActive(false);
         wordV2Canvas.SetActive(false);
+        Destroy(go);
+        input.text = null;
+        Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
     }
 

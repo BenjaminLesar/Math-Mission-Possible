@@ -44,11 +44,12 @@ public class WordScript : MonoBehaviour
     private int realAnswer;
     private int playerAnswer;
 
+    string mathQuestion;
 
-
-    void Start()
+    public void DoMath()
     {
-        go = GameObject.FindWithTag("QuestionTrigger4");
+        mathQuestion = PlayerPrefs.GetString("mathQuestion");
+        go = GameObject.Find(mathQuestion);
         isText = true;
         n1 = numberOne[Random.Range(0, numberOne.Length)];
         n2 = numberTwo[Random.Range(0, numberTwo.Length)];
@@ -282,6 +283,9 @@ public class WordScript : MonoBehaviour
     {
         go.SetActive(false);
         wordCanvas.SetActive(false);
+        Destroy(go);
+        input.text = null;
+        Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
     }
 
