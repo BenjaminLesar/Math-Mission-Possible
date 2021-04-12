@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using UnityEngine.SceneManagement;
 
 public class CheckPointSave : MonoBehaviour
 {
@@ -22,6 +25,43 @@ public class CheckPointSave : MonoBehaviour
             PlayerPrefs.SetFloat("PlayerX", this.transform.position.x);
             PlayerPrefs.SetFloat("PlayerY", this.transform.position.y);
             PlayerPrefs.SetString("IsNotFirst", "true");
+
+            AutoSave();
+
+            void AutoSave()
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Create(Application.persistentDataPath + "/" + "Autosave.dat");
+                SaveObject mySave = new SaveObject();
+                mySave.score = FindObjectOfType<GameSession>().GetScore();
+                mySave.lives = FindObjectOfType<GameSession>().GetLives();
+                mySave.level = SceneManager.GetActiveScene().buildIndex;
+
+                coinPickup[] result = FindObjectsOfType<coinPickup>();
+
+                foreach (coinPickup c in result)
+                {
+                    mySave.xcoord.Add(c.transform.position.x);
+                    mySave.ycoord.Add(c.transform.position.y);
+                }
+
+                TriggerScript[] result2 = FindObjectsOfType<TriggerScript>();
+
+                foreach (TriggerScript t in result2)
+                {
+                    mySave.mathXCoord.Add(t.transform.position.x);
+                    mySave.mathYCoord.Add(t.transform.position.y);
+                }
+
+                mySave.playerXCoord = PlayerPrefs.GetFloat("PlayerX");
+                mySave.playerYCoord = PlayerPrefs.GetFloat("PlayerY");
+
+                mySave.health = FindObjectOfType<Player>().GetHealth();
+
+                bf.Serialize(file, mySave);
+                file.Close();
+            }
+
 
             StartCoroutine(DisplayMessage());
 
