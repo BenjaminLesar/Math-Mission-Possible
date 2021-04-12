@@ -91,6 +91,18 @@ public class Player : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = sr.material;
+        string myCheck;
+
+        myCheck = PlayerPrefs.GetString("IsNotFirst");
+
+        if (myCheck.Length != 0)
+        {
+            if (myCheck.Equals("true"))
+            {
+                this.transform.position = new Vector2(PlayerPrefs.GetFloat("PlayerX"), PlayerPrefs.GetFloat("PlayerY"));
+            }
+        }
+        
 
         if (GetLoaded())
         {
@@ -138,6 +150,13 @@ public class Player : MonoBehaviour
                     newObj.transform.parent = GameObject.Find("Questions").transform;
                     newObj.name = "Question" + i.ToString();
                 }
+
+                if (mySave.playerXCoord != 0)
+                {
+                    this.transform.position = new Vector2(mySave.playerXCoord, mySave.playerYCoord);
+                }
+
+
             }
         }
     }

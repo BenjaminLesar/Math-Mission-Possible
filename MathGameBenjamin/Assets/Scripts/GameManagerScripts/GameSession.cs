@@ -13,6 +13,9 @@ public class GameSession : MonoBehaviour
 
     [SerializeField] Text scoreText;
 
+    Player myPlayer;
+    CheckPointSave myCheck;
+
     private void Awake()
     {
         int numGameSessions = FindObjectsOfType<GameSession>().Length;

@@ -43,6 +43,23 @@ public class Save : MonoBehaviour
             mySave.mathYCoord.Add(t.transform.position.y);
         }
 
+        string myCheck;
+
+        myCheck = PlayerPrefs.GetString("IsNotFirst");
+        if (myCheck.Length != 0)
+        {
+            if (myCheck.Equals("true"))
+            {
+                mySave.playerXCoord = PlayerPrefs.GetFloat("PlayerX");
+                mySave.playerYCoord = PlayerPrefs.GetFloat("PlayerY");
+            }
+        }
+        else
+        {
+            mySave.playerXCoord = 0;
+            mySave.playerYCoord = 0;
+        }
+
         mySave.health = FindObjectOfType<Player>().GetHealth();
 
         bf.Serialize(file, mySave);
