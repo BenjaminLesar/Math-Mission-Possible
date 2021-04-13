@@ -28,6 +28,7 @@ public class MultiplierScript : MonoBehaviour
     private int[] firstNumber = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     private int[] secondNumber = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
     public InputField input;
+    [SerializeField] Animator boxAnimator;
 
     private int f;
     private int s;

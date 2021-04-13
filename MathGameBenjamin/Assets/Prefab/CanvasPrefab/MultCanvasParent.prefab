@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2526208910712348935}
   m_Layer: 0
-  m_Name: Animated_MathCanvases
+  m_Name: MultCanvasParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +48,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1182401846455195794, guid: fae32d292a0be8143b617f566b9f8eba,
+        type: 3}
+      propertyPath: boxAnimator
+      value: 
+      objectReference: {fileID: 2412084145501846846}
     - target: {fileID: 1182401846455195822, guid: fae32d292a0be8143b617f566b9f8eba,
         type: 3}
       propertyPath: m_Pivot.x
@@ -168,6 +173,12 @@ PrefabInstance:
 --- !u!224 &1610429685058015017 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1182401846455195822, guid: fae32d292a0be8143b617f566b9f8eba,
+    type: 3}
+  m_PrefabInstance: {fileID: 446376925327972231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2412084145501846846 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2830697852335286969, guid: fae32d292a0be8143b617f566b9f8eba,
     type: 3}
   m_PrefabInstance: {fileID: 446376925327972231}
   m_PrefabAsset: {fileID: 0}
