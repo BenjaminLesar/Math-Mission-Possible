@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 2513263957220343814}
   - component: {fileID: 2513263957220343813}
   - component: {fileID: 2513263957220343834}
+  - component: {fileID: 9220353296157315698}
   m_Layer: 12
-  m_Name: Test Bird
+  m_Name: UFO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 618810845
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0e104590e771da64da093c0d8b812008, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a86f9769a41f5d4f9cb2d0784639ee2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +102,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.1875, y: 1.875}
+    oldSize: {x: 1.9266666, y: 1.6266667}
     newSize: {x: 0.35, y: 0.3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,7 +145,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.1875, y: 1.875}
+    oldSize: {x: 1.9266666, y: 1.6266667}
     newSize: {x: 0.35, y: 0.3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -166,3 +167,22 @@ PolygonCollider2D:
       - {x: 0.42872953, y: -0.7321112}
       - {x: 0.24545097, y: -0.28932023}
       - {x: 0.17300177, y: -0.1872809}
+--- !u!95 &9220353296157315698
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2513263957220343809}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa34cae3bff72cd41b4134f71ff88a72, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
