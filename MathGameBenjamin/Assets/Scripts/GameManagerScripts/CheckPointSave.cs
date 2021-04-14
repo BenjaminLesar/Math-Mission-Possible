@@ -45,6 +45,14 @@ public class CheckPointSave : MonoBehaviour
                     mySave.ycoord.Add(c.transform.position.y);
                 }
 
+                CheckPointSave[] SPResult = FindObjectsOfType<CheckPointSave>();
+
+                foreach (CheckPointSave cp in SPResult)
+                {
+                    mySave.SavePointX.Add(cp.transform.position.x);
+                    mySave.SavePointY.Add(cp.transform.position.y);
+                }
+
                 TriggerScript[] result2 = FindObjectsOfType<TriggerScript>();
 
                 foreach (TriggerScript t in result2)

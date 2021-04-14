@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
     public GameObject SaveMenuCanvas;
     public GameObject coinPrefab;
     public GameObject mathPrefab;
+    public GameObject checkPointPrefab;
 
     void Awake()
     {  
@@ -135,6 +136,20 @@ public class Player : MonoBehaviour
                     var newObj = Instantiate(coinPrefab, new Vector2(mySave.xcoord[i], mySave.ycoord[i]), Quaternion.identity);
                     newObj.transform.parent = GameObject.Find("Pickups").transform;
                     newObj.name = "Coin" + i.ToString();
+                }
+
+                CheckPointSave[] SPResult = FindObjectsOfType<CheckPointSave>();
+
+                foreach (CheckPointSave cp in SPResult)
+                {
+                    Destroy(cp.gameObject);
+                }
+
+                for (int i = 0; i < mySave.SavePointX.Count; i++)
+                {
+                    var newObj = Instantiate(checkPointPrefab, new Vector2(mySave.SavePointX[i], mySave.SavePointY[i]), Quaternion.identity);
+                    newObj.transform.parent = GameObject.Find("ScenePersist").transform;
+                    newObj.name = "CheckPoint" + i.ToString();
                 }
 
                 TriggerScript[] result2 = FindObjectsOfType<TriggerScript>();
@@ -212,7 +227,7 @@ public class Player : MonoBehaviour
 
     private void Run()
     {
-        if (inWater == false)
+        if (inWater == false && !myFeet.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
             float left_right_movement = CrossPlatformInputManager.GetAxis("Horizontal"); //between -1 and 1, this by default gets player's "a" and "d" or left/right arrow keystrokes.
             Vector2 playerVelocity = new Vector2(left_right_movement * runSpeed, myRigidBody.velocity.y); //creates a new x vector coordinate equal to player input times the runspeed variable
