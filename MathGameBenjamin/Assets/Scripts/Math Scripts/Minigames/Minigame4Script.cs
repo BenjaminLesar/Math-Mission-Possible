@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.UI;
-using System;
 using Random = UnityEngine.Random;
 
-public class MultiplierScript : MonoBehaviour
+public class Minigame4Script : MonoBehaviour
 {
     // Will need to create UI in project
     // Attach script to created UI (canvas, panels, text, etc.)
@@ -13,7 +14,7 @@ public class MultiplierScript : MonoBehaviour
     public Text questionText;
     public Text correctText;
     public Text incorrectText;
-    
+
 
     public Button checkAnswer;
     public Button returnButton;
@@ -25,19 +26,25 @@ public class MultiplierScript : MonoBehaviour
 
     private GameObject go;
 
-    private int[] firstNumber = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    private int[] secondNumber = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
     public InputField input;
-    [SerializeField] Animator boxAnimator;
-
-    private int f;
-    private int s;
 
     private int realAnswer;
     private int playerAnswer;
-
+    Slider energyBar;
+    float energyValue = 0;
 
     string mathQuestion;
+    TextController txtController;
+
+    Text challengeText;
+    public GameObject energyPannel;
+    void Start()
+    {
+        txtController = FindObjectOfType<TextController>();
+        challengeText = GameObject.Find("ChallengeText").GetComponent<Text>();
+
+    }
+
     // Calls random int from array and assigns to f & s
     // Panels for correct/incorrect panels disabled
     // Question method called
@@ -48,18 +55,26 @@ public class MultiplierScript : MonoBehaviour
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
         Question();
+        energyPannel.SetActive(true);
+        energyBar = GameObject.Find("EnergyBar").GetComponent<Slider>();
+        txtController.RunAnimationText(challengeText, 2);
+
     }
 
     // Waits for user interaction with each button
     void Update()
     {
+        checkAnswer.onClick.RemoveAllListeners();
         // Check answer by enter key
-        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKey("enter"))
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("enter"))
         {
             CheckAnswer();
         }
         checkAnswer.onClick.AddListener(CheckAnswer);
+
+        returnButton.onClick.RemoveAllListeners();
         returnButton.onClick.AddListener(Return);
+        continueButton.onClick.RemoveAllListeners();
         continueButton.onClick.AddListener(Continue);
     }
 
@@ -67,10 +82,29 @@ public class MultiplierScript : MonoBehaviour
     // Multiplies variables and assigns this number as the correct answer
     void Question()
     {
-        f = firstNumber[Random.Range(0, firstNumber.Length)];
-        s = secondNumber[Random.Range(0, secondNumber.Length)];
-        questionText.text = "" + f + " X " + s + " = ";
-        realAnswer = f * s;
+        input.text = "";
+        int operand1 = Random.Range(2, 13);
+        int operand2 = Random.Range(2, 13);
+        int questionType = Random.Range(1, 4);
+
+        switch (questionType)
+        {
+            case 1:
+                questionText.text = operand1 + " x " + operand2 + " = ___";
+                realAnswer = operand1 * operand2;
+                break;
+            case 2:
+                questionText.text = "___" + " x " + operand1 + " = " + operand1 * operand2;
+                realAnswer = operand2;
+                break;
+            case 3:
+                questionText.text = operand1 + " x " + "___" + " = " + operand1 * operand2;
+                realAnswer = operand2;
+                break;
+            default:
+                print("invalid question type!");
+                break;
+        }
     }
 
 
@@ -84,8 +118,7 @@ public class MultiplierScript : MonoBehaviour
         incorrectAnswerPanel.SetActive(false);
     }
 
-    // When continue button is pressed on correct panel, main panel is deactivated
-    // Calls Player script
+    // Correct answer
     void Continue()
     {
         Destroy(go);
@@ -95,7 +128,19 @@ public class MultiplierScript : MonoBehaviour
         Player.instance.UnFreezePlayer();
     }
 
-    
+    void Challenge()
+    {
+        StartCoroutine(FillBarAnimation(1));
+        if (energyValue > 3)
+        {
+            correctAnswerPanel.SetActive(true);
+            correctText.text = "You passed the chanllenge, congrats!!!";
+            txtController.RunAnimationText(correctText, 2);
+        }
+        Question();
+    }
+
+
     // Checks whether player answer matches the correct answer
     // Need to implement method so player cannot input letters
     void CheckAnswer()
@@ -109,10 +154,7 @@ public class MultiplierScript : MonoBehaviour
         // Correct text is set (Can be altered)
         if (playerAnswer == realAnswer)
         {
-            
-            correctAnswerPanel.SetActive(true);
-            correctText.text = "CORRECT! GREAT JOB!";
-            
+            Challenge();
         }
 
         // If the player's answer does not match the correct answer
@@ -122,11 +164,36 @@ public class MultiplierScript : MonoBehaviour
         {
             incorrectAnswerPanel.SetActive(true);
             incorrectText.text = "Incorrect! Please try again";
-
+            StartCoroutine(DeleteBarAnimation());
         }
-
-
     }
 
+    IEnumerator FillBarAnimation(float value)
+    {
+        float speed = 6;
+        float currentValue = energyValue + value;
+        while (energyValue <= currentValue)
+        {
+            energyValue += speed*Time.deltaTime;
+            energyBar.value = energyValue;
+            yield return new WaitForSeconds(0.01f); 
+        }
+    }
 
+    IEnumerator DeleteBarAnimation()
+    {
+        float speed = 5;
+        while (energyValue > 0)
+        {
+            energyValue -= speed * Time.deltaTime;
+            energyBar.value = energyValue;
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
+    public void AcceptChanllenge()
+    {
+        GameObject clPannel = GameObject.Find("ChallengePannel");
+        clPannel.SetActive(false);
+    }
 }
