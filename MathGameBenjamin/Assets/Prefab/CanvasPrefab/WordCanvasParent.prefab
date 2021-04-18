@@ -54,6 +54,7 @@ MonoBehaviour:
   wordCanvas: {fileID: 8157233362850466077}
   numberText: []
   input: {fileID: 7361577585266768575}
+  boxAnimator: {fileID: 8930991395416769197}
 --- !u!1001 &669546551976840577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61,6 +62,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 669546553105840181}
     m_Modifications:
+    - target: {fileID: 1157346103783074599, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_Name
+      value: WordAnimator
+      objectReference: {fileID: 0}
     - target: {fileID: 8133508363366212193, guid: 8b00176b534c4e049ba4c4fce44818d0,
         type: 3}
       propertyPath: m_Pivot.x
@@ -166,6 +172,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8267470172530003756, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8682629524992558236, guid: 8b00176b534c4e049ba4c4fce44818d0,
         type: 3}
       propertyPath: m_Name
@@ -183,6 +194,12 @@ GameObject:
 --- !u!224 &8767017303976341472 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8133508363366212193, guid: 8b00176b534c4e049ba4c4fce44818d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 669546551976840577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8930991395416769197 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8267470172530003756, guid: 8b00176b534c4e049ba4c4fce44818d0,
     type: 3}
   m_PrefabInstance: {fileID: 669546551976840577}
   m_PrefabAsset: {fileID: 0}

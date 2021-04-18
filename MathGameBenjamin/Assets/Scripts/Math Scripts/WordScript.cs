@@ -31,6 +31,7 @@ public class WordScript : MonoBehaviour
     private int[] numberTwo = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 
     public InputField input;
+    [SerializeField] Animator boxAnimator;
 
     private bool isText;
     private String q;

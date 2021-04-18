@@ -26,11 +26,13 @@ public class TriggerScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            MultiplierScript multScript = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<MultiplierScript>();
+            
+            MultiplierScript myScript = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<MultiplierScript>();
             RepAddScript addScript = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<RepAddScript>();
             ShapeScript geoScript = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<ShapeScript>();
             WordScript wScript = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<WordScript>();
             WordV2Script wv2Script = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<WordV2Script>();
+
 
             PlayerPrefs.SetString("mathQuestion", this.name);
             boxAnimator = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
@@ -39,9 +41,9 @@ public class TriggerScript : MonoBehaviour
             boxAnimator.SetTrigger("Popup");
             Time.timeScale = 0;
             Player.instance.FreezePlayer();
-            if (multScript != null)
+            if (myScript != null)
             {
-                multScript.DoMath();
+                myScript.DoMath();
             }
             if (addScript != null)
             {
