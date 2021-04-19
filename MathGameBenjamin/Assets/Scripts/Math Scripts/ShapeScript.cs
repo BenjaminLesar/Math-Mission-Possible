@@ -121,6 +121,7 @@ public class ShapeScript : MonoBehaviour
         //Question();
 
         boxAnimator.SetTrigger("Close");
+        Time.timeScale = 1;
         Invoke("DisableCanvas", 0.25f);
     }
 

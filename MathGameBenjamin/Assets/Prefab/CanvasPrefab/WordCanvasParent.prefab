@@ -67,6 +67,111 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordAnimator
       objectReference: {fileID: 0}
+    - target: {fileID: 1183670213426860321, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183670213426860321, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183670213426860321, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884401145784968981, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884401145784968981, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884401145784968981, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035573050014451417, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035573050014451417, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035573050014451417, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365962733413849406, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365962733413849406, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365962733413849406, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946290480090751179, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946290480090751179, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946290480090751179, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7192735142492710368, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7192735142492710368, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7192735142492710368, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124643013443906477, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124643013443906477, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124643013443906477, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8133508363366212193, guid: 8b00176b534c4e049ba4c4fce44818d0,
         type: 3}
       propertyPath: m_Pivot.x
@@ -125,7 +230,7 @@ PrefabInstance:
     - target: {fileID: 8133508363366212193, guid: 8b00176b534c4e049ba4c4fce44818d0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 149.32025
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8133508363366212193, guid: 8b00176b534c4e049ba4c4fce44818d0,
         type: 3}
@@ -135,27 +240,27 @@ PrefabInstance:
     - target: {fileID: 8133508363366212193, guid: 8b00176b534c4e049ba4c4fce44818d0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8133508363366212193, guid: 8b00176b534c4e049ba4c4fce44818d0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8133508363366212193, guid: 8b00176b534c4e049ba4c4fce44818d0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8133508363366212193, guid: 8b00176b534c4e049ba4c4fce44818d0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -19.959473
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8133508363366212193, guid: 8b00176b534c4e049ba4c4fce44818d0,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -11.775354
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8133508363366212193, guid: 8b00176b534c4e049ba4c4fce44818d0,
         type: 3}
@@ -181,6 +286,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WordCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682629524992558236, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5221196977470846540, guid: 8b00176b534c4e049ba4c4fce44818d0, type: 3}
