@@ -165,7 +165,9 @@ MonoBehaviour:
   health: 3
   LoadName: 
   SaveMenuCanvas: {fileID: 0}
-  myPrefab: {fileID: 0}
+  coinPrefab: {fileID: 0}
+  mathPrefab: {fileID: 0}
+  checkPointPrefab: {fileID: 0}
 --- !u!61 &948512149
 BoxCollider2D:
   m_ObjectHideFlags: 0
