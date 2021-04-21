@@ -53,17 +53,16 @@ public class ShapeScript : MonoBehaviour
     {
         checkAnswer.onClick.RemoveAllListeners();
         checkAnswer.onClick.AddListener(CheckAnswer);
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKey("enter"))
+        {
+            CheckAnswer();
+        }
 
         returnButton.onClick.RemoveAllListeners();
         returnButton.onClick.AddListener(Return);
 
         continueButton.onClick.RemoveAllListeners();
         continueButton.onClick.AddListener(Continue);
-
-        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKey("enter"))
-        {
-            CheckAnswer();
-        }
     }
 
     void Question()
@@ -123,7 +122,7 @@ public class ShapeScript : MonoBehaviour
 
         boxAnimator.SetTrigger("Close");
         Time.timeScale = 1;
-        Invoke("DisableCanvas", 0.25f);
+        Invoke("DisableCanvas", 0.25f); // wait .25s for box animator close
     }
 
     void DisableCanvas()

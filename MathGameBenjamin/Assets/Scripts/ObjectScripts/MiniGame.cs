@@ -19,7 +19,6 @@ public class MiniGame : MonoBehaviour
 
     void Awake()
     {
-
         instance = this;
 
     }

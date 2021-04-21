@@ -251,11 +251,6 @@ public class Player : MonoBehaviour
             return;
         }
 
-        if (myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")))
-        {
-            CanRun();
-        }
-
         float controlFlow = CrossPlatformInputManager.GetAxis("Vertical"); //by default gets player's "w" and "s" or up/down arrow keystrokes.
         Vector2 climbVelocity = new Vector2(myRigidBody.velocity.x, controlFlow * climbSpeed); //creates a new y vector coordinate equal to player input times the climbspeed variable.
         myRigidBody.velocity = climbVelocity; //sets the player velocity equal to the new vector.
@@ -263,8 +258,12 @@ public class Player : MonoBehaviour
 
         bool playerHasV = Mathf.Abs(myRigidBody.velocity.y) > Mathf.Epsilon; //tests to see if player character y velocity is appreciably greater than zero.
         myAnimator.SetBool("Climbing", playerHasV); //sets the player character to climbing animation if bool is true.
-        print("climbing");
 
+        // when Player is touching the Ground and inside the Ladder Colider Box
+        if (myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+             CanRun();
+        }
     }
 
     private void Swim()
@@ -317,7 +316,7 @@ public class Player : MonoBehaviour
             myAnimator.SetTrigger("isJumping");
         }
 
-        if (myFeet.IsTouchingLayers(LayerMask.GetMask("Trampoline")) && CrossPlatformInputManager.GetButtonDown("Jump")) //by default gets player's "spacebar" input.
+        if (myFeet.IsTouchingLayers(LayerMask.GetMask("Trampoline")) && !myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) && CrossPlatformInputManager.GetButtonDown("Jump")) //by default gets player's "spacebar" input.
         {
             Vector2 jumpVelocity = new Vector2(0f, (jumpSpeed * 1.5f)); //creates a new y vector coordinate equal to the Jumpspeed variable
             myRigidBody.velocity += jumpVelocity; //sets the player character velocity equal to the new vector.
