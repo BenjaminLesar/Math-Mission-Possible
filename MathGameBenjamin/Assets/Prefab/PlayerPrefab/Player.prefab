@@ -93,7 +93,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 307718291
   m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 9704635256d7ac3409a943af695207b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -139,8 +139,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0, y: -0.01}
-  m_Size: {x: 0.56, y: 1.87}
+  m_Offset: {x: -0, y: 0.05}
+  m_Size: {x: 0.56, y: 1.8}
   m_Direction: 0
 --- !u!114 &-5113244724312496350
 MonoBehaviour:
@@ -165,9 +165,12 @@ MonoBehaviour:
   health: 3
   LoadName: 
   SaveMenuCanvas: {fileID: 0}
-  coinPrefab: {fileID: 0}
-  mathPrefab: {fileID: 0}
-  checkPointPrefab: {fileID: 0}
+  coinPrefab: {fileID: 2716729049847329386, guid: 50fbd75a4bcb52b47bf7cbdc684d36f3,
+    type: 3}
+  mathPrefab: {fileID: 61292953987677811, guid: ff09826b606fbe74c959f109f4a1d50d,
+    type: 3}
+  checkPointPrefab: {fileID: 1835679784965515893, guid: 22fbe2304366bfa4fbf29ffa5483e243,
+    type: 3}
 --- !u!61 &948512149
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,7 +184,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01, y: -0.84}
+  m_Offset: {x: -0.01, y: -0.8}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -192,5 +195,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.52, y: 0.19}
+  m_Size: {x: 0.52, y: 0.15}
   m_EdgeRadius: 0

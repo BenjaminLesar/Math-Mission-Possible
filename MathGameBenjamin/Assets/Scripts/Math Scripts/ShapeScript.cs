@@ -99,6 +99,7 @@ public class ShapeScript : MonoBehaviour
             questionText.text = "" + n + "in.";
             realAnswer = 8 * n;
         }
+        print("question");
 
 
     }

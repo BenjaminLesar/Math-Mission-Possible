@@ -229,24 +229,31 @@ public class Player : MonoBehaviour
     {
         if (inWater == false && !myFeet.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
-            float left_right_movement = CrossPlatformInputManager.GetAxis("Horizontal"); //between -1 and 1, this by default gets player's "a" and "d" or left/right arrow keystrokes.
-            Vector2 playerVelocity = new Vector2(left_right_movement * runSpeed, myRigidBody.velocity.y); //creates a new x vector coordinate equal to player input times the runspeed variable
-            myRigidBody.velocity = playerVelocity; //sets the player velocity equal to the new vector.
-
-            bool hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon; //tests to see if player character x velicity is appreciably greater than zero.
-            myAnimator.SetBool("Running", hSpeed); //sets the player character to running animation if bool is true. 
+            CanRun();
         }
     }
 
+    void CanRun()
+    {
+        float left_right_movement = CrossPlatformInputManager.GetAxis("Horizontal"); //between -1 and 1, this by default gets player's "a" and "d" or left/right arrow keystrokes.
+        Vector2 playerVelocity = new Vector2(left_right_movement * runSpeed, myRigidBody.velocity.y); //creates a new x vector coordinate equal to player input times the runspeed variable
+        myRigidBody.velocity = playerVelocity; //sets the player velocity equal to the new vector.
+
+        bool hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon; //tests to see if player character x velicity is appreciably greater than zero.
+        myAnimator.SetBool("Running", hSpeed); //sets the player character to running animation if bool is true. 
+    }
     private void climbLadder()
     {
-        
-
         if (!myFeet.IsTouchingLayers(LayerMask.GetMask("Climbing"))) //tests to see if player character's feet are NOT touching a ladder 
         {
             myAnimator.SetBool("Climbing", false); //sets climbing to false
             myRigidBody.gravityScale = gravityScaleAtStart; //sets normal gravity.
             return;
+        }
+
+        if (myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            CanRun();
         }
 
         float controlFlow = CrossPlatformInputManager.GetAxis("Vertical"); //by default gets player's "w" and "s" or up/down arrow keystrokes.
@@ -256,6 +263,8 @@ public class Player : MonoBehaviour
 
         bool playerHasV = Mathf.Abs(myRigidBody.velocity.y) > Mathf.Epsilon; //tests to see if player character y velocity is appreciably greater than zero.
         myAnimator.SetBool("Climbing", playerHasV); //sets the player character to climbing animation if bool is true.
+        print("climbing");
+
     }
 
     private void Swim()
