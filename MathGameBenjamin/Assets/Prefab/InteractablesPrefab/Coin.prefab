@@ -102,7 +102,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 0.512, y: 0.512}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 97dc5a32eed89f94988320d261dad8d9, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
   pointsForCoinPickup: 1
 --- !u!82 &1693295795023143754
 AudioSource:
