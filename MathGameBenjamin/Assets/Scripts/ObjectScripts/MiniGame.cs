@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MiniGame : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class MiniGame : MonoBehaviour
     public Vector2 endPos;
 
     [SerializeField] Animator boxAnimator;
+
 
     void Awake()
     {

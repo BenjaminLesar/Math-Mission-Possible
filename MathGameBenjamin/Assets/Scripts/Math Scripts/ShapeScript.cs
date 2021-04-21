@@ -44,8 +44,6 @@ public class ShapeScript : MonoBehaviour
         go = GameObject.Find(mathQuestion);
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
-        n = number[Random.Range(0, number.Length)];
-        selectedShape = shapes[Random.Range(0, shapes.Length)];
         Question();
     }
 
@@ -81,7 +79,6 @@ public class ShapeScript : MonoBehaviour
         {
             selectedShape.SetActive(true);
             questionText.text = "" + n + "in.";
-           // questionText.transform.position = new Vector2(-206f, 19f);
             realAnswer = 5 * n;
         }
 
@@ -98,7 +95,6 @@ public class ShapeScript : MonoBehaviour
             questionText.text = "" + n + "in.";
             realAnswer = 8 * n;
         }
-        print("question");
 
 
     }
@@ -121,7 +117,10 @@ public class ShapeScript : MonoBehaviour
         //Question();
 
         boxAnimator.SetTrigger("Close");
+        Destroy(go);
+        input.text = null;
         Time.timeScale = 1;
+        Player.instance.UnFreezePlayer();
         Invoke("DisableCanvas", 0.25f); // wait .25s for box animator close
     }
 
@@ -130,11 +129,7 @@ public class ShapeScript : MonoBehaviour
         MiniGame.instance.RaisePillar();
         shapeCanvas.SetActive(false);
         correctAnswerPanel.SetActive(false);
-        Destroy(go);
-        input.text = null;
-        Time.timeScale = 1;
-        Player.instance.UnFreezePlayer();
-        Question();
+        
     }
 
 
