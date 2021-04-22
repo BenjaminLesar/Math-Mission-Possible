@@ -104,6 +104,7 @@ public class RepAddScript : MonoBehaviour
         nRange = numberRange[Random.Range(0, numberRange.Length)];
         String tempText = "";
 
+
         for (int i = 0; i < nRange - 1; i++)
         {
             tempText += n + " + ";
@@ -127,27 +128,22 @@ public class RepAddScript : MonoBehaviour
     void Continue()
     {
         boxAnimator.SetTrigger("Close");
+        Destroy(go);
+        input.text = null;
+        correctAnswerPanel.SetActive(false);
+        Time.timeScale = 1;
         Invoke("DisableCanvas", 0.25f);
 
     }
 
     void DisableCanvas()
-    {
-        correctAnswerPanel.SetActive(false);
-        input.text = null;
-        // TriggerScript.instance.triggerObject.SetActive(false);
-        TriggerScript.instance.canvas.SetActive(false);
-        Destroy(go);
-        Time.timeScale = 1;
+    {       
         Player.instance.UnFreezePlayer();
-        Question();
     }
 
 
     void CheckAnswer()
     {
-
-
         playerAnswer = Convert.ToInt32(input.text);
 
         if (playerAnswer == realAnswer)

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7409987233119461084}
   - component: {fileID: 7409987233119461086}
   - component: {fileID: 7409987233119461085}
-  - component: {fileID: 1040137621}
+  - component: {fileID: 116457843}
   m_Layer: 14
   m_Name: AddQuestion
   m_TagString: Untagged
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.28, y: 3.32}
+  m_Size: {x: 0.28, y: 6.8}
   m_EdgeRadius: 0
 --- !u!212 &7409987233119461085
 SpriteRenderer:
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1040137621
+--- !u!114 &116457843
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,12 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f15b372c52f3d946865fe6ad0235a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerObject:
-  - {fileID: 7409987233119461083}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   canvas: {fileID: 0}
   boxAnimator: {fileID: 0}
