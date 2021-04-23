@@ -47,20 +47,34 @@ public class ShapeScript : MonoBehaviour
         Question();
     }
 
+    private void Start()
+    {      
+        returnButton.onClick.AddListener(Return);
+        continueButton.onClick.AddListener(Continue);
+    }
+
     void Update()
     {
-        checkAnswer.onClick.RemoveAllListeners();
-        checkAnswer.onClick.AddListener(CheckAnswer);
-        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKey("enter"))
+        if (input.IsActive())
+            input.ActivateInputField();
+        if (input.text != "") // prevent empty input from player, which cause invalid input error
         {
-            CheckAnswer();
+            checkAnswer.onClick.RemoveAllListeners();
+            checkAnswer.onClick.AddListener(CheckAnswer);
         }
 
-        returnButton.onClick.RemoveAllListeners();
-        returnButton.onClick.AddListener(Return);
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("enter"))
+        {
+            if (correctAnswerPanel.activeInHierarchy)
+            {
+                Continue();
+            }
+            else if (incorrectAnswerPanel.activeInHierarchy)
+                Return();
+            else if (input.text != "")
+                CheckAnswer();
+        }
 
-        continueButton.onClick.RemoveAllListeners();
-        continueButton.onClick.AddListener(Continue);
     }
 
     void Question()
@@ -99,14 +113,11 @@ public class ShapeScript : MonoBehaviour
 
     }
 
-
-
     void Return()
     {
         Question();
         incorrectAnswerPanel.SetActive(false);
     }
-
 
     void Continue()
     {
@@ -121,7 +132,7 @@ public class ShapeScript : MonoBehaviour
         input.text = null;
         Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
-        Invoke("DisableCanvas", 0.25f); // wait .25s for box animator close
+        Invoke("DisableCanvas", 0.25f); // wait .25s for box animator finishes closing
     }
 
     void DisableCanvas()
@@ -135,9 +146,7 @@ public class ShapeScript : MonoBehaviour
 
     void CheckAnswer()
     {
-
         selectedShape.SetActive(false);
-
         playerAnswer = Convert.ToInt32(input.text);
 
         if (playerAnswer == realAnswer)

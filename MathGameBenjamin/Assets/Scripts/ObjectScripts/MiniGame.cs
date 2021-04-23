@@ -17,46 +17,46 @@ public class MiniGame : MonoBehaviour
     public Vector2 endPos;
 
     [SerializeField] Animator boxAnimator;
-
-
+    bool isOpen = false;
     void Awake()
     {
         instance = this;
-
+        GameObject canvas = GameObject.Find("ShapeCanvas");
     }
-
-
- 
-
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
         if (other.gameObject.CompareTag("Player"))
-        {
-            Player.instance.FreezePlayer();
+        {         
             canvas.SetActive(true);
-            boxAnimator.SetTrigger("Popup");           
+            Player.instance.FreezePlayer();
+            ShapeScript geoScript = FindObjectOfType<ShapeScript>();
+
+            // prevent MathUI open twice since player has two collider boxes
+            if (!isOpen)
+            {
+                isOpen = true;
+                geoScript.DoMath();
+            }
+
+            boxAnimator.SetTrigger("Popup");
         }
-
-
     }
 
     void OnTriggerExit2D(Collider2D other)
-    {
-        
+    {    
         if(other.gameObject.CompareTag("Player"))
         {
             player.transform.position = Vector2.MoveTowards(endPos, endPos, moveSpeed * Time.deltaTime);
             pillar.transform.position = Vector2.MoveTowards(endPos, endPos, moveSpeed* Time.deltaTime);
         }
-
-        
     }
+
 
    public void RaisePillar()
     {
         pillarTrigger.SetActive(false);
+        player.transform.position += new Vector3(0, 0.1f); //get the player out of trigger box
     }
 
 }
