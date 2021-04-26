@@ -24,7 +24,7 @@ public class Elevator : MonoBehaviour
 
     private IEnumerator MoveDown()
     {
-        int speed = 1;
+        int speed = 6;
         float lerpTime = 10000f;
         lerpTime = lerpTime / speed; //if speed = 1, it takes 5s to finsih the animation
         float currentTime = 0;
