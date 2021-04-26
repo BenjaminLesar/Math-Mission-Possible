@@ -8,7 +8,7 @@ public class TriggerScriptLevel_004 : MonoBehaviour
 {
     public GameObject[] triggerObject;
     public static TriggerScriptLevel_004 instance;
-    public GameObject canvas;
+    public GameObject panel;
 
     [SerializeField] Animator boxAnimator;
     Minigame4Script multScript;
@@ -27,7 +27,7 @@ public class TriggerScriptLevel_004 : MonoBehaviour
         {
             multScript.DoMath();
             Player.instance.FreezePlayer();
-            canvas.SetActive(true);
+            panel.SetActive(true);
             boxAnimator.SetTrigger("Popup");
         }
         Destroy(gameObject);

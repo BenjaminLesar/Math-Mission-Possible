@@ -22,7 +22,9 @@ public class Minigame4Script : MonoBehaviour
 
     public GameObject correctAnswerPanel;
     public GameObject incorrectAnswerPanel;
-    public GameObject multiplierCanvas;
+
+    [SerializeField] Animator boxAnimator;
+
 
     private GameObject go;
 
@@ -42,6 +44,31 @@ public class Minigame4Script : MonoBehaviour
     {
         txtController = FindObjectOfType<TextController>();
         challengeText = GameObject.Find("ChallengeText").GetComponent<Text>();
+        returnButton.onClick.AddListener(Return);
+        continueButton.onClick.AddListener(Continue);
+    }
+
+    void Update()
+    {
+        if (input.IsActive())
+            input.ActivateInputField();
+        if (input.text != "") // prevent empty input from player, which cause invalid input error
+        {
+            checkAnswer.onClick.RemoveAllListeners();
+            checkAnswer.onClick.AddListener(CheckAnswer);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("enter"))
+        {
+            if (correctAnswerPanel.activeInHierarchy)
+            {
+                Continue();
+            }
+            else if (incorrectAnswerPanel.activeInHierarchy)
+                Return();
+            else if (input.text != "")
+                CheckAnswer();
+        }
 
     }
 
@@ -59,23 +86,6 @@ public class Minigame4Script : MonoBehaviour
         energyBar = GameObject.Find("EnergyBar").GetComponent<Slider>();
         txtController.RunAnimationText(challengeText, 2);
 
-    }
-
-    // Waits for user interaction with each button
-    void Update()
-    {
-        checkAnswer.onClick.RemoveAllListeners();
-        // Check answer by enter key
-        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("enter"))
-        {
-            CheckAnswer();
-        }
-        checkAnswer.onClick.AddListener(CheckAnswer);
-
-        returnButton.onClick.RemoveAllListeners();
-        returnButton.onClick.AddListener(Return);
-        continueButton.onClick.RemoveAllListeners();
-        continueButton.onClick.AddListener(Continue);
     }
 
     // Displays variables gathered within the question text
@@ -123,15 +133,16 @@ public class Minigame4Script : MonoBehaviour
     {
         Destroy(go);
         input.text = null;
-        multiplierCanvas.SetActive(false);
+        boxAnimator.SetTrigger("Close");
         Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
     }
 
     void Challenge()
     {
+        int questionNumber = 4;
         StartCoroutine(FillBarAnimation(1));
-        if (energyValue > 3)
+        if (energyValue > questionNumber-1)
         {
             correctAnswerPanel.SetActive(true);
             correctText.text = "You passed the chanllenge, congrats!!!";
