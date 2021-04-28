@@ -56,19 +56,33 @@ public class RepAddScript : MonoBehaviour
         incorrectAnswerPanel.SetActive(false);
         Question();
     }
+    private void Start()
+    {
+        returnButton.onClick.AddListener(Return);
+        continueButton.onClick.AddListener(Continue);
+    }
 
     void Update()
     {
-        // Check answer by enter key
-
-        // Do this for return and continue as well
-        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKey("enter"))
+        if (input.IsActive())
+            input.ActivateInputField();
+        if (input.text != "") // prevent empty input from player, which cause invalid input error
         {
-            CheckAnswer();
+            checkAnswer.onClick.RemoveAllListeners();
+            checkAnswer.onClick.AddListener(CheckAnswer);
         }
-        checkAnswer.onClick.AddListener(CheckAnswer);
-        returnButton.onClick.AddListener(Return);
-        continueButton.onClick.AddListener(Continue);
+
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("enter"))
+        {
+            if (correctAnswerPanel.activeInHierarchy)
+            {
+                Continue();
+            }
+            else if (incorrectAnswerPanel.activeInHierarchy)
+                Return();
+            else if (input.text != "")
+                CheckAnswer();
+        }
     }
 
     void Question1()

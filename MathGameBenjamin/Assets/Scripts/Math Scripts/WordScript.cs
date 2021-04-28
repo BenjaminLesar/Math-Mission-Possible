@@ -63,11 +63,33 @@ public class WordScript : MonoBehaviour
         Question();
     }
 
-    void Update()
+    private void Start()
     {
-        checkAnswer.onClick.AddListener(CheckAnswer);
         returnButton.onClick.AddListener(Return);
         continueButton.onClick.AddListener(Continue);
+    }
+
+    void Update()
+    {
+        if (input.IsActive())
+            input.ActivateInputField();
+        if (input.text != "") // prevent empty input from player, which cause invalid input error
+        {
+            checkAnswer.onClick.RemoveAllListeners();
+            checkAnswer.onClick.AddListener(CheckAnswer);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("enter"))
+        {
+            if (correctAnswerPanel.activeInHierarchy)
+            {
+                Continue();
+            }
+            else if (incorrectAnswerPanel.activeInHierarchy)
+                Return();
+            else if (input.text != "")
+                CheckAnswer();
+        }
     }
 
     //Used for last question, However when isText = true realAnswer continuosly changes
