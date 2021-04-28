@@ -16,18 +16,19 @@ public class MiniGame : MonoBehaviour
     public Vector2 startPos;
     public Vector2 endPos;
 
-    [SerializeField] Animator boxAnimator;
     bool isOpen = false;
     void Awake()
     {
         instance = this;
-        GameObject canvas = GameObject.Find("ShapeCanvas");
+        //GameObject canvas = GameObject.Find("ShapeCanvas");
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Animator boxAnimator = GameObject.Find("ShapeAnimator").GetComponent<Animator>();
+            GameObject canvas = GameObject.Find("ShapeCanvas");
             canvas.SetActive(true);
             Player.instance.FreezePlayer();
             ShapeScript geoScript = FindObjectOfType<ShapeScript>();
