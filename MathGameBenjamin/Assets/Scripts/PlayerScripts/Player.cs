@@ -235,6 +235,7 @@ public class Player : MonoBehaviour
 
     void CanRun()
     {
+        myAnimator.SetBool("Swimming", false);
         float left_right_movement = CrossPlatformInputManager.GetAxis("Horizontal"); //between -1 and 1, this by default gets player's "a" and "d" or left/right arrow keystrokes.
         Vector2 playerVelocity = new Vector2(left_right_movement * runSpeed, myRigidBody.velocity.y); //creates a new x vector coordinate equal to player input times the runspeed variable
         myRigidBody.velocity = playerVelocity; //sets the player velocity equal to the new vector.
@@ -251,6 +252,7 @@ public class Player : MonoBehaviour
             return;
         }
 
+        myAnimator.SetBool("Swimming", false);
         float controlFlow = CrossPlatformInputManager.GetAxis("Vertical"); //by default gets player's "w" and "s" or up/down arrow keystrokes.
         Vector2 climbVelocity = new Vector2(myRigidBody.velocity.x, controlFlow * climbSpeed); //creates a new y vector coordinate equal to player input times the climbspeed variable.
         myRigidBody.velocity = climbVelocity; //sets the player velocity equal to the new vector.
@@ -270,13 +272,17 @@ public class Player : MonoBehaviour
     {
         if (!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Water"))) //tests to see if player character's feet are NOT touching a ladder 
         {
+            myAnimator.SetBool("Swimming", false);
             inWater = false;
             //myAnimator.SetBool("Running", false); //sets climbing to false
             myRigidBody.gravityScale = gravityScaleAtStart; //sets normal gravity.
             return;
         }
 
+        myAnimator.SetBool("Running", false);
+        bool hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
         inWater = true;
+        myAnimator.SetBool("Swimming", hSpeed);
         myRigidBody.gravityScale = underWaterGrav;
 
         if (myRigidBody.velocity.y < sinkSpeed)
@@ -296,8 +302,8 @@ public class Player : MonoBehaviour
         Vector2 playerVelocity = new Vector2((left_right_movement * runSpeed) / 2, myRigidBody.velocity.y); //creates a new x vector coordinate equal to player input times the runspeed variable
         myRigidBody.velocity = playerVelocity; //sets the player velocity equal to the new vector.
 
-        bool hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon; //tests to see if player character x velicity is appreciably greater than zero.
-        myAnimator.SetBool("Running", hSpeed);
+        //bool hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon; //tests to see if player character x velicity is appreciably greater than zero.
+        //myAnimator.SetBool("Running", hSpeed);
     }
 
     private void Jump()

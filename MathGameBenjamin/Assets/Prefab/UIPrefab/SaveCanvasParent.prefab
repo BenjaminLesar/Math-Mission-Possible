@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 943375968}
   - component: {fileID: 943375967}
   - component: {fileID: 943375966}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +785,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &7378932747040276852
 MonoBehaviour:
@@ -876,12 +876,12 @@ PrefabInstance:
     - target: {fileID: 624431693074018095, guid: cf9ca45e2e205d94a9c7fa304f947bce,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -1228.6764
+      value: -1296.1772
       objectReference: {fileID: 0}
     - target: {fileID: 624431693074018095, guid: cf9ca45e2e205d94a9c7fa304f947bce,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -586.8987
+      value: -543.6289
       objectReference: {fileID: 0}
     - target: {fileID: 624431693074018095, guid: cf9ca45e2e205d94a9c7fa304f947bce,
         type: 3}
@@ -921,12 +921,12 @@ PrefabInstance:
     - target: {fileID: 624431693074018095, guid: cf9ca45e2e205d94a9c7fa304f947bce,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 19.960022
+      value: -13.799988
       objectReference: {fileID: 0}
     - target: {fileID: 624431693074018095, guid: cf9ca45e2e205d94a9c7fa304f947bce,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -9.549988
+      value: -31.200012
       objectReference: {fileID: 0}
     - target: {fileID: 624431693074018095, guid: cf9ca45e2e205d94a9c7fa304f947bce,
         type: 3}
