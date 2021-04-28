@@ -21,7 +21,7 @@ public class MiniGame : MonoBehaviour
     void Awake()
     {
         instance = this;
-        GameObject canvas = GameObject.Find("ShapeCanvas");
+        //GameObject canvas = GameObject.Find("ShapeCanvas");
     }
 
     void OnTriggerEnter2D(Collider2D other)
