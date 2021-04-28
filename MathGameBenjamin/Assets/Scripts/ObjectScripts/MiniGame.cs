@@ -21,13 +21,13 @@ public class MiniGame : MonoBehaviour
     void Awake()
     {
         instance = this;
-        //GameObject canvas = GameObject.Find("ShapeCanvas");
+        GameObject canvas = GameObject.Find("ShapeCanvas");
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
-        {         
+        {
             canvas.SetActive(true);
             Player.instance.FreezePlayer();
             ShapeScript geoScript = FindObjectOfType<ShapeScript>();
@@ -47,6 +47,7 @@ public class MiniGame : MonoBehaviour
     {    
         if(other.gameObject.CompareTag("Player"))
         {
+            player = GameObject.Find("Player");
             player.transform.position = Vector2.MoveTowards(endPos, endPos, moveSpeed * Time.deltaTime);
             pillar.transform.position = Vector2.MoveTowards(endPos, endPos, moveSpeed* Time.deltaTime);
         }
@@ -55,7 +56,7 @@ public class MiniGame : MonoBehaviour
 
    public void RaisePillar()
     {
-        pillarTrigger.SetActive(false);
+        //pillarTrigger.SetActive(false);
         player.transform.position += new Vector3(0, 0.1f); //get the player out of trigger box
     }
 
