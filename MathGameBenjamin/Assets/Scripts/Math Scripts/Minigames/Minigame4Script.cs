@@ -40,10 +40,9 @@ public class Minigame4Script : MonoBehaviour
 
     Text challengeText;
     public GameObject energyPannel;
+
     void Start()
     {
-        txtController = FindObjectOfType<TextController>();
-        challengeText = GameObject.Find("ChallengeText").GetComponent<Text>();
         returnButton.onClick.AddListener(Return);
         continueButton.onClick.AddListener(Continue);
     }
@@ -77,6 +76,9 @@ public class Minigame4Script : MonoBehaviour
     // Question method called
     public void DoMath()
     {
+        txtController = gameObject.transform.GetChild(1).gameObject.GetComponent<TextController>();
+        challengeText = gameObject.transform.GetChild(0).transform.GetChild(6).transform.GetChild(0).GetComponent<Text>();
+        gameObject.SetActive(true);
         mathQuestion = PlayerPrefs.GetString("mathQuestion");
         go = GameObject.Find(mathQuestion);
         correctAnswerPanel.SetActive(false);
@@ -134,6 +136,7 @@ public class Minigame4Script : MonoBehaviour
         Destroy(go);
         input.text = null;
         boxAnimator.SetTrigger("Close");
+        Destroy(gameObject.transform.parent.gameObject);
         Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
     }
@@ -145,7 +148,7 @@ public class Minigame4Script : MonoBehaviour
         if (energyValue > questionNumber-1)
         {
             correctAnswerPanel.SetActive(true);
-            correctText.text = "You passed the chanllenge, congrats!!!";
+            correctText.text = "You passed the challenge, congrats!!!";
             txtController.RunAnimationText(correctText, 2);
         }
         Question();

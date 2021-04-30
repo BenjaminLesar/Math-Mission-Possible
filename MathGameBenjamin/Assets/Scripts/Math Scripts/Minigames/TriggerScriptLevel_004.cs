@@ -17,7 +17,7 @@ public class TriggerScriptLevel_004 : MonoBehaviour
     {
 
         instance = this;
-        multScript = FindObjectOfType<Minigame4Script>();
+        multScript = transform.GetChild(0).gameObject.GetComponent<Minigame4Script>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -30,6 +30,5 @@ public class TriggerScriptLevel_004 : MonoBehaviour
             panel.SetActive(true);
             boxAnimator.SetTrigger("Popup");
         }
-        Destroy(gameObject);
     }
 }
