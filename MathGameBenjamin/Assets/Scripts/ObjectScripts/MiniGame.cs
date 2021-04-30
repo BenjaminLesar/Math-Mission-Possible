@@ -27,8 +27,9 @@ public class MiniGame : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Animator boxAnimator = GameObject.Find("ShapeAnimator").GetComponent<Animator>();
-            GameObject canvas = GameObject.Find("ShapeCanvas");
+            GameObject canvasParent = GameObject.Find("ShapeCanvasParent");
+            GameObject canvas = canvasParent.transform.GetChild(0).gameObject;
+            Animator boxAnimator = canvas.GetComponentInChildren<Animator>();
             canvas.SetActive(true);
             Player.instance.FreezePlayer();
             ShapeScript geoScript = FindObjectOfType<ShapeScript>();

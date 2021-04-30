@@ -46,13 +46,23 @@ PrefabInstance:
     - target: {fileID: 1182401846455195793, guid: fae32d292a0be8143b617f566b9f8eba,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1182401846455195794, guid: fae32d292a0be8143b617f566b9f8eba,
         type: 3}
       propertyPath: boxAnimator
       value: 
       objectReference: {fileID: 2412084145501846846}
+    - target: {fileID: 1182401846455195820, guid: fae32d292a0be8143b617f566b9f8eba,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182401846455195820, guid: fae32d292a0be8143b617f566b9f8eba,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1182401846455195822, guid: fae32d292a0be8143b617f566b9f8eba,
         type: 3}
       propertyPath: m_Pivot.x
