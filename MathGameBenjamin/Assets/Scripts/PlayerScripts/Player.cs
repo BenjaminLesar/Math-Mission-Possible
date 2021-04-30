@@ -310,11 +310,14 @@ public class Player : MonoBehaviour
     {
        
         
+        
         if (myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) && CrossPlatformInputManager.GetButtonDown("Jump") && inWater == false) //by default gets player's "spacebar" input.
         {
             Vector2 jumpVelocity = new Vector2(0f, jumpSpeed); //creates a new y vector coordinate equal to the Jumpspeed variable
             myRigidBody.velocity += jumpVelocity; //sets the player character velocity equal to the new vector.
             myAnimator.SetTrigger("isJumping");
+            FindObjectOfType<AudioController>().Play("Jump");
+           
         }
 
         if (myFeet.IsTouchingLayers(LayerMask.GetMask("Enemy")) && CrossPlatformInputManager.GetButtonDown("Jump") && inWater == false) //by default gets player's "spacebar" input.
