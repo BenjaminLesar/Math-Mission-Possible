@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MiniGame2 : MonoBehaviour
+public class MiniGame : MonoBehaviour
 {
-    public static MiniGame2 instance;
+    public static MiniGame instance;
 
     public GameObject pillar;
     public GameObject pillarTrigger;

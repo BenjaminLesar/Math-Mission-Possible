@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class Minigame4 : MonoBehaviour
+public class Minigame4Script : MonoBehaviour
 {
     // Will need to create UI in project
     // Attach script to created UI (canvas, panels, text, etc.)
