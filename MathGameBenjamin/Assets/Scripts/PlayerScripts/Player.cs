@@ -338,7 +338,7 @@ public class Player : MonoBehaviour
     private void Die()
     {
         //myPause = FindObjectOfType<Pause>();
-
+        
         if (myRigidBody.transform.position.y < deathFall || health <= 0)
         {
             //DontDestroyOnLoad(myPause.PauseMenuCanvas);

@@ -45,7 +45,8 @@ public class ResetMiniGame : MonoBehaviour
 
     void ResetPlayer()
     {
-
+        ShapeScript geoScript = FindObjectOfType<ShapeScript>();
+        geoScript.DoMath();
         player.transform.position = teleportPos;
 
     }

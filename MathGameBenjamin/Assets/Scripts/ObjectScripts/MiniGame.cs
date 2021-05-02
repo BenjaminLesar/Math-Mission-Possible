@@ -16,7 +16,8 @@ public class MiniGame : MonoBehaviour
     public Vector2 startPos;
     public Vector2 endPos;
 
-    bool isOpen = false;
+    GameObject canvasParent;
+    Animator boxAnimator;
     void Awake()
     {
         instance = this;
@@ -27,19 +28,17 @@ public class MiniGame : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            GameObject canvasParent = GameObject.Find("ShapeCanvasParent");
-            GameObject canvas = canvasParent.transform.GetChild(0).gameObject;
-            Animator boxAnimator = canvas.GetComponentInChildren<Animator>();
+            if(!canvasParent)
+            {
+                canvasParent = GameObject.Find("ShapeCanvasParent");
+                canvas = canvasParent.transform.GetChild(0).gameObject;
+                boxAnimator = canvas.GetComponentInChildren<Animator>();
+            }
+
             canvas.SetActive(true);
             Player.instance.FreezePlayer();
             ShapeScript geoScript = FindObjectOfType<ShapeScript>();
-
-            // prevent MathUI open twice since player has two collider boxes
-            if (!isOpen)
-            {
-                isOpen = true;
-                geoScript.DoMath();
-            }
+            geoScript.DoMath();
 
             boxAnimator.SetTrigger("Popup");
         }

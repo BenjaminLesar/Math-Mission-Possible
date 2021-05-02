@@ -25,15 +25,14 @@ public class ShapeScript : MonoBehaviour
 
     private GameObject go;
 
-    public GameObject[] shapes;
+    public Sprite[] shapeSprites;
+    public Image currentShape;
     public InputField input;
 
     [SerializeField] Animator boxAnimator;
 
     private int n;
     private int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    private GameObject selectedShape;
-
     private int realAnswer;
     private int playerAnswer;
     string mathQuestion;
@@ -80,32 +79,29 @@ public class ShapeScript : MonoBehaviour
     void Question()
     {
         n = number[Random.Range(0, number.Length)];
-        selectedShape = shapes[Random.Range(0, shapes.Length)];
+        int shapeIdx = Random.Range(1, shapeSprites.Length);
+        currentShape.sprite = shapeSprites[shapeIdx];
 
-        if (selectedShape == shapes[0])
+        if (shapeIdx == 1)
         {
-            selectedShape.SetActive(true);
             questionText.text = "" + n + "in.";
             realAnswer = 4 * n;
         }
 
-        else if (selectedShape == shapes[1])
+        else if (shapeIdx == 2)
         {
-            selectedShape.SetActive(true);
             questionText.text = "" + n + "in.";
             realAnswer = 5 * n;
         }
 
-        else if (selectedShape == shapes[2])
+        else if (shapeIdx == 3)
         {
-            selectedShape.SetActive(true);
             questionText.text = "" + n + "in.";
             realAnswer = 6 * n;
         }
 
-        else if (selectedShape == shapes[3])
+        else if (shapeIdx == 4)
         {
-            selectedShape.SetActive(true);
             questionText.text = "" + n + "in.";
             realAnswer = 8 * n;
         }
@@ -121,12 +117,6 @@ public class ShapeScript : MonoBehaviour
 
     void Continue()
     {
-        //MiniGame.instance.RaisePillar();
-        //shapeCanvas.SetActive(false);
-        //correctAnswerPanel.SetActive(false);
-        //Player.instance.UnFreezePlayer();
-        //Question();
-
         boxAnimator.SetTrigger("Close");
         Destroy(go);
         input.text = null;
@@ -138,7 +128,6 @@ public class ShapeScript : MonoBehaviour
     void DisableCanvas()
     {
         MiniGame.instance.RaisePillar();
-        //shapeCanvas.SetActive(false);
         correctAnswerPanel.SetActive(false);
         
     }
@@ -146,12 +135,13 @@ public class ShapeScript : MonoBehaviour
 
     void CheckAnswer()
     {
-        selectedShape.SetActive(false);
+        // disable image
+        currentShape.sprite = shapeSprites[0];
+
         playerAnswer = Convert.ToInt32(input.text);
 
         if (playerAnswer == realAnswer)
         {
-
             correctAnswerPanel.SetActive(true);
             correctText.text = "CORRECT! GREAT JOB!";
 
@@ -161,9 +151,7 @@ public class ShapeScript : MonoBehaviour
         {
             incorrectAnswerPanel.SetActive(true);
             incorrectText.text = "Incorrect! Please try again";
-
         }
-
         input.text = "";
     }
 
