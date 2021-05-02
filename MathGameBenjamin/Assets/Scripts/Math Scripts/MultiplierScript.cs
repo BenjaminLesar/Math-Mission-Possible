@@ -104,9 +104,17 @@ public class MultiplierScript : MonoBehaviour
     // Calls Player script
     void Continue()
     {
+        boxAnimator.SetTrigger("Close");
+
+        if (go.tag == "Treasure")
+        {
+            GameObject openChest = Instantiate(go) as GameObject;
+            openChest.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("AnimImages/TreasureChest/LargerSize/Open");
+            FindObjectOfType<GameSession>().AddToScore(20);
+        }
         Destroy(go);
         input.text = null;
-        multiplierCanvas.SetActive(false);
+        //multiplierCanvas.SetActive(false);
         Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
     }

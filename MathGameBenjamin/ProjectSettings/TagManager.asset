@@ -18,6 +18,7 @@ TagManager:
   - SaveMenuCanvas
   - LoadMenuCanvas
   - PauseMenuCanvas
+  - Treasure
   layers:
   - Default
   - TransparentFX

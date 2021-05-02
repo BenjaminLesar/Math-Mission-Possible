@@ -118,7 +118,14 @@ public class ShapeScript : MonoBehaviour
     void Continue()
     {
         boxAnimator.SetTrigger("Close");
+        if (go.tag == "Treasure")
+        {
+            GameObject openChest = Instantiate(go) as GameObject;
+            openChest.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("AnimImages/TreasureChest/LargerSize/Open");
+            FindObjectOfType<GameSession>().AddToScore(20);
+        }
         Destroy(go);
+
         input.text = null;
         Time.timeScale = 1;
         Player.instance.UnFreezePlayer();

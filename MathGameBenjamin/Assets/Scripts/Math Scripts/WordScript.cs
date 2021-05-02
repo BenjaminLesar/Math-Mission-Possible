@@ -304,14 +304,26 @@ public class WordScript : MonoBehaviour
 
     void Continue()
     {
-        go.SetActive(false);
-        wordCanvas.SetActive(false);
+        boxAnimator.SetTrigger("Close");
+
+        if (go.tag == "Treasure")
+        {
+            GameObject openChest = Instantiate(go) as GameObject;
+            openChest.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("AnimImages/TreasureChest/LargerSize/Open");
+            FindObjectOfType<GameSession>().AddToScore(20);
+        }
+
         Destroy(go);
         input.text = null;
         Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
+        Invoke("DisableCanvas", 0.25f); // wait .25s for box animator finishes closing
     }
 
+    void DisableCanvas()
+    {
+        wordCanvas.SetActive(false);
+    }
 
     void CheckAnswer()
     {

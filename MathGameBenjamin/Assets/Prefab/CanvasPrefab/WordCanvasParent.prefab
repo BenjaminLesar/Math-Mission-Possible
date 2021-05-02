@@ -506,6 +506,21 @@ PrefabInstance:
       propertyPath: m_MatchWidthOrHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8026301592135759678, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_ContentType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8026301592135759678, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_KeyboardType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8026301592135759678, guid: 8b00176b534c4e049ba4c4fce44818d0,
+        type: 3}
+      propertyPath: m_CharacterValidation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8031919294521013242, guid: 8b00176b534c4e049ba4c4fce44818d0,
         type: 3}
       propertyPath: m_AnchoredPosition.y
