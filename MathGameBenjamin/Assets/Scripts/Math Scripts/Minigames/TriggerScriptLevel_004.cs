@@ -11,13 +11,13 @@ public class TriggerScriptLevel_004 : MonoBehaviour
     public GameObject panel;
 
     [SerializeField] Animator boxAnimator;
-    Minigame4Script multScript;
+    Minigame4 multScript;
 
     void Awake()
     {
 
         instance = this;
-        multScript = transform.GetChild(0).gameObject.GetComponent<Minigame4Script>();
+        multScript = transform.GetChild(0).gameObject.GetComponent<Minigame4>();
     }
 
     void OnTriggerEnter2D(Collider2D other)

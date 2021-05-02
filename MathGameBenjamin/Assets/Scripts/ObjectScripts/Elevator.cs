@@ -24,17 +24,14 @@ public class Elevator : MonoBehaviour
 
     private IEnumerator MoveDown()
     {
-        int speed = 6;
-        float lerpTime = 10000f;
-        lerpTime = lerpTime / speed; //if speed = 1, it takes 5s to finsih the animation
-        float currentTime = 0;
+        int timeToReachTarget = 7;
         float t = 0;
+        var currentPos = transform.position;
 
         while (t < 1)
         {
-            currentTime += Time.deltaTime;
-            t = currentTime / lerpTime;
-            this.transform.position = Vector3.Lerp(this.transform.position, endPoint.position, t);
+            t += Time.deltaTime / timeToReachTarget;
+            this.transform.position = Vector3.Lerp(currentPos, endPoint.position, t);
             yield return null;
         }
     }
