@@ -127,7 +127,7 @@ public class ShapeScript : MonoBehaviour
 
     void DisableCanvas()
     {
-        MiniGame.instance.RaisePillar();
+        MiniGame2.instance.RaisePillar();
         correctAnswerPanel.SetActive(false);
         
     }
