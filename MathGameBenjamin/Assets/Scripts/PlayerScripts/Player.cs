@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -332,6 +332,7 @@ public class Player : MonoBehaviour
             Vector2 jumpVelocity = new Vector2(0f, (jumpSpeed * 1.5f)); //creates a new y vector coordinate equal to the Jumpspeed variable
             myRigidBody.velocity += jumpVelocity; //sets the player character velocity equal to the new vector.
             myAnimator.SetTrigger("isJumping");
+            FindObjectOfType<AudioController>().Play("Boing");
         }
     }
 
@@ -364,6 +365,12 @@ public class Player : MonoBehaviour
     IEnumerator TakeDamage()
     {
         isTakingDM = true;
+
+        if (isTakingDM == true){
+
+            FindObjectOfType<AudioController>().Play("Hit");
+            
+        }
         health -= 1;
         healthBar.value = health;      // update health bar UI
         // Flashing 5 times
@@ -371,9 +378,12 @@ public class Player : MonoBehaviour
         {
             sr.material = matWhite;
             yield return new WaitForSeconds(.1f);
+            
+            
             ResetMaterial();
             yield return new WaitForSeconds(.1f);
         }
+        
         isTakingDM = false;
         yield return new WaitForSeconds(0.5f);
     }

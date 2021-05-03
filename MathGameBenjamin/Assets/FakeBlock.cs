@@ -49,7 +49,7 @@ public class FakeBlock : MonoBehaviour
         
         if (playerFeet.IsTouching(damageCollider))
         {
-        
+            FindObjectOfType<AudioController>().Play("Wrong");
             Destroy(gameObject);
             
         }

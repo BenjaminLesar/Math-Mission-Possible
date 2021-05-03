@@ -51018,12 +51018,12 @@ PrefabInstance:
     - target: {fileID: 708830938083316376, guid: d2b82d19013a1a24e9d870da3b560053,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.43
+      value: 152.47
       objectReference: {fileID: 0}
     - target: {fileID: 708830938083316376, guid: d2b82d19013a1a24e9d870da3b560053,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -3.24
       objectReference: {fileID: 0}
     - target: {fileID: 708830938083316376, guid: d2b82d19013a1a24e9d870da3b560053,
         type: 3}
@@ -65052,7 +65052,7 @@ GameObject:
   m_Layer: 0
   m_Name: AudioController
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -65072,7 +65072,27 @@ MonoBehaviour:
   - name: Jump
     clip: {fileID: 8300000, guid: 4505bf4723db4ff4c96682f4d8029634, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 0.83
+    source: {fileID: 0}
+  - name: Explosion
+    clip: {fileID: 8300000, guid: 89cd03cf1807a3546a1a46a42046cf56, type: 3}
+    volume: 1
+    pitch: 1.07
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 3fa9901bd58ca96499817911f338b573, type: 3}
+    volume: 1
+    pitch: 1.07
+    source: {fileID: 0}
+  - name: Wrong
+    clip: {fileID: 8300000, guid: af574cf0662eae944865019f347aff2e, type: 3}
+    volume: 1
+    pitch: 1.07
+    source: {fileID: 0}
+  - name: Boing
+    clip: {fileID: 8300000, guid: 942227de53a916441a83811ae297e663, type: 3}
+    volume: 1
+    pitch: 1.07
     source: {fileID: 0}
 --- !u!4 &1520131989
 Transform:
@@ -86749,12 +86769,12 @@ PrefabInstance:
     - target: {fileID: 5023498938931557479, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.653522
+      value: 150.24648
       objectReference: {fileID: 0}
     - target: {fileID: 5023498938931557479, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.692348
+      value: -0.8323481
       objectReference: {fileID: 0}
     - target: {fileID: 5023498938931557479, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
@@ -86764,12 +86784,12 @@ PrefabInstance:
     - target: {fileID: 5023498939275455469, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.653522
+      value: 150.24648
       objectReference: {fileID: 0}
     - target: {fileID: 5023498939275455469, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.692348
+      value: -0.8323481
       objectReference: {fileID: 0}
     - target: {fileID: 5023498939275455469, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
@@ -86894,12 +86914,12 @@ PrefabInstance:
     - target: {fileID: 6399635702658221689, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.63913
+      value: 150.26086
       objectReference: {fileID: 0}
     - target: {fileID: 6399635702658221689, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.014381409
+      value: 0.8743813
       objectReference: {fileID: 0}
     - target: {fileID: 6399635702658221689, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
@@ -86914,12 +86934,12 @@ PrefabInstance:
     - target: {fileID: 6399635703388321176, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.653522
+      value: 150.24648
       objectReference: {fileID: 0}
     - target: {fileID: 6399635703388321176, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.692348
+      value: -0.8323481
       objectReference: {fileID: 0}
     - target: {fileID: 6399635703388321176, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}

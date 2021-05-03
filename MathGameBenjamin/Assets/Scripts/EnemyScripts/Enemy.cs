@@ -59,6 +59,7 @@ public class Enemy : MonoBehaviour
         BoxCollider2D playerFeet = GameObject.Find("Player").GetComponent<BoxCollider2D>();
         if (playerFeet.IsTouching(damageCollider))
         {
+            FindObjectOfType<AudioController>().Play("Explosion");
             isAlive = false;
             Destroy(gameObject);
         }
