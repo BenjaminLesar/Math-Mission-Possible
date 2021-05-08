@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SeeCredits : MonoBehaviour
+public class ReturnToMain : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void GoToCredits()
+    public void GoBack()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(0);
     }
 }

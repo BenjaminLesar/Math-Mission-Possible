@@ -16,11 +16,14 @@ EditorBuildSettings:
     guid: 65f6870717572724ca8dec7b4a054512
   - enabled: 1
     path: Assets/Levels/Level3.unity
-    guid: 9a4dc8431cb0f7e4589fd631f288fc45
+    guid: 23652b43c88d35f408761162fbaa113e
   - enabled: 1
     path: Assets/Levels/Level4(Real) 1.unity
     guid: 94ac6fe1b69a6644e8c14235fb067b15
   - enabled: 1
     path: Assets/Levels/Win!.unity
     guid: 97ae17829dfd39241ade960b5f1ec75a
+  - enabled: 1
+    path: Assets/Levels/Credits.unity
+    guid: 643a2c46edde0234ba69298884d106a3
   m_configObjects: {}
