@@ -54,7 +54,7 @@ public class RepAddScript : MonoBehaviour
         nRange = numberRange[Random.Range(0, numberRange.Length)];
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
-        Question();
+        realAnswer = Question(questionText);
     }
     private void Start()
     {
@@ -85,34 +85,7 @@ public class RepAddScript : MonoBehaviour
         }
     }
 
-    void Question1()
-    {
-        if(nRange == numberRange[0])
-        {
-            questionText.text = "" + n + " + " + n + " + " + n + " = ";
-            realAnswer = n*3;
-        }
-
-        else if (nRange == numberRange[1])
-        {
-            questionText.text = "" + n + " + " + n + " + " + n + " + " + n + " = ";
-            realAnswer = n*4;
-        }
-
-        else if (nRange == numberRange[2])
-        {
-            questionText.text = "" + n + " + " + n + " + " + n + " + " + n + " + " + n + " = ";
-            realAnswer = n*5;
-        }
-
-        else if (nRange == numberRange[3])
-        {
-            questionText.text = "" + n + " + " + n + " + " + n + " + " + n + " + " + n + " + " + n + " = ";
-            realAnswer = n*6;
-        }
-    }
-
-    void Question()
+    public int Question(Text questionText)
     {
         n = number[Random.Range(0, number.Length)];
         nRange = numberRange[Random.Range(0, numberRange.Length)];
@@ -126,14 +99,12 @@ public class RepAddScript : MonoBehaviour
         tempText += n + " = ";
 
         questionText.text = tempText;
-        realAnswer = n * nRange;
+        return  n * nRange;
     }
 
     void Return()
     {
-        //n = number[Random.Range(0, number.Length)];
-        //nRange = numberRange[Random.Range(0, numberRange.Length)];
-        Question();
+        realAnswer=Question(questionText);
         incorrectAnswerPanel.SetActive(false);
     }
 

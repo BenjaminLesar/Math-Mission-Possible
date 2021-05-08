@@ -47,7 +47,7 @@ public class MultiplierScript : MonoBehaviour
         go = GameObject.Find(mathQuestion);
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
-        Question();
+        realAnswer = Question(questionText);
     }
 
     private void Start()
@@ -81,12 +81,12 @@ public class MultiplierScript : MonoBehaviour
 
     // Displays variables gathered within the question text
     // Multiplies variables and assigns this number as the correct answer
-    void Question()
+    public int Question(Text questionText)
     {
         f = firstNumber[Random.Range(0, firstNumber.Length)];
         s = secondNumber[Random.Range(0, secondNumber.Length)];
         questionText.text = "" + f + " X " + s + " = ";
-        realAnswer = f * s;
+        return  f * s;
     }
 
 
@@ -96,7 +96,7 @@ public class MultiplierScript : MonoBehaviour
     void Return()
     {
         //Debug.Log("return");
-        Question();
+        realAnswer = Question(questionText);
         incorrectAnswerPanel.SetActive(false);
     }
 
@@ -127,6 +127,7 @@ public class MultiplierScript : MonoBehaviour
         //Debug.Log("checkanswer");
         // Takes the players answer and converts it to an int
         playerAnswer = Convert.ToInt32(input.text);
+        print("real realAnswer   " + realAnswer);
 
         // If the player's answer and the correct answer match
         // Correct panel is enabled

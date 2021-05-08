@@ -43,7 +43,7 @@ public class ShapeScript : MonoBehaviour
         go = GameObject.Find(mathQuestion);
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
-        Question();
+        realAnswer=Question(questionText, currentShape);
     }
 
     private void Start()
@@ -76,7 +76,7 @@ public class ShapeScript : MonoBehaviour
 
     }
 
-    void Question()
+    public int Question(Text questionText, Image currentShape)
     {
         n = number[Random.Range(0, number.Length)];
         int shapeIdx = Random.Range(1, shapeSprites.Length);
@@ -105,13 +105,13 @@ public class ShapeScript : MonoBehaviour
             questionText.text = "" + n + "in.";
             realAnswer = 8 * n;
         }
-
+        return realAnswer;
 
     }
 
     void Return()
     {
-        Question();
+        realAnswer=Question(questionText, currentShape);
         incorrectAnswerPanel.SetActive(false);
     }
 

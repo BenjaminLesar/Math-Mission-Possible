@@ -52,15 +52,10 @@ public class WordScript : MonoBehaviour
         mathQuestion = PlayerPrefs.GetString("mathQuestion");
         go = GameObject.Find(mathQuestion);
         isText = true;
-        n1 = numberOne[Random.Range(0, numberOne.Length)];
-        n2 = numberTwo[Random.Range(0, numberTwo.Length)];
 
-        //Change [Random.Range(0, question.Length)] to 0-4 for testing specific questions
-        //Eg. [Random.Range(4,4)], only question 5 will show
-        q = question[Random.Range(2, 2)];
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
-        Question();
+        realAnswer = Question(questionText);
     }
 
     private void Start()
@@ -228,8 +223,16 @@ public class WordScript : MonoBehaviour
         }
     }
 
-    void Question()
+    public int Question(Text questionText)
     {
+        input.text = null;
+        n1 = numberOne[Random.Range(0, numberOne.Length)];
+        n2 = numberTwo[Random.Range(0, numberTwo.Length)];
+
+        //Change [Random.Range(0, question.Length)] to 0-4 for testing specific questions
+        //Eg. [Random.Range(4,4)], only question 5 will show
+        q = question[Random.Range(2, 2)];
+
         if (q == question[0])
         {
             //isText should be true
@@ -282,7 +285,7 @@ public class WordScript : MonoBehaviour
                 "how many total slices do the players have?";
             realAnswer = n1 * n2;
         }
-
+        return realAnswer;
 
     }
 
@@ -290,14 +293,7 @@ public class WordScript : MonoBehaviour
 
     void Return()
     {
-        n1 = numberOne[Random.Range(0, numberOne.Length)];
-        n2 = numberTwo[Random.Range(0, numberTwo.Length)];
-        //Change [Random.Range(0, question.Length)] to 0-4 for testing specific questions
-        //Eg. [Random.Range(4,4)], only question 5 will show
-        q = question[Random.Range(2, 2)];
-
-        Debug.Log(realAnswer);
-        Question();
+        realAnswer = Question(questionText);
         incorrectAnswerPanel.SetActive(false);
     }
 
@@ -314,7 +310,6 @@ public class WordScript : MonoBehaviour
         }
 
         Destroy(go);
-        input.text = null;
         Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
         Invoke("DisableCanvas", 0.25f); // wait .25s for box animator finishes closing
