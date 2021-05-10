@@ -23,6 +23,7 @@ public class RepAddScript : MonoBehaviour
     public GameObject incorrectAnswerPanel;
     public GameObject repAddCanvas;
 
+    public static RepAddScript instance;
     private GameObject go;
 
     private int[] number = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -30,90 +31,133 @@ public class RepAddScript : MonoBehaviour
     
     public InputField input;
 
+    [SerializeField] Animator boxAnimator;
+
     private int n;
     private int nRange;
     
 
     private int realAnswer;
     private int playerAnswer;
+    string mathQuestion;
+    void Awake()
+    {
+        instance = this;
+    }
 
-
-
-    void Start()
+    public void DoMath()
     {
 
-        go = GameObject.FindWithTag("QuestionTrigger1");
+        mathQuestion = PlayerPrefs.GetString("mathQuestion");
+        go = GameObject.Find(mathQuestion);
         n = number[Random.Range(0, number.Length)];
         nRange = numberRange[Random.Range(0, numberRange.Length)];
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
         Question();
     }
-
-    void Update()
+    private void Start()
     {
-        // Check answer by enter key
-        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKey("enter"))
-        {
-            CheckAnswer();
-        }
-        checkAnswer.onClick.AddListener(CheckAnswer);
         returnButton.onClick.AddListener(Return);
         continueButton.onClick.AddListener(Continue);
     }
 
-    void Question()
+    void Update()
+    {
+        if (input.IsActive())
+            input.ActivateInputField();
+        if (input.text != "") // prevent empty input from player, which cause invalid input error
+        {
+            checkAnswer.onClick.RemoveAllListeners();
+            checkAnswer.onClick.AddListener(CheckAnswer);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("enter"))
+        {
+            if (correctAnswerPanel.activeInHierarchy)
+            {
+                Continue();
+            }
+            else if (incorrectAnswerPanel.activeInHierarchy)
+                Return();
+            else if (input.text != "")
+                CheckAnswer();
+        }
+    }
+
+    void Question1()
     {
         if(nRange == numberRange[0])
         {
             questionText.text = "" + n + " + " + n + " + " + n + " = ";
-            realAnswer = n + n + n;
+            realAnswer = n*3;
         }
 
         else if (nRange == numberRange[1])
         {
             questionText.text = "" + n + " + " + n + " + " + n + " + " + n + " = ";
-            realAnswer = n + n + n + n;
+            realAnswer = n*4;
         }
 
         else if (nRange == numberRange[2])
         {
             questionText.text = "" + n + " + " + n + " + " + n + " + " + n + " + " + n + " = ";
-            realAnswer = n + n + n + n + n;
+            realAnswer = n*5;
         }
 
         else if (nRange == numberRange[3])
         {
             questionText.text = "" + n + " + " + n + " + " + n + " + " + n + " + " + n + " + " + n + " = ";
-            realAnswer = n + n + n + n + n;
+            realAnswer = n*6;
         }
-        
-
     }
 
-
-
-    void Return()
+    void Question()
     {
         n = number[Random.Range(0, number.Length)];
         nRange = numberRange[Random.Range(0, numberRange.Length)];
+        String tempText = "";
+
+
+        for (int i = 0; i < nRange - 1; i++)
+        {
+            tempText += n + " + ";
+        }
+        tempText += n + " = ";
+
+        questionText.text = tempText;
+        realAnswer = n * nRange;
+    }
+
+    void Return()
+    {
+        //n = number[Random.Range(0, number.Length)];
+        //nRange = numberRange[Random.Range(0, numberRange.Length)];
         Question();
         incorrectAnswerPanel.SetActive(false);
     }
 
 
+
     void Continue()
     {
-        go.SetActive(false);
-        repAddCanvas.SetActive(false);
+        boxAnimator.SetTrigger("Close");
+        Destroy(go);
+        input.text = null;
+        correctAnswerPanel.SetActive(false);
+        Time.timeScale = 1;
+        Invoke("DisableCanvas", 0.25f);
+
+    }
+
+    void DisableCanvas()
+    {       
         Player.instance.UnFreezePlayer();
     }
 
 
     void CheckAnswer()
     {
-
-
         playerAnswer = Convert.ToInt32(input.text);
 
         if (playerAnswer == realAnswer)

@@ -28,6 +28,7 @@ public class MultiplierScript : MonoBehaviour
     private int[] firstNumber = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     private int[] secondNumber = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
     public InputField input;
+    [SerializeField] Animator boxAnimator;
 
     private int f;
     private int s;
@@ -35,43 +36,57 @@ public class MultiplierScript : MonoBehaviour
     private int realAnswer;
     private int playerAnswer;
 
-   
+
+    string mathQuestion;
     // Calls random int from array and assigns to f & s
     // Panels for correct/incorrect panels disabled
     // Question method called
-    void Start()
+    public void DoMath()
     {
-
-        go = GameObject.FindWithTag("QuestionTrigger2");
-        f = firstNumber[Random.Range(0, firstNumber.Length)];
-        s = secondNumber[Random.Range(0, secondNumber.Length)];
+        mathQuestion = PlayerPrefs.GetString("mathQuestion");
+        go = GameObject.Find(mathQuestion);
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
         Question();
     }
 
+    private void Start()
+    {
+        returnButton.onClick.AddListener(Return);
+        continueButton.onClick.AddListener(Continue);
+    }
     // Waits for user interaction with each button
     void Update()
     {
-        // Check answer by enter key
-        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKey("enter"))
+        if (input.IsActive())
+            input.ActivateInputField();
+        if (input.text != "") // prevent empty input from player, which cause invalid input error
         {
-            CheckAnswer();
+            checkAnswer.onClick.RemoveAllListeners();
+            checkAnswer.onClick.AddListener(CheckAnswer);
         }
-        checkAnswer.onClick.AddListener(CheckAnswer);
-        returnButton.onClick.AddListener(Return);
-        continueButton.onClick.AddListener(Continue);
+
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("enter"))
+        {
+            if (correctAnswerPanel.activeInHierarchy)
+            {
+                Continue();
+            }
+            else if (incorrectAnswerPanel.activeInHierarchy)
+                Return();
+            else if (input.text != "")
+                CheckAnswer();
+        }
     }
 
     // Displays variables gathered within the question text
     // Multiplies variables and assigns this number as the correct answer
     void Question()
     {
-
+        f = firstNumber[Random.Range(0, firstNumber.Length)];
+        s = secondNumber[Random.Range(0, secondNumber.Length)];
         questionText.text = "" + f + " X " + s + " = ";
         realAnswer = f * s;
-
-
     }
 
 
@@ -80,8 +95,7 @@ public class MultiplierScript : MonoBehaviour
     // Incorrect panel is disabled
     void Return()
     {
-        f = firstNumber[Random.Range(0, firstNumber.Length)];
-        s = secondNumber[Random.Range(0, secondNumber.Length)];
+        //Debug.Log("return");
         Question();
         incorrectAnswerPanel.SetActive(false);
     }
@@ -90,8 +104,18 @@ public class MultiplierScript : MonoBehaviour
     // Calls Player script
     void Continue()
     {
-        go.SetActive(false);
-        multiplierCanvas.SetActive(false);
+        boxAnimator.SetTrigger("Close");
+
+        if (go.tag == "Treasure")
+        {
+            GameObject openChest = Instantiate(go) as GameObject;
+            openChest.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("AnimImages/TreasureChest/LargerSize/Open");
+            FindObjectOfType<GameSession>().AddToScore(20);
+        }
+        Destroy(go);
+        input.text = null;
+        //multiplierCanvas.SetActive(false);
+        Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
     }
 
@@ -100,6 +124,7 @@ public class MultiplierScript : MonoBehaviour
     // Need to implement method so player cannot input letters
     void CheckAnswer()
     {
+        //Debug.Log("checkanswer");
         // Takes the players answer and converts it to an int
         playerAnswer = Convert.ToInt32(input.text);
 

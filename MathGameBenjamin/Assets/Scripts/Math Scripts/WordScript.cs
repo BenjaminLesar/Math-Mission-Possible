@@ -31,6 +31,7 @@ public class WordScript : MonoBehaviour
     private int[] numberTwo = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 
     public InputField input;
+    [SerializeField] Animator boxAnimator;
 
     private bool isText;
     private String q;
@@ -44,11 +45,12 @@ public class WordScript : MonoBehaviour
     private int realAnswer;
     private int playerAnswer;
 
+    string mathQuestion;
 
-
-    void Start()
+    public void DoMath()
     {
-        go = GameObject.FindWithTag("QuestionTrigger4");
+        mathQuestion = PlayerPrefs.GetString("mathQuestion");
+        go = GameObject.Find(mathQuestion);
         isText = true;
         n1 = numberOne[Random.Range(0, numberOne.Length)];
         n2 = numberTwo[Random.Range(0, numberTwo.Length)];
@@ -61,11 +63,33 @@ public class WordScript : MonoBehaviour
         Question();
     }
 
-    void Update()
+    private void Start()
     {
-        checkAnswer.onClick.AddListener(CheckAnswer);
         returnButton.onClick.AddListener(Return);
         continueButton.onClick.AddListener(Continue);
+    }
+
+    void Update()
+    {
+        if (input.IsActive())
+            input.ActivateInputField();
+        if (input.text != "") // prevent empty input from player, which cause invalid input error
+        {
+            checkAnswer.onClick.RemoveAllListeners();
+            checkAnswer.onClick.AddListener(CheckAnswer);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("enter"))
+        {
+            if (correctAnswerPanel.activeInHierarchy)
+            {
+                Continue();
+            }
+            else if (incorrectAnswerPanel.activeInHierarchy)
+                Return();
+            else if (input.text != "")
+                CheckAnswer();
+        }
     }
 
     //Used for last question, However when isText = true realAnswer continuosly changes
@@ -280,11 +304,26 @@ public class WordScript : MonoBehaviour
 
     void Continue()
     {
-        go.SetActive(false);
-        wordCanvas.SetActive(false);
+        boxAnimator.SetTrigger("Close");
+
+        if (go.tag == "Treasure")
+        {
+            GameObject openChest = Instantiate(go) as GameObject;
+            openChest.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("AnimImages/TreasureChest/LargerSize/Open");
+            FindObjectOfType<GameSession>().AddToScore(20);
+        }
+
+        Destroy(go);
+        input.text = null;
+        Time.timeScale = 1;
         Player.instance.UnFreezePlayer();
+        Invoke("DisableCanvas", 0.25f); // wait .25s for box animator finishes closing
     }
 
+    void DisableCanvas()
+    {
+        wordCanvas.SetActive(false);
+    }
 
     void CheckAnswer()
     {
@@ -312,3 +351,4 @@ public class WordScript : MonoBehaviour
 
 
 }
+
