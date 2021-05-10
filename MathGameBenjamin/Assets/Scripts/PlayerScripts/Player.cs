@@ -70,6 +70,8 @@ public class Player : MonoBehaviour
     public GameObject mathPrefab;
     public GameObject checkPointPrefab;
 
+    public Sprite Marcus;
+
     void Awake()
     {  
         instance = this;
@@ -77,8 +79,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        
-
+        sr = gameObject.GetComponent<SpriteRenderer>();
         //Debug.Log(health);
 
         //setting variables equal to their actual in-game components.
@@ -89,12 +90,18 @@ public class Player : MonoBehaviour
         gravityScaleAtStart = myRigidBody.gravityScale;
         healthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
 
-        sr = GetComponent<SpriteRenderer>();
+        
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = sr.material;
         string myCheck;
 
         myCheck = PlayerPrefs.GetString("IsNotFirst");
+
+        if (PlayerPrefs.GetString("Character") == "Marcus")
+        {
+            sr.sprite = Marcus;
+            myAnimator.runtimeAnimatorController = Instantiate(Resources.Load("BBoy") as RuntimeAnimatorController);
+        }
 
         if (myCheck.Length != 0)
         {
@@ -190,7 +197,6 @@ public class Player : MonoBehaviour
         climbLadder();
         Swim();
         Die();
-
     }
 
     // When player touches coin, coin is disabled and the coin count is increased by 1.
