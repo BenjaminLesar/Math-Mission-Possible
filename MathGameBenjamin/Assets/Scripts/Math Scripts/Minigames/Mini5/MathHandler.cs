@@ -5,48 +5,45 @@ using Random = UnityEngine.Random;
 
 public class MathHandler : MonoBehaviour
 {
+    public GameObject[] currentCanvas;
     public GameObject[] mathCanvas;
-    public GameObject multCanvas;
-    public GameObject addCanvas;
-    public GameObject wordCanvas;
-    public GameObject shapeCanvas;
 
-    MultiplierScript multScript;
-    RepAddScript addScript;
-    WordScript wordScript;
-    ShapeScript shapeScript;  
+    MathParent[] mathScript;
 
-    public MultiplierScript MultScript { get=> multScript; set=> multScript=value; }
-    public RepAddScript AddScript { get => addScript; set => addScript = value; }
-    public WordScript WordScript { get => wordScript; set => wordScript = value; }
-    public ShapeScript ShapeScript { get => shapeScript; set => shapeScript = value; }
-
+    public MathParent[] MathScript { get => mathScript; set => mathScript = value; }
 
     void Awake()
     {
-        multScript = multCanvas.GetComponent<MultiplierScript>();
-        addScript = addCanvas.GetComponent<RepAddScript>();
-        wordScript = wordCanvas.GetComponent<WordScript>();
-        shapeScript = shapeCanvas.GetComponent<ShapeScript>();
+        int mathSize = mathCanvas.Length;
+        mathScript = new MathParent[mathSize];
+
+        for (int i = 0; i < mathSize; i++)
+        {
+            mathScript[i] = mathCanvas[i].GetComponent<MathParent>();
+        }
+
         RandomQuestion();
     }
 
+    /// <summary>
+    /// 1. Disable all math canvas
+    /// 2. activate a random math canvas
+    /// 3. call the relative question
+    /// </summary>
     public void RandomQuestion()
     {
         DisableCanvas();
-        int Idx = Random.Range(0, mathCanvas.Length);
-        mathCanvas[Idx].SetActive(true);
-        var mathScript = mathCanvas[Idx].GetComponent<MathScript>();
+        int Idx = Random.Range(0, currentCanvas.Length);
+        currentCanvas[Idx].SetActive(true);
+        var mathScript = currentCanvas[Idx].GetComponent<MathScript>();
 
         mathScript.OpenMath();
         mathScript.Question(Idx);
-        
-        //return Idx;
     }
 
     public void DisableCanvas()
     {
-        foreach (GameObject canv in mathCanvas)
+        foreach (GameObject canv in currentCanvas)
         {
             canv.SetActive(false);
         }

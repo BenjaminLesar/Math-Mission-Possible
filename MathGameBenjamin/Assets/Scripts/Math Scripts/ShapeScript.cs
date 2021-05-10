@@ -5,81 +5,17 @@ using UnityEngine.UI;
 using System;
 using Random = UnityEngine.Random;
 
-public class ShapeScript : MonoBehaviour
+public class ShapeScript : MathParent
 {
-    // Will need to create UI in project
-    // Attach script to created UI (canvas, panels, text, etc.)
-    // Script is called within PlayerScript (reference PlayerScript for more details)
-    // View MultiplierScript for a more detailed explanation on methods
-    public Text questionText;
-    public Text correctText;
-    public Text incorrectText;
-    
-    public Button checkAnswer;
-    public Button returnButton;
-    public Button continueButton;
-
-    public GameObject correctAnswerPanel;
-    public GameObject incorrectAnswerPanel;
-    public GameObject shapeCanvas;
-
-    private GameObject go;
 
     public Sprite[] shapeSprites;
     public Image currentShape;
-    public InputField input;
 
-    [SerializeField] Animator boxAnimator;
-
-    private int n;
-    private int[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    private int realAnswer;
-    private int playerAnswer;
-    string mathQuestion;
-
-    public void DoMath()
-    {
-        mathQuestion = PlayerPrefs.GetString("mathQuestion");
-        go = GameObject.Find(mathQuestion);
-        correctAnswerPanel.SetActive(false);
-        incorrectAnswerPanel.SetActive(false);
-        realAnswer=Question(questionText, currentShape);
-    }
-
-    private void Start()
-    {      
-        returnButton.onClick.AddListener(Return);
-        continueButton.onClick.AddListener(Continue);
-    }
-
-    void Update()
-    {
-        if (input.IsActive())
-            input.ActivateInputField();
-        if (input.text != "") // prevent empty input from player, which cause invalid input error
-        {
-            checkAnswer.onClick.RemoveAllListeners();
-            checkAnswer.onClick.AddListener(CheckAnswer);
-        }
-
-        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("enter"))
-        {
-            if (correctAnswerPanel.activeInHierarchy)
-            {
-                Continue();
-            }
-            else if (incorrectAnswerPanel.activeInHierarchy)
-                Return();
-            else if (input.text != "")
-                CheckAnswer();
-        }
-
-    }
-
+    override
     public int Question(Text questionText, Image currentShape)
     {
-        n = number[Random.Range(0, number.Length)];
-        int shapeIdx = Random.Range(1, shapeSprites.Length);
+        int n = Random.Range(1, 11);
+        int shapeIdx = Random.Range(1, shapeSprites.Length);  //ignore the first one because it is null
         currentShape.sprite = shapeSprites[shapeIdx];
 
         if (shapeIdx == 1)
@@ -108,39 +44,24 @@ public class ShapeScript : MonoBehaviour
         return realAnswer;
 
     }
-
-    void Return()
+    override
+    public  void Return()
     {
-        realAnswer=Question(questionText, currentShape);
+        //Debug.Log("return");
+        realAnswer = Question(questionText, currentShape);
         incorrectAnswerPanel.SetActive(false);
     }
 
-    void Continue()
-    {
-        boxAnimator.SetTrigger("Close");
-        if (go.tag == "Treasure")
-        {
-            GameObject openChest = Instantiate(go) as GameObject;
-            openChest.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("AnimImages/TreasureChest/LargerSize/Open");
-            FindObjectOfType<GameSession>().AddToScore(20);
-        }
-        Destroy(go);
-
-        input.text = null;
-        Time.timeScale = 1;
-        Player.instance.UnFreezePlayer();
-        Invoke("DisableCanvas", 0.25f); // wait .25s for box animator finishes closing
-    }
-
-    void DisableCanvas()
+    override
+    public void DisableCanvas()
     {
         Minigame2.instance.RaisePillar();
         correctAnswerPanel.SetActive(false);
         
     }
 
-
-    void CheckAnswer()
+    override
+    public void CheckAnswer()
     {
         // disable image
         currentShape.sprite = shapeSprites[0];

@@ -234,19 +234,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501434ba08255854b87bb22e1b83f071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mathCanvas:
+  currentCanvas:
   - {fileID: 8248335402919182132}
   - {fileID: 6991791973938860728}
   - {fileID: 7835478897934095649}
   - {fileID: 3418571537223006945}
-  multCanvas: {fileID: 7979869702758298052, guid: e132a3bb0e65bef4b8af0690eb529103,
-    type: 3}
-  addCanvas: {fileID: 392639053919607450, guid: 739c097352cefbd4ca433a4ccd071a49,
-    type: 3}
-  wordCanvas: {fileID: 3792775455449782679, guid: 1383ff860c4c3a243a34fa3ddfc57ab9,
-    type: 3}
-  shapeCanvas: {fileID: 6308891056100055650, guid: 27d753a7b575f9744a234d898e39de34,
-    type: 3}
+  mathCanvas:
+  - {fileID: 7979869702758298052, guid: e132a3bb0e65bef4b8af0690eb529103, type: 3}
+  - {fileID: 392639053919607450, guid: 739c097352cefbd4ca433a4ccd071a49, type: 3}
+  - {fileID: 3792775455449782679, guid: 1383ff860c4c3a243a34fa3ddfc57ab9, type: 3}
+  - {fileID: 6308891056100055650, guid: 27d753a7b575f9744a234d898e39de34, type: 3}
 --- !u!1 &909330484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,13 +2796,17 @@ MonoBehaviour:
   checkAnswer: {fileID: 24397098874185495}
   returnButton: {fileID: 5444524845172092391}
   continueButton: {fileID: 595161684379370977}
+  input: {fileID: 9090849698982238996}
   correctAnswerPanel: {fileID: 4773732530890825205}
   incorrectAnswerPanel: {fileID: 4166082050826838683}
-  input: {fileID: 9090849698982238996}
+  boxAnimator: {fileID: 4280696736969831673}
   currentShape: {fileID: 7504798862930178321}
   shapeSprites:
   - {fileID: 21300000, guid: 0f14b0fb8e07bc64eb4159f1c31731a3, type: 3}
-  boxAnimator: {fileID: 4280696736969831673}
+  - {fileID: 21300000, guid: 1fee9e21d65deb3469fe58850480ab62, type: 3}
+  - {fileID: 21300000, guid: e08da0e1c6439a846b9bb010d85a64fd, type: 3}
+  - {fileID: 21300000, guid: 8a7df5b0fd1fd0d4292ce41548f0d7fe, type: 3}
+  - {fileID: 21300000, guid: e81180ee8987a874788e9d77b4a7856c, type: 3}
   mathHandler: {fileID: 480258024}
 --- !u!224 &3442916154004231200
 RectTransform:
@@ -5047,12 +5048,12 @@ MonoBehaviour:
   checkAnswer: {fileID: 4251346285690641207}
   returnButton: {fileID: 4965057428862010054}
   continueButton: {fileID: 6897936351631403751}
+  input: {fileID: 8388206161840480171}
   correctAnswerPanel: {fileID: 1247861728270561944}
   incorrectAnswerPanel: {fileID: 135493570149415834}
-  input: {fileID: 8388206161840480171}
+  boxAnimator: {fileID: 3788526959545664668}
   currentShape: {fileID: 0}
   shapeSprites: []
-  boxAnimator: {fileID: 3788526959545664668}
   mathHandler: {fileID: 480258024}
 --- !u!114 &6991791973938860730
 MonoBehaviour:
@@ -5879,12 +5880,12 @@ MonoBehaviour:
   checkAnswer: {fileID: 2644782903864136750}
   returnButton: {fileID: 7232567343921326952}
   continueButton: {fileID: 3017139770631450900}
+  input: {fileID: 8908390276889388675}
   correctAnswerPanel: {fileID: 8121995911182026896}
   incorrectAnswerPanel: {fileID: 2015610100012986893}
-  input: {fileID: 8908390276889388675}
+  boxAnimator: {fileID: 345769063223556763}
   currentShape: {fileID: 0}
   shapeSprites: []
-  boxAnimator: {fileID: 345769063223556763}
   mathHandler: {fileID: 480258024}
 --- !u!1 &7931307704696569540
 GameObject:
@@ -6109,12 +6110,12 @@ MonoBehaviour:
   checkAnswer: {fileID: 2994889858520938171}
   returnButton: {fileID: 6311585925620510538}
   continueButton: {fileID: 5533314299351877483}
+  input: {fileID: 7428909234558186023}
   correctAnswerPanel: {fileID: 153517352977440532}
   incorrectAnswerPanel: {fileID: 1337976142158747158}
-  input: {fileID: 7428909234558186023}
+  boxAnimator: {fileID: 2874318743087802648}
   currentShape: {fileID: 0}
   shapeSprites: []
-  boxAnimator: {fileID: 2874318743087802648}
   mathHandler: {fileID: 480258024}
 --- !u!114 &8248335402919182134
 MonoBehaviour:
