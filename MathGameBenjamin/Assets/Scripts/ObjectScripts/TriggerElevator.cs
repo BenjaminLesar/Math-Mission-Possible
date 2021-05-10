@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
-using System.Collections;
 
 public class TriggerElevator : MonoBehaviour
 {

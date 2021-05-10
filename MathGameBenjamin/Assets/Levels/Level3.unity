@@ -50273,6 +50273,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37128648}
     m_Modifications:
+    - target: {fileID: 1610429685058014997, guid: de86a2c069ab1bc40a269f478dfd45cb,
+        type: 3}
+      propertyPath: myCanvas
+      value: 
+      objectReference: {fileID: 2091991042}
     - target: {fileID: 2526208910712348935, guid: de86a2c069ab1bc40a269f478dfd45cb,
         type: 3}
       propertyPath: m_RootOrder
