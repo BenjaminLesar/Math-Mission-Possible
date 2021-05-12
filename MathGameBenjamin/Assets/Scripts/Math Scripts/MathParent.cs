@@ -80,13 +80,13 @@ public class MathParent:MonoBehaviour
         go = GameObject.Find(mathQuestion);
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
-        realAnswer = Question(questionText);
+        Return();
     }
 
     public void Continue()
     {
         boxAnimator.SetTrigger("Close");
-        if (go.tag == "Treasure")
+        if (go && go.tag == "Treasure")
         {
             // 1. dupliacate the Treasure
             // 2. remove its script
@@ -110,7 +110,6 @@ public class MathParent:MonoBehaviour
 
     public virtual void Return()
     {
-        //Debug.Log("return");
         realAnswer = Question(questionText);
         incorrectAnswerPanel.SetActive(false);
     }
@@ -125,13 +124,10 @@ public class MathParent:MonoBehaviour
             correctAnswerPanel.SetActive(true);
             correctText.text = "CORRECT! GREAT JOB!";
         }
-
         else
         {
             incorrectAnswerPanel.SetActive(true);
             incorrectText.text = "Incorrect! Please try again";
         }
-
-
     }
 }

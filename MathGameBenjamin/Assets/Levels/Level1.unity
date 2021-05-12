@@ -60483,6 +60483,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: RepAddCanvasParent
       objectReference: {fileID: 0}
+    - target: {fileID: 8281430464882143236, guid: b5859d45296d1574ea8487cf609f8b98,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281430464882143291, guid: b5859d45296d1574ea8487cf609f8b98,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5859d45296d1574ea8487cf609f8b98, type: 3}
 --- !u!1 &1352581504
