@@ -9,14 +9,17 @@ EditorBuildSettings:
     path: Assets/Levels/Main Menu 1.unity
     guid: a486e157a5ee23840abdf84f629302f9
   - enabled: 1
+    path: Assets/Levels/Open.unity
+    guid: ba65a4a46c75e0c44850d8e1538a47da
+  - enabled: 1
     path: Assets/Levels/Level1.unity
     guid: 48392a2d8c107e84c96d33011b348176
   - enabled: 1
     path: Assets/Levels/Level2.unity
     guid: 65f6870717572724ca8dec7b4a054512
-  - enabled: 1
-    path: Assets/Levels/Level3.unity
-    guid: 23652b43c88d35f408761162fbaa113e
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Levels/Level4(Real) 1.unity
     guid: 94ac6fe1b69a6644e8c14235fb067b15
