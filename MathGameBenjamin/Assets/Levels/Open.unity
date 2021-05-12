@@ -586,34 +586,33 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dear Secret Agent [Students First Name or Username],
+  m_text: 'Dear Secret Agent,
 
 
-    We have a very
-    important mission for you if you are willing to accept it.
+    We have a very important mission for you if you
+    are willing to accept it.
 
 
     <b>The Mission</b>
 
 
-    The
-    agency was able to hack into the evil [character?] computer and read a disturbing
-    message. According to a crypted text we decoded, [character] is planning to steal
-    the secret treasure chest hidden in the pyramids. In order to beat the bad guys
-    to the treasure, we must successfully complete each level''s mission and find
-    the room where the treasure chest is.
+    The agency was able
+    to hack into the evil [character?] computer and read a disturbing message. According
+    to a crypted text we decoded, [character] is planning to steal the secret treasure
+    chest hidden in the pyramids. In order to beat the bad guys to the treasure,
+    we must successfully complete each level''s mission and find the room where the
+    treasure chest is.
 
 
-    Secret Agent [Students First Name
-    or Username], we are hoping you will be able to beat the bad guys and find treasure.
-    This mission is of national importance!! We thank you in advance for your service
-    and for helping us save the world!
+    Secret Agent [Students First Name or Username], we are
+    hoping you will be able to beat the bad guys and find treasure. This mission
+    is of national importance!! We thank you in advance for your service and for
+    helping us save the world!
 
 
-    Best Regards,
 
 
-    Che'''
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

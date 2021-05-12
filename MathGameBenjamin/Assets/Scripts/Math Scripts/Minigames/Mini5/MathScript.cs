@@ -17,28 +17,7 @@ public class MathScript : MathParent
         if (Idx == 3)
             realAnswer = mathHandler.MathScript[Idx].Question(questionText, currentShape);
         else
-            realAnswer = mathHandler.MathScript[Idx].Question(questionText);
-
-        //switch (Idx)
-        //{
-        //    case 0:
-        //        multScript = mathHandler.MultScript;
-        //        realAnswer = multScript.Question(questionText);
-        //        break;
-        //    case 1:
-        //        addScript = mathHandler.AddScript;
-        //        realAnswer = addScript.Question(questionText);
-        //        break;
-        //    case 2:
-        //        wordScript = mathHandler.WordScript;
-        //        realAnswer = wordScript.Question(questionText);
-        //        break;
-        //    case 3:
-        //        shapeScript = mathHandler.ShapeScript;
-        //        realAnswer = shapeScript.Question(questionText, currentShape);
-        //        break;
-
-        //}    
+            realAnswer = mathHandler.MathScript[Idx].Question(questionText); 
     }
 
     public void OpenMath()
