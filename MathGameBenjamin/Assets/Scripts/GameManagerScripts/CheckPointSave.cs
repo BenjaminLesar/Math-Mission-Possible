@@ -65,6 +65,7 @@ public class CheckPointSave : MonoBehaviour
                 mySave.playerYCoord = PlayerPrefs.GetFloat("PlayerY");
 
                 mySave.health = FindObjectOfType<Player>().GetHealth();
+                mySave.character = FindObjectOfType<Player>().GetComponent<Animator>().runtimeAnimatorController.name;
 
                 bf.Serialize(file, mySave);
                 file.Close();

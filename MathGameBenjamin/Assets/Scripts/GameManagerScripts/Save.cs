@@ -70,6 +70,7 @@ public class Save : MonoBehaviour
         }
 
         mySave.health = FindObjectOfType<Player>().GetHealth();
+        mySave.character = FindObjectOfType<Player>().GetComponent<Animator>().runtimeAnimatorController.name;
 
         bf.Serialize(file, mySave);
         file.Close();

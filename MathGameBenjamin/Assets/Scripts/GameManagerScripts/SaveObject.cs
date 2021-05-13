@@ -18,4 +18,5 @@ public class SaveObject
     public float playerXCoord;
     public float playerYCoord;
     public float health;
+    public string character;
 }

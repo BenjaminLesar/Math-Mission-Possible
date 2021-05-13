@@ -57,6 +57,7 @@ public class ShapeScript : MathParent
     {
         Minigame2.instance.RaisePillar();
         correctAnswerPanel.SetActive(false);
+        gameObject.SetActive(false);
         
     }
 

@@ -101,6 +101,7 @@ public class Player : MonoBehaviour
         {
             sr.sprite = Marcus;
             myAnimator.runtimeAnimatorController = Instantiate(Resources.Load("BBoy") as RuntimeAnimatorController);
+            myAnimator.runtimeAnimatorController.name = "BBoy";
         }
 
         if (myCheck.Length != 0)
@@ -176,6 +177,20 @@ public class Player : MonoBehaviour
                 if (mySave.playerXCoord != 0)
                 {
                     this.transform.position = new Vector2(mySave.playerXCoord, mySave.playerYCoord);
+                }
+
+
+                if(mySave.character == "BBoy")
+                {
+                    myAnimator.runtimeAnimatorController = Instantiate(Resources.Load("BBoy") as RuntimeAnimatorController);
+                    PlayerPrefs.SetString("Character", "Marcus");
+                    myAnimator.runtimeAnimatorController.name = "BBoy";
+                }
+                else
+                {
+                    myAnimator.runtimeAnimatorController = Instantiate(Resources.Load("HGirl") as RuntimeAnimatorController);
+                    PlayerPrefs.SetString("Character", "Maria");
+                    myAnimator.runtimeAnimatorController.name = "HGirl";
                 }
 
 
