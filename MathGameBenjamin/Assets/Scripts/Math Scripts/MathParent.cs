@@ -27,7 +27,7 @@ public class MathParent:MonoBehaviour
     protected int realAnswer;
     protected int playerAnswer;
 
-    private GameObject go;
+    protected GameObject go;
     string mathQuestion;
 
     // will be overridden in child class
@@ -74,7 +74,7 @@ public class MathParent:MonoBehaviour
         }
     }
 
-    public void DoMath()
+    public virtual void DoMath()
     {
         mathQuestion = PlayerPrefs.GetString("mathQuestion");
         go = GameObject.Find(mathQuestion);

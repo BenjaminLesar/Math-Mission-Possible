@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class TriggerScriptLevel_004 : MonoBehaviour
 {
-    public GameObject[] triggerObject;
     public static TriggerScriptLevel_004 instance;
     public GameObject panel;
 
@@ -15,7 +14,6 @@ public class TriggerScriptLevel_004 : MonoBehaviour
 
     void Awake()
     {
-
         instance = this;
         multScript = transform.GetChild(0).gameObject.GetComponent<Minigame4>();
     }
@@ -25,6 +23,7 @@ public class TriggerScriptLevel_004 : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
+            PlayerPrefs.SetString("mathQuestion", this.name);
             multScript.DoMath();
             Player.instance.FreezePlayer();
             panel.SetActive(true);
