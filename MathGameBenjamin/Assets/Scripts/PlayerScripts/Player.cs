@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
     public GameObject checkPointPrefab;
 
     public Sprite Marcus;
-
+    public bool shouldLock = false;
     void Awake()
     {  
         instance = this;
@@ -256,13 +256,36 @@ public class Player : MonoBehaviour
 
     void CanRun()
     {
+        shouldLock = false;
+
+        if (SceneManager.GetActiveScene().name == "World_001Ending")
+        {
+            shouldLock = true;
+        }
+
+        Vector2 playerVelocity;
+        bool hSpeed;
+
         myAnimator.SetBool("Swimming", false);
         float left_right_movement = CrossPlatformInputManager.GetAxis("Horizontal"); //between -1 and 1, this by default gets player's "a" and "d" or left/right arrow keystrokes.
-        Vector2 playerVelocity = new Vector2(left_right_movement * runSpeed, myRigidBody.velocity.y); //creates a new x vector coordinate equal to player input times the runspeed variable
-        myRigidBody.velocity = playerVelocity; //sets the player velocity equal to the new vector.
 
-        bool hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon; //tests to see if player character x velicity is appreciably greater than zero.
-        myAnimator.SetBool("Running", hSpeed); //sets the player character to running animation if bool is true. 
+        if(shouldLock == false)
+        {
+            playerVelocity = new Vector2(left_right_movement * runSpeed, myRigidBody.velocity.y); //creates a new x vector coordinate equal to player input times the runspeed variable
+            myRigidBody.velocity = playerVelocity; //sets the player velocity equal to the new vector.
+
+            hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon; //tests to see if player character x velicity is appreciably greater than zero.
+            myAnimator.SetBool("Running", hSpeed); //sets the player character to running animation if bool is true. 
+        }
+
+        if (shouldLock == true && left_right_movement > 0)
+        {
+            playerVelocity = new Vector2(left_right_movement * runSpeed, myRigidBody.velocity.y); //creates a new x vector coordinate equal to player input times the runspeed variable
+            myRigidBody.velocity = playerVelocity; //sets the player velocity equal to the new vector.
+
+            hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon; //tests to see if player character x velicity is appreciably greater than zero.
+            myAnimator.SetBool("Running", hSpeed); //sets the player character to running animation if bool is true. 
+        }
     }
     private void climbLadder()
     {
@@ -332,7 +355,7 @@ public class Player : MonoBehaviour
        
         
         
-        if (myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) && CrossPlatformInputManager.GetButtonDown("Jump") && inWater == false) //by default gets player's "spacebar" input.
+        if (myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")) && CrossPlatformInputManager.GetButtonDown("Jump") && inWater == false && shouldLock == false) //by default gets player's "spacebar" input.
         {
             Vector2 jumpVelocity = new Vector2(0f, jumpSpeed); //creates a new y vector coordinate equal to the Jumpspeed variable
             myRigidBody.velocity += jumpVelocity; //sets the player character velocity equal to the new vector.
@@ -377,7 +400,7 @@ public class Player : MonoBehaviour
     private void changeAnim()
     {
         bool hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon; //tests to see if player's x velocity is appreciably greater than 0.
-        if (hSpeed) //if true
+        if (hSpeed && shouldLock == false) //if true
         {
             transform.localScale = new Vector2(Mathf.Sign(myRigidBody.velocity.x), 1f); //flips player anim direction
         }

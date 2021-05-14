@@ -8,6 +8,6 @@ public class SeeCredits : MonoBehaviour
     // Start is called before the first frame update
     public void GoToCredits()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene("Credits");
     }
 }

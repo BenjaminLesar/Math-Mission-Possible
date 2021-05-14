@@ -8,6 +8,6 @@ public class ReturnToMain : MonoBehaviour
     // Start is called before the first frame update
     public void GoBack()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Main Menu");
     }
 }
