@@ -278,13 +278,18 @@ public class Player : MonoBehaviour
             myAnimator.SetBool("Running", hSpeed); //sets the player character to running animation if bool is true. 
         }
 
-        if (shouldLock == true && left_right_movement > 0)
+        if (shouldLock == true && left_right_movement > Mathf.Epsilon)
         {
             playerVelocity = new Vector2(left_right_movement * runSpeed, myRigidBody.velocity.y); //creates a new x vector coordinate equal to player input times the runspeed variable
             myRigidBody.velocity = playerVelocity; //sets the player velocity equal to the new vector.
 
             hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon; //tests to see if player character x velicity is appreciably greater than zero.
             myAnimator.SetBool("Running", hSpeed); //sets the player character to running animation if bool is true. 
+        }
+
+        else
+        {
+            myAnimator.SetBool("Running", false);
         }
     }
     private void climbLadder()
