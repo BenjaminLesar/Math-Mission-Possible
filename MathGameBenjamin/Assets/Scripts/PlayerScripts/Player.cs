@@ -317,6 +317,7 @@ public class Player : MonoBehaviour
         if (!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Water"))) //tests to see if player character's feet are NOT touching a ladder 
         {
             myAnimator.SetBool("Swimming", false);
+            myAnimator.SetBool("IdleSwim", false);
             inWater = false;
             //myAnimator.SetBool("Running", false); //sets climbing to false
             myRigidBody.gravityScale = gravityScaleAtStart; //sets normal gravity.
@@ -325,8 +326,10 @@ public class Player : MonoBehaviour
 
         myAnimator.SetBool("Running", false);
         bool hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
+        bool noSpeed = Mathf.Abs(myRigidBody.velocity.x) <= Mathf.Epsilon;
         inWater = true;
         myAnimator.SetBool("Swimming", hSpeed);
+        myAnimator.SetBool("IdleSwim", noSpeed);
         myRigidBody.gravityScale = underWaterGrav;
 
         if (myRigidBody.velocity.y < sinkSpeed)
