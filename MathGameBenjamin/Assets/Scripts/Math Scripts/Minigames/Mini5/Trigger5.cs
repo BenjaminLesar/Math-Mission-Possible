@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class Trigger5 : MonoBehaviour
 {
-    GameObject myCanvas;
-    // Start is called before the first frame update
+    [SerializeField] Animator mumKing;
+    MathHandler mathHandler;
+    public Animator MumKing { get=> mumKing; }
     void Awake()
     {
-        myCanvas = GameObject.Find("/Math UI");
+        PlayerPrefs.SetString("mathQuestion", this.name);
+
+        mathHandler = transform.GetChild(0).gameObject.GetComponent<MathHandler>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerPrefs.SetString("mathQuestion", this.name);
-            Time.timeScale = 0;
+            mumKing.SetTrigger("showup");
+            Invoke("StartMath", .7f);
+
             Player.instance.FreezePlayer();
         }
+    }
+
+    void StartMath()
+    {
+        mathHandler.RandomQuestion();
+
     }
 }

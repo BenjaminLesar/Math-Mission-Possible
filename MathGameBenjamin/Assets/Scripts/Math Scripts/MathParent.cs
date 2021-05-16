@@ -33,7 +33,10 @@ public class MathParent:MonoBehaviour
     // will be overridden in child class
     public virtual int Question(Text questionText) { return 0; }
     public virtual int Question(Text questionText, Image currentShape) { return 0; }
+    private void Awake()
+    {
 
+    }
     public void OnStart()
     {
         myCanvas = this.gameObject;
@@ -44,6 +47,8 @@ public class MathParent:MonoBehaviour
     private void Start()
     {
         OnStart();
+        mathQuestion = PlayerPrefs.GetString("mathQuestion");
+        go = GameObject.Find(mathQuestion);
     }
 
     void Update()
@@ -68,7 +73,8 @@ public class MathParent:MonoBehaviour
                 Continue();
             }
             else if (incorrectAnswerPanel.activeInHierarchy)
-                Return();
+                //Return();
+                returnButton.onClick.Invoke();
             else if (input.text != "")
                 CheckAnswer();
         }

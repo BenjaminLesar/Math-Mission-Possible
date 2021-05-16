@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class TextController : MonoBehaviour
 {
+    public static System.Action<Text, int> RunningText;   // a delegate func
+    private void Awake()
+    {
+        RunningText = RunAnimationText;
+    }
+
     /// <summary>
     /// A function to run text animation by a defined speed (int)
     /// </summary>

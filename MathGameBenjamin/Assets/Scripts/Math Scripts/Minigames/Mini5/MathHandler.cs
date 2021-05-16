@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 public class MathHandler : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class MathHandler : MonoBehaviour
             mathScript[i] = mathCanvas[i].GetComponent<MathParent>();
         }
 
-        RandomQuestion();
+        //RandomQuestion();
     }
 
     /// <summary>
@@ -49,4 +50,8 @@ public class MathHandler : MonoBehaviour
         }
     }
 
+    public void ResetCurrentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
