@@ -6,32 +6,9 @@ using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class Minigame4 : MonoBehaviour
+public class Minigame4 : MathParent
 {
-    // Will need to create UI in project
-    // Attach script to created UI (canvas, panels, text, etc.)
-    // Script is called within PlayerScript (reference PlayerScript for more details)
-    public Text questionText;
-    public Text correctText;
-    public Text incorrectText;
 
-
-    public Button checkAnswer;
-    public Button returnButton;
-    public Button continueButton;
-
-    public GameObject correctAnswerPanel;
-    public GameObject incorrectAnswerPanel;
-
-    [SerializeField] Animator boxAnimator;
-
-
-    private GameObject go;
-
-    public InputField input;
-
-    private int realAnswer;
-    private int playerAnswer;
     Slider energyBar;
     float energyValue = 0;
 
@@ -41,39 +18,9 @@ public class Minigame4 : MonoBehaviour
     Text challengeText;
     public GameObject energyPannel;
 
-    void Start()
-    {
-        returnButton.onClick.AddListener(Return);
-        continueButton.onClick.AddListener(Continue);
-    }
+    
 
-    void Update()
-    {
-        if (input.IsActive())
-            input.ActivateInputField();
-        if (input.text != "") // prevent empty input from player, which cause invalid input error
-        {
-            checkAnswer.onClick.RemoveAllListeners();
-            checkAnswer.onClick.AddListener(CheckAnswer);
-        }
-
-        if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp("enter"))
-        {
-            if (correctAnswerPanel.activeInHierarchy)
-            {
-                Continue();
-            }
-            else if (incorrectAnswerPanel.activeInHierarchy)
-                Return();
-            else if (input.text != "")
-                CheckAnswer();
-        }
-
-    }
-
-    // Calls random int from array and assigns to f & s
-    // Panels for correct/incorrect panels disabled
-    // Question method called
+    override
     public void DoMath()
     {
         txtController = gameObject.transform.GetChild(1).gameObject.GetComponent<TextController>();
@@ -83,7 +30,7 @@ public class Minigame4 : MonoBehaviour
         go = GameObject.Find(mathQuestion);
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
-        Question();
+        realAnswer = Question(questionText);
         energyPannel.SetActive(true);
         energyBar = GameObject.Find("EnergyBar").GetComponent<Slider>();
         txtController.RunAnimationText(challengeText, 2);
@@ -92,7 +39,8 @@ public class Minigame4 : MonoBehaviour
 
     // Displays variables gathered within the question text
     // Multiplies variables and assigns this number as the correct answer
-    void Question()
+    override
+    public int Question(Text questionText)
     {
         input.text = "";
         int operand1 = Random.Range(2, 13);
@@ -117,28 +65,7 @@ public class Minigame4 : MonoBehaviour
                 print("invalid question type!");
                 break;
         }
-    }
-
-
-    // When return button is pressed, brings player back to question screen
-    // New variables are assigned and Question function is called
-    // Incorrect panel is disabled
-    void Return()
-    {
-        //Debug.Log("return");
-        Question();
-        incorrectAnswerPanel.SetActive(false);
-    }
-
-    // Correct answer
-    void Continue()
-    {
-        Destroy(go);
-        input.text = null;
-        boxAnimator.SetTrigger("Close");
-        Destroy(gameObject.transform.parent.gameObject);
-        Time.timeScale = 1;
-        Player.instance.UnFreezePlayer();
+        return realAnswer;
     }
 
     void Challenge()
@@ -151,29 +78,19 @@ public class Minigame4 : MonoBehaviour
             correctText.text = "You passed the challenge, congrats!!!";
             txtController.RunAnimationText(correctText, 2);
         }
-        Question();
+        Question(questionText);
     }
 
-
-    // Checks whether player answer matches the correct answer
-    // Need to implement method so player cannot input letters
-    void CheckAnswer()
+    override
+    public void CheckAnswer()
     {
-        //Debug.Log("checkanswer");
-        // Takes the players answer and converts it to an int
         playerAnswer = Convert.ToInt32(input.text);
 
-        // If the player's answer and the correct answer match
-        // Correct panel is enabled
-        // Correct text is set (Can be altered)
         if (playerAnswer == realAnswer)
         {
             Challenge();
         }
 
-        // If the player's answer does not match the correct answer
-        // Incorrect panel is enabled
-        // Incorrect text is set (Can be altered)
         else
         {
             incorrectAnswerPanel.SetActive(true);
