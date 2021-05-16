@@ -130,6 +130,7 @@ public class Player : MonoBehaviour
                 FindObjectOfType<GameSession>().SetLives(mySave.lives);
                 FindObjectOfType<GameSession>().SetScore(mySave.score);
                 FindObjectOfType<GameSession>().LoadScore();
+                FindObjectOfType<GameSession>().SetTotalScore(mySave.finalScore);
 
                 coinPickup[] result = FindObjectsOfType<coinPickup>();
 
@@ -256,13 +257,17 @@ public class Player : MonoBehaviour
 
     void CanRun()
     {
-        shouldLock = false;
-
         if (SceneManager.GetActiveScene().name == "World_001Ending")
         {
             shouldLock = true;
         }
 
+        else
+        {
+            shouldLock = false;
+        }
+
+        
         Vector2 playerVelocity;
         bool hSpeed;
 
@@ -273,7 +278,7 @@ public class Player : MonoBehaviour
         {
             playerVelocity = new Vector2(left_right_movement * runSpeed, myRigidBody.velocity.y); //creates a new x vector coordinate equal to player input times the runspeed variable
             myRigidBody.velocity = playerVelocity; //sets the player velocity equal to the new vector.
-
+ 
             hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon; //tests to see if player character x velicity is appreciably greater than zero.
             myAnimator.SetBool("Running", hSpeed); //sets the player character to running animation if bool is true. 
         }
@@ -284,10 +289,10 @@ public class Player : MonoBehaviour
             myRigidBody.velocity = playerVelocity; //sets the player velocity equal to the new vector.
 
             hSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon; //tests to see if player character x velicity is appreciably greater than zero.
-            myAnimator.SetBool("Running", hSpeed); //sets the player character to running animation if bool is true. 
+            myAnimator.SetBool("Running", shouldLock); //sets the player character to running animation if bool is true. 
         }
 
-        else
+        if(Mathf.Abs(myRigidBody.velocity.x) < Mathf.Epsilon)
         {
             myAnimator.SetBool("Running", false);
         }

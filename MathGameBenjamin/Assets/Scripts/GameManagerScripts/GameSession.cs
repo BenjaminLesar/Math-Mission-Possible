@@ -8,7 +8,7 @@ public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
     [SerializeField] int score = 0;
-
+    int totalScore = 0;
     [SerializeField] Text livesText;
 
     [SerializeField] Text scoreText;
@@ -45,6 +45,7 @@ public class GameSession : MonoBehaviour
     public void AddToScore(int pointsToAdd)
     {
         score += pointsToAdd;
+        totalScore += pointsToAdd;
         if (score >= 100)
         {
             score -= 100;
@@ -57,6 +58,16 @@ public class GameSession : MonoBehaviour
     public int GetScore()
     {
         return score;
+    }
+
+    public int GetTotalScore()
+    {
+        return totalScore;
+    }
+
+    public void SetTotalScore(int x)
+    {
+        totalScore = x;
     }
 
     public int GetLives()

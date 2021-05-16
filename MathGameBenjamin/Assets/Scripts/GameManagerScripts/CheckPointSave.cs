@@ -66,6 +66,7 @@ public class CheckPointSave : MonoBehaviour
 
                 mySave.health = FindObjectOfType<Player>().GetHealth();
                 mySave.character = FindObjectOfType<Player>().GetComponent<Animator>().runtimeAnimatorController.name;
+                mySave.finalScore = FindObjectOfType<GameSession>().GetTotalScore();
 
                 bf.Serialize(file, mySave);
                 file.Close();

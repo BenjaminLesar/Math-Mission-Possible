@@ -19,4 +19,5 @@ public class SaveObject
     public float playerYCoord;
     public float health;
     public string character;
+    public int finalScore;
 }
