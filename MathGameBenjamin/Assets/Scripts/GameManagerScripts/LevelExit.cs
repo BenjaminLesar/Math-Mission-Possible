@@ -21,5 +21,6 @@ public class LevelExit : MonoBehaviour
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
         PlayerPrefs.SetString("IsNotFirst", "false");
+        FindObjectOfType<AudioController>().Play("Exit");
     }
 }

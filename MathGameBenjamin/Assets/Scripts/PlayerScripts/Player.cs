@@ -324,8 +324,10 @@ public class Player : MonoBehaviour
 
     private void Swim()
     {
+        
         if (!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Water"))) //tests to see if player character's feet are NOT touching a ladder 
         {
+            
             myAnimator.SetBool("Swimming", false);
             myAnimator.SetBool("IdleSwim", false);
             inWater = false;
@@ -344,7 +346,7 @@ public class Player : MonoBehaviour
 
         if (myRigidBody.velocity.y < sinkSpeed)
         {
-            
+               
             Vector2 waterVelocity = new Vector2(myRigidBody.velocity.x, sinkSpeed);
             myRigidBody.velocity = waterVelocity;
         }

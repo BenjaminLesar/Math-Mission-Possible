@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -49,7 +49,7 @@ public class EnemyVertical : MonoBehaviour
         
         if (playerFeet.IsTouching(damageCollider))
         {
-        
+            FindObjectOfType<AudioController>().Play("OtherHit");
             Destroy(gameObject);
             Destroy(GameObject.Find("Blocking Wall"));
             

@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &38216195
 Animator:
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &55363180
 Animator:
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &60789555
 Animator:
@@ -1391,7 +1391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &65770214
 Animator:
@@ -1631,7 +1631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &67158273
 Animator:
@@ -2114,7 +2114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &71539525
 Animator:
@@ -2781,7 +2781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &100267641
 Animator:
@@ -3021,7 +3021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &101228358
 Animator:
@@ -3261,7 +3261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &104075320
 Animator:
@@ -25523,7 +25523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &145009554
 Animator:
@@ -25797,7 +25797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &156886703
 Animator:
@@ -26037,7 +26037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &159661910
 Animator:
@@ -26277,7 +26277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &161391679
 Animator:
@@ -26589,7 +26589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &172271149
 Animator:
@@ -27154,7 +27154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &192718813
 Animator:
@@ -27440,7 +27440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &200689138
 Animator:
@@ -28005,7 +28005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &227150680
 Animator:
@@ -28326,7 +28326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &240831706
 Animator:
@@ -28566,7 +28566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &243935960
 Animator:
@@ -28887,7 +28887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &264678629
 Animator:
@@ -29161,7 +29161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &286872145
 Animator:
@@ -29401,7 +29401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &288632107
 Animator:
@@ -29675,7 +29675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &330783523
 Animator:
@@ -30063,7 +30063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &359153765
 Animator:
@@ -30337,7 +30337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &362918874
 Animator:
@@ -30868,7 +30868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &387250351
 Animator:
@@ -31108,7 +31108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &400003878
 Animator:
@@ -31348,7 +31348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &404682865
 Animator:
@@ -31588,7 +31588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &411145856
 Animator:
@@ -31828,7 +31828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &425477233
 Animator:
@@ -32068,7 +32068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &428364791
 Animator:
@@ -32308,7 +32308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &428741143
 Animator:
@@ -32788,7 +32788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &441098970
 Animator:
@@ -33323,7 +33323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &483037775
 Animator:
@@ -33888,7 +33888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &491485446
 Animator:
@@ -34773,7 +34773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &535484013
 Animator:
@@ -35174,7 +35174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &549435789
 Animator:
@@ -35414,7 +35414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &558575244
 Animator:
@@ -35815,7 +35815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &578003857
 Animator:
@@ -36061,7 +36061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &589443476
 Animator:
@@ -36301,7 +36301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &589816835
 Animator:
@@ -36626,7 +36626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &603300339
 Animator:
@@ -36866,7 +36866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &605898373
 Animator:
@@ -37187,7 +37187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &611410833
 Animator:
@@ -37427,7 +37427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &617547999
 Animator:
@@ -37877,7 +37877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &627917873
 Animator:
@@ -38117,7 +38117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &633762415
 Animator:
@@ -38762,7 +38762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &658201443
 Animator:
@@ -39002,7 +39002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &659431216
 Animator:
@@ -39380,7 +39380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &670278127
 Animator:
@@ -39620,7 +39620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &676466011
 Animator:
@@ -39860,7 +39860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &679572403
 Animator:
@@ -40100,7 +40100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &680600923
 Animator:
@@ -40340,7 +40340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &692806832
 Animator:
@@ -40790,7 +40790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &706958616
 Animator:
@@ -41030,7 +41030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &707261172
 Animator:
@@ -41270,7 +41270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &712985581
 Animator:
@@ -41367,6 +41367,100 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &728004130
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3627869367197496578, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496578, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.0493717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496578, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.4918113
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496578, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496578, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496578, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496578, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496578, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496578, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496578, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496578, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496579, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: sounds.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496579, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a7cfb2bedb82aa04abb0fcf5d759d730, type: 3}
+    - target: {fileID: 3627869367197496579, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: OtherHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496579, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: sounds.Array.data[7].pitch
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496579, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627869367197496580, guid: 544c000d31429c1498bce9312b8929eb,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioController
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 544c000d31429c1498bce9312b8929eb, type: 3}
 --- !u!1 &733652929
 GameObject:
   m_ObjectHideFlags: 0
@@ -41510,7 +41604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &733652933
 Animator:
@@ -41960,7 +42054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &750621651
 Animator:
@@ -42200,7 +42294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &752254804
 Animator:
@@ -42440,7 +42534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &762494107
 Animator:
@@ -42799,7 +42893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &768697611
 Animator:
@@ -43039,7 +43133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &773948975
 Animator:
@@ -43570,7 +43664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &792309294
 Animator:
@@ -43810,7 +43904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &797151527
 Animator:
@@ -44084,7 +44178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &814109533
 Animator:
@@ -44330,7 +44424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &857602270
 Animator:
@@ -44570,7 +44664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &869606132
 Animator:
@@ -44810,7 +44904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &873189162
 Animator:
@@ -45424,7 +45518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &880165065
 Animator:
@@ -45664,7 +45758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &881071837
 Animator:
@@ -45904,7 +45998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &885879238
 Animator:
@@ -46306,7 +46400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &897269657
 Animator:
@@ -46627,7 +46721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &904134417
 Animator:
@@ -46901,7 +46995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &928769607
 Animator:
@@ -47351,7 +47445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &933807238
 Animator:
@@ -47591,7 +47685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &934801641
 Animator:
@@ -49268,7 +49362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &973768267
 Animator:
@@ -49867,7 +49961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &983949620
 Animator:
@@ -50107,7 +50201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &998747045
 Animator:
@@ -50575,12 +50669,12 @@ PrefabInstance:
     - target: {fileID: 708830938083316376, guid: d2b82d19013a1a24e9d870da3b560053,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.07
+      value: 149.82
       objectReference: {fileID: 0}
     - target: {fileID: 708830938083316376, guid: d2b82d19013a1a24e9d870da3b560053,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.09
+      value: -3.09
       objectReference: {fileID: 0}
     - target: {fileID: 708830938083316376, guid: d2b82d19013a1a24e9d870da3b560053,
         type: 3}
@@ -50772,7 +50866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1026918719
 Animator:
@@ -51012,7 +51106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1031752664
 Animator:
@@ -51252,7 +51346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1032997471
 Animator:
@@ -51688,7 +51782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1060148733
 Animator:
@@ -51928,7 +52022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1080125292
 Animator:
@@ -52168,7 +52262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1080944134
 Animator:
@@ -54316,7 +54410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1168754004
 Animator:
@@ -54556,7 +54650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1172163894
 Animator:
@@ -54881,7 +54975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1183897321
 Animator:
@@ -55121,7 +55215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1187068232
 Animator:
@@ -55361,7 +55455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1193336949
 Animator:
@@ -56315,7 +56409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1223973207
 Animator:
@@ -56555,7 +56649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1226405966
 Animator:
@@ -57005,7 +57099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1232743701
 Animator:
@@ -57245,7 +57339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1232822281
 Animator:
@@ -57485,7 +57579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1234732239
 Animator:
@@ -57725,7 +57819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1248135502
 Animator:
@@ -57965,7 +58059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1249825212
 Animator:
@@ -58238,7 +58332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1279135064
 Animator:
@@ -58478,7 +58572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1288453532
 Animator:
@@ -58718,7 +58812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1298104523
 Animator:
@@ -59108,7 +59202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1323751345
 Animator:
@@ -59588,7 +59682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1325031848
 Animator:
@@ -60230,7 +60324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1354147104
 Animator:
@@ -60565,7 +60659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1359062201
 Animator:
@@ -60805,7 +60899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1369265945
 Animator:
@@ -61045,7 +61139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1372019587
 Animator:
@@ -61378,7 +61472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1381656837
 Animator:
@@ -61939,7 +62033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1410424259
 Animator:
@@ -62179,7 +62273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1412320463
 Animator:
@@ -62419,7 +62513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1412788672
 Animator:
@@ -62907,7 +63001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1452522515
 Animator:
@@ -63147,7 +63241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1453027385
 Animator:
@@ -63387,7 +63481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1456156126
 Animator:
@@ -64064,7 +64158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1496889390
 Animator:
@@ -64304,7 +64398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1506989995
 Animator:
@@ -64401,75 +64495,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1520131987
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1520131989}
-  - component: {fileID: 1520131988}
-  m_Layer: 0
-  m_Name: AudioController
-  m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1520131988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520131987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9ef377f94791df43bd4965718e779f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Jump
-    clip: {fileID: 8300000, guid: 4505bf4723db4ff4c96682f4d8029634, type: 3}
-    volume: 1
-    pitch: 0.83
-    source: {fileID: 0}
-  - name: Explosion
-    clip: {fileID: 8300000, guid: 89cd03cf1807a3546a1a46a42046cf56, type: 3}
-    volume: 1
-    pitch: 1.07
-    source: {fileID: 0}
-  - name: Hit
-    clip: {fileID: 8300000, guid: 3fa9901bd58ca96499817911f338b573, type: 3}
-    volume: 1
-    pitch: 1.07
-    source: {fileID: 0}
-  - name: Wrong
-    clip: {fileID: 8300000, guid: af574cf0662eae944865019f347aff2e, type: 3}
-    volume: 1
-    pitch: 1.07
-    source: {fileID: 0}
-  - name: Boing
-    clip: {fileID: 8300000, guid: 942227de53a916441a83811ae297e663, type: 3}
-    volume: 1
-    pitch: 1.07
-    source: {fileID: 0}
---- !u!4 &1520131989
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520131987}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!213 &1530831372
 Sprite:
   m_ObjectHideFlags: 0
@@ -65033,7 +65058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1535117576
 Animator:
@@ -65273,7 +65298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1535569311
 Animator:
@@ -65943,7 +65968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1562102255
 Animator:
@@ -66183,7 +66208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1562952187
 Animator:
@@ -66789,7 +66814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1591951833
 Animator:
@@ -67145,7 +67170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1615097250
 Animator:
@@ -67419,7 +67444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1622257680
 Animator:
@@ -67659,7 +67684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1623384436
 Animator:
@@ -67945,7 +67970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1629630862
 Animator:
@@ -68185,7 +68210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1638656541
 Animator:
@@ -68425,7 +68450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1653804738
 Animator:
@@ -68786,7 +68811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1688811181
 Animator:
@@ -69270,7 +69295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1706766976
 Animator:
@@ -69720,7 +69745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1719296158
 Animator:
@@ -69960,7 +69985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1727763837
 Animator:
@@ -70200,7 +70225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1730758702
 Animator:
@@ -70440,7 +70465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1734004529
 Animator:
@@ -70680,7 +70705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1736078644
 Animator:
@@ -70920,7 +70945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1739785075
 Animator:
@@ -71160,7 +71185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1744272990
 Animator:
@@ -71400,7 +71425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1751399478
 Animator:
@@ -71640,7 +71665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1753922432
 Animator:
@@ -71880,7 +71905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1761424939
 Animator:
@@ -72205,7 +72230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1772517142
 Animator:
@@ -72445,7 +72470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1776791178
 Animator:
@@ -72685,7 +72710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1777675259
 Animator:
@@ -72925,7 +72950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1782257517
 Animator:
@@ -73165,7 +73190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1787315958
 Animator:
@@ -73405,7 +73430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1800657372
 Animator:
@@ -73645,7 +73670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1824383550
 Animator:
@@ -73885,7 +73910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1836651218
 Animator:
@@ -74335,7 +74360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1844357516
 Animator:
@@ -74575,7 +74600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1845387024
 Animator:
@@ -74815,7 +74840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1855544678
 Animator:
@@ -75395,7 +75420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1857994490
 Animator:
@@ -75716,7 +75741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1866393856
 Animator:
@@ -75956,7 +75981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1869064957
 Animator:
@@ -76196,7 +76221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1876475362
 Animator:
@@ -76436,7 +76461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1879565294
 Animator:
@@ -76710,7 +76735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1908406571
 Animator:
@@ -76950,7 +76975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1918909829
 Animator:
@@ -77190,7 +77215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1929581664
 Animator:
@@ -77430,7 +77455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1929703678
 Animator:
@@ -77670,7 +77695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1930701991
 Animator:
@@ -77943,7 +77968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1940504443
 Animator:
@@ -78183,7 +78208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1957201851
 Animator:
@@ -78568,7 +78593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1964360514
 Animator:
@@ -79018,7 +79043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1970556975
 Animator:
@@ -79258,7 +79283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1971116138
 Animator:
@@ -79498,7 +79523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1975567986
 Animator:
@@ -79738,7 +79763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &1982675301
 Animator:
@@ -80053,7 +80078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2010620900
 Animator:
@@ -80293,7 +80318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2011956745
 Animator:
@@ -80533,7 +80558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2015247135
 Animator:
@@ -80773,7 +80798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2023626838
 Animator:
@@ -81019,7 +81044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2030600466
 Animator:
@@ -81469,7 +81494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2058166240
 Animator:
@@ -81709,7 +81734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2058686506
 Animator:
@@ -81949,7 +81974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2060743856
 Animator:
@@ -82483,7 +82508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2068649715
 Animator:
@@ -82723,7 +82748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2073926488
 Animator:
@@ -83293,7 +83318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2087273437
 Animator:
@@ -83614,7 +83639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2088992334
 Animator:
@@ -83854,7 +83879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2092316506
 Animator:
@@ -84094,7 +84119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2094730978
 Animator:
@@ -84334,7 +84359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2096213902
 Animator:
@@ -84855,7 +84880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2123918927
 Animator:
@@ -85095,7 +85120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0165f4a7ad7ea174da695bf8f3b992a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickUpSFX: {fileID: 8300000, guid: 8cb6ef908e1f46f4c9a3033066edbdaf, type: 3}
+  coinPickUpSFX: {fileID: 8300000, guid: 74a4859e8ca6aff4c901730b6e4039b5, type: 3}
   pointsForCoinPickup: 1
 --- !u!95 &2133712457
 Animator:
@@ -85821,7 +85846,7 @@ PrefabInstance:
     - target: {fileID: 8517516083933917721, guid: 101d73761356ce84494474b13267b08a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8517516083933917721, guid: 101d73761356ce84494474b13267b08a,
         type: 3}
@@ -85901,12 +85926,12 @@ PrefabInstance:
     - target: {fileID: 5023498938931557479, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.293522
+      value: 147.59648
       objectReference: {fileID: 0}
     - target: {fileID: 5023498938931557479, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6823483
+      value: -0.682348
       objectReference: {fileID: 0}
     - target: {fileID: 5023498938931557479, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
@@ -85916,12 +85941,12 @@ PrefabInstance:
     - target: {fileID: 5023498939275455469, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.293522
+      value: 147.59648
       objectReference: {fileID: 0}
     - target: {fileID: 5023498939275455469, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6823483
+      value: -0.682348
       objectReference: {fileID: 0}
     - target: {fileID: 5023498939275455469, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
@@ -86046,12 +86071,12 @@ PrefabInstance:
     - target: {fileID: 6399635702658221689, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.49685
+      value: 147.61087
       objectReference: {fileID: 0}
     - target: {fileID: 6399635702658221689, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0243783
+      value: 1.0243814
       objectReference: {fileID: 0}
     - target: {fileID: 6399635702658221689, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
@@ -86066,12 +86091,12 @@ PrefabInstance:
     - target: {fileID: 6399635703388321176, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.163523
+      value: 147.59648
       objectReference: {fileID: 0}
     - target: {fileID: 6399635703388321176, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6823483
+      value: -0.682348
       objectReference: {fileID: 0}
     - target: {fileID: 6399635703388321176, guid: 2c8d42e9baefbc247915d9d1162253ec,
         type: 3}

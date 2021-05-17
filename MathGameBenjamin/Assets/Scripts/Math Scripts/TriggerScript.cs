@@ -29,6 +29,7 @@ public class TriggerScript : MonoBehaviour
             MathParent math = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<MathParent>();
 
             PlayerPrefs.SetString("mathQuestion", this.name);
+            FindObjectOfType<AudioController>().Play("Questions");
             boxAnimator = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>();
             canvas = this.transform.parent.gameObject.transform.parent.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject;
             canvas.SetActive(true);
@@ -38,6 +39,7 @@ public class TriggerScript : MonoBehaviour
 
             if (math != null)
             {
+                
                 math.DoMath();
             }
             //if (myScript != null)
