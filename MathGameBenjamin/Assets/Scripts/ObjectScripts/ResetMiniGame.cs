@@ -4,50 +4,38 @@ using UnityEngine;
 
 public class ResetMiniGame : MonoBehaviour
 {
-
     public GameObject[] pillars;
     public GameObject[] pillarTriggers;
     public GameObject player;
 
-    public Vector2[] startPos;
-    public Vector2[] endPos;
-
-    public float moveSpeed;
-
     public Vector2 teleportPos;
+    public Minigame2 myPillar { get; set; }
 
-    void OnStart()
+    Vector3[] start = new Vector3[4];
+    private void Awake()
     {
-        pillars[0].transform.position = startPos[0];
-        pillars[1].transform.position = startPos[1];
-        pillars[2].transform.position = startPos[2];
-        pillars[3].transform.position = startPos[3];
+        for (int i=0; i<4; i++)
+        {
+            start[i] = pillars[i].transform.position;
+        }
     }
-
     void OnTriggerEnter2D(Collider2D other)
     {
-
+        myPillar.StopRaisePillar(); // need to stop animation first before set position
         if (other.gameObject.CompareTag("Player"))
         {
-            pillars[0].transform.position = Vector2.MoveTowards(endPos[0], endPos[0], moveSpeed * Time.deltaTime);
-            pillars[1].transform.position = Vector2.MoveTowards(endPos[1], endPos[1], moveSpeed * Time.deltaTime);
-            pillars[2].transform.position = Vector2.MoveTowards(endPos[2], endPos[2], moveSpeed * Time.deltaTime);
-            pillars[3].transform.position = Vector2.MoveTowards(endPos[3], endPos[3], moveSpeed * Time.deltaTime);
-            pillarTriggers[0].SetActive(true);
-            pillarTriggers[1].SetActive(true);
-            pillarTriggers[2].SetActive(true);
-            pillarTriggers[3].SetActive(true);
+            for (int i=0; i < pillars.Length; i++)
+            {
+                pillars[i].transform.position = start[i];
+                pillarTriggers[i].GetComponent<BoxCollider2D>().enabled = true;
+            }
             ResetPlayer();
-
+            
         }
-
     }
 
     void ResetPlayer()
     {
-        ShapeScript geoScript = FindObjectOfType<ShapeScript>();
-        geoScript.DoMath();
         player.transform.position = teleportPos;
-
     }
 }

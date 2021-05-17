@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6637032719860052334}
   - component: {fileID: 6637032719860052333}
   m_Layer: 0
-  m_Name: PillarTrigger
+  m_Name: PillarTrigge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6637032719860052332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 188.61751, y: -10.37151, z: -24.349564}
+  m_LocalPosition: {x: 188.61751, y: -9.45, z: -24.349564}
   m_LocalScale: {x: 1, y: -2.47, z: 1}
   m_Children: []
   m_Father: {fileID: 6637032719946722617}
@@ -71,13 +71,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pillar: {fileID: 0}
-  pillarTrigger: {fileID: 6637032719860052332}
   canvas: {fileID: 0}
   player: {fileID: 0}
-  moveSpeed: -100
-  startPos: {x: 189, y: -10}
-  endPos: {x: 189, y: -6}
-  boxAnimator: {fileID: 0}
+  moveSpeed: 1.5
 --- !u!1 &6637032719946722616
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,8 +134,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6637032720677233848}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 194.4375, y: -7.99, z: -24.349564}
-  m_LocalScale: {x: 2.97, y: -0.7, z: 1}
+  m_LocalPosition: {x: 194.96, y: -6.61, z: -24.349564}
+  m_LocalScale: {x: 0.89100003, y: -2.24875, z: 1}
   m_Children: []
   m_Father: {fileID: 6637032719946722617}
   m_RootOrder: 1
@@ -183,13 +179,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pillar: {fileID: 0}
-  pillarTrigger: {fileID: 6637032720677233848}
   canvas: {fileID: 0}
   player: {fileID: 0}
-  moveSpeed: -100
-  startPos: {x: 195, y: -6}
-  endPos: {x: 195, y: -3.5}
-  boxAnimator: {fileID: 0}
+  moveSpeed: 1.5
 --- !u!1 &6637032720827460263
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,8 +208,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6637032720827460263}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 200.61, y: -4.99, z: -24.349564}
-  m_LocalScale: {x: 3.34, y: -0.69, z: 1}
+  m_LocalPosition: {x: 200.96, y: -2.05, z: -24.349564}
+  m_LocalScale: {x: 0.87674993, y: -2.026875, z: 1}
   m_Children: []
   m_Father: {fileID: 6637032719946722617}
   m_RootOrder: 2
@@ -261,13 +253,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pillar: {fileID: 0}
-  pillarTrigger: {fileID: 6637032720827460263}
   canvas: {fileID: 0}
   player: {fileID: 0}
-  moveSpeed: -100
-  startPos: {x: 201, y: -3.5}
-  endPos: {x: 201, y: 1}
-  boxAnimator: {fileID: 0}
+  moveSpeed: 1.5
 --- !u!1 &6637032721145452644
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,8 +282,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6637032721145452644}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 206.61, y: -1, z: -24.349564}
-  m_LocalScale: {x: 3.22, y: -0.71, z: 1}
+  m_LocalPosition: {x: 206.99, y: 1.9, z: -24.349564}
+  m_LocalScale: {x: 0.966, y: -2.635875, z: 1}
   m_Children: []
   m_Father: {fileID: 6637032719946722617}
   m_RootOrder: 3
@@ -339,10 +327,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pillar: {fileID: 0}
-  pillarTrigger: {fileID: 6637032721145452644}
   canvas: {fileID: 0}
   player: {fileID: 0}
-  moveSpeed: -100
-  startPos: {x: 207, y: 1}
-  endPos: {x: 207, y: 6}
-  boxAnimator: {fileID: 0}
+  moveSpeed: 1.5

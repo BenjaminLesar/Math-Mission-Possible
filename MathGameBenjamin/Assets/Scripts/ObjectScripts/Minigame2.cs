@@ -5,42 +5,54 @@ using UnityEngine.UI;
 
 public class Minigame2 : MonoBehaviour
 {
-    public static Minigame2 instance;
+    //public static Minigame2 instance;
 
     public GameObject pillar;
-    public GameObject pillarTrigger;
     public GameObject canvas;
     public GameObject player;
-    public float moveSpeed;
 
-    public Vector2 startPos;
-    public Vector2 endPos;
+    public float moveSpeed =5;
+
+    Vector2 startPos;
+    Vector2 endPos;
 
     GameObject canvasParent;
     Animator boxAnimator;
+    BoxCollider2D myBox;
+    ShapeScript geoScript;
+    float heightToRaise = 3.5f;
+    ResetMiniGame gameReset;
+    Coroutine raisePillar;
+
     void Awake()
     {
-        instance = this;
-        //GameObject canvas = GameObject.Find("ShapeCanvas");
+        myBox = GetComponent<BoxCollider2D>();
+        startPos = pillar.transform.position;
+        endPos = startPos + new Vector2(0, heightToRaise);
+
+        if (!canvasParent)
+        {
+            canvasParent = GameObject.Find("ShapeCanvasParent");
+
+        }
+        gameReset = FindObjectOfType<ResetMiniGame>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(!canvasParent)
-            {
-                canvasParent = GameObject.Find("ShapeCanvasParent");
-                canvas = canvasParent.transform.GetChild(0).gameObject;
-                boxAnimator = canvas.GetComponentInChildren<Animator>();
-            }
-
+            canvas = canvasParent.transform.GetChild(0).gameObject;
             canvas.SetActive(true);
-            Player.instance.FreezePlayer();
-            ShapeScript geoScript = FindObjectOfType<ShapeScript>();
-            geoScript.DoMath();
 
+            boxAnimator = canvas.GetComponentInChildren<Animator>();
+            geoScript = FindObjectOfType<ShapeScript>();
+
+            Player.instance.FreezePlayer();
+            geoScript.DoMath();
             boxAnimator.SetTrigger("Popup");
+            geoScript.myPillar = this; // mark this so the according pillar can raise
+            gameReset.myPillar = this; 
         }
     }
 
@@ -49,16 +61,32 @@ public class Minigame2 : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             player = GameObject.Find("Player");
-            player.transform.position = Vector2.MoveTowards(endPos, endPos, moveSpeed * Time.deltaTime);
-            pillar.transform.position = Vector2.MoveTowards(endPos, endPos, moveSpeed* Time.deltaTime);
+            raisePillar = StartCoroutine( MoveAnimation());
         }
     }
 
-
-   public void RaisePillar()
+   public void RaisePillar()  //=> exit trigger
     {
-        //pillarTrigger.SetActive(false);
-        player.transform.position += new Vector3(0, 0.1f); //get the player out of trigger box
+        myBox.enabled = false;
+    }
+
+
+    public void StopRaisePillar()
+    {
+        StopCoroutine(raisePillar);
+    }
+
+
+
+    IEnumerator MoveAnimation()
+    {
+        float t = 0;
+        while(t < 1)
+        {
+            t += Time.deltaTime/moveSpeed;
+            pillar.transform.position = Vector2.Lerp(startPos, endPos, t);
+            yield return null;
+        }
     }
 
 }

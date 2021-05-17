@@ -11,6 +11,7 @@ public class ShapeScript : MathParent
     public Sprite[] shapeSprites;
     public Image currentShape;
 
+    public Minigame2 myPillar { get; set; }
     override
     public int Question(Text questionText, Image currentShape)
     {
@@ -55,7 +56,8 @@ public class ShapeScript : MathParent
     override
     public void DisableCanvas()
     {
-        Minigame2.instance.RaisePillar();
+        //Minigame2.disableTrigger();// RaisePillar();
+        myPillar.RaisePillar();
         correctAnswerPanel.SetActive(false);
         gameObject.SetActive(false);
         
