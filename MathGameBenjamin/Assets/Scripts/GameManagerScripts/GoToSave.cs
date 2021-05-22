@@ -10,6 +10,7 @@ public class GoToSave : MonoBehaviour
         GameObject[] SaveMenuCanvas = GameObject.FindGameObjectsWithTag("SaveMenuCanvas");
         GameObject myCanvas = SaveMenuCanvas[0].transform.GetChild(0).gameObject;
 
-        myCanvas.SetActive(true);     
+        myCanvas.SetActive(true);
+        gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
     }
 }

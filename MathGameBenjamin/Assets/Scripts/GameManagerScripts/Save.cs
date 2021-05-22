@@ -79,12 +79,16 @@ public class Save : MonoBehaviour
         StartCoroutine(DisplayMessage());
 
         IEnumerator DisplayMessage()
-        {    
+        {
+            
             saveGameMessage.transform.parent.gameObject.SetActive(true);
             yield return new WaitForSecondsRealtime(MessageDelay);
             myCanvas.SetActive(false);
             saveGameMessage.transform.parent.gameObject.SetActive(false);
+            
+
         }
+        Time.timeScale = 1;
     }
 }
 

@@ -19,6 +19,7 @@ public class GoToLoad : MonoBehaviour
         }
 
         myCanvas.SetActive(true);
+        gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
         //DontDestroyOnLoad(LoadMenuCanvas);
     }
 }
