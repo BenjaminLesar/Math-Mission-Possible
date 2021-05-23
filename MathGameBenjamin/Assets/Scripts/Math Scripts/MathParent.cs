@@ -29,6 +29,7 @@ public class MathParent:MonoBehaviour
 
     protected GameObject go;
     string mathQuestion;
+  
 
     // will be overridden in child class
     public virtual int Question(Text questionText) { return 0; }
@@ -101,6 +102,7 @@ public class MathParent:MonoBehaviour
             Destroy(openChest.GetComponent<TriggerScript>());
             openChest.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("AnimImages/TreasureChest/LargerSize/Open");
             FindObjectOfType<GameSession>().AddToScore(20);
+            
         }
         Destroy(go);
         input.text = null;
