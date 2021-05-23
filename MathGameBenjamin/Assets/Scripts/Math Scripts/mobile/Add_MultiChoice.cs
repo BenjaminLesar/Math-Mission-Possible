@@ -47,22 +47,20 @@ public class Add_MultiChoice : MonoBehaviour
         correctAnswerPanel.SetActive(false);
         incorrectAnswerPanel.SetActive(false);
         Question();
-    }
 
-    void Update()
-    {
-        answer1.onClick.RemoveAllListeners();
         answer1.onClick.AddListener(() => CheckAnswer(answer1Text.text));
-        answer2.onClick.RemoveAllListeners();
         answer2.onClick.AddListener(() => CheckAnswer(answer2Text.text));
-        answer3.onClick.RemoveAllListeners();
         answer3.onClick.AddListener(() => CheckAnswer(answer3Text.text));
-        answer4.onClick.RemoveAllListeners();
         answer4.onClick.AddListener(() => CheckAnswer(answer4Text.text));
 
 
         returnButton.onClick.AddListener(Return);
         continueButton.onClick.AddListener(Continue);
+    }
+
+    void Update()
+    {
+
     }
 
     void Question()

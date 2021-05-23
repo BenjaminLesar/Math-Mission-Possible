@@ -604,16 +604,19 @@ MonoBehaviour:
     treasure chest is.
 
 
-    Secret Agent [Students First Name or Username], we are
-    hoping you will be able to beat the bad guys and find treasure. This mission
-    is of national importance!! We thank you in advance for your service and for
-    helping us save the world!
+    Secret Agent, we are hoping you will be able to beat
+    the bad guys and find treasure. This mission is of national importance!! We thank
+    you in advance for your service and for helping us save the world!
 
 
 
 
-    Use W,A,S,D (A and S for climbing ladders)
-    to move and SpaceBar to jump.
+    Use
+    W,A,S,D (A and S for climbing ladders) to move and SpaceBar to jump.
+
+
+
+
 
 '
   m_isRightToLeft: 0

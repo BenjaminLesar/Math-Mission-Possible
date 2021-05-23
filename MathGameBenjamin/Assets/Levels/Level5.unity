@@ -22970,6 +22970,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2056426375754405118, guid: 65017da727efa1e48814d80116b77589,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020619187475793232, guid: 65017da727efa1e48814d80116b77589,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 135.3717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020619187475793232, guid: 65017da727efa1e48814d80116b77589,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 241.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146179988299347509, guid: 65017da727efa1e48814d80116b77589,
+        type: 3}
+      propertyPath: m_Text
+      value: 10 + 10 + 10 + 10 + 10 + 10 =
+      objectReference: {fileID: 0}
     - target: {fileID: 6358506016336009216, guid: 65017da727efa1e48814d80116b77589,
         type: 3}
       propertyPath: m_RootOrder
@@ -23029,6 +23049,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trigger5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509834576382268827, guid: 65017da727efa1e48814d80116b77589,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 271.4148
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509834576382268827, guid: 65017da727efa1e48814d80116b77589,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -219.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65017da727efa1e48814d80116b77589, type: 3}

@@ -235,6 +235,7 @@ public class Player : MonoBehaviour
     public void FreezePlayer()
     {
         myRigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+        print("freeze player");
 
     }
 

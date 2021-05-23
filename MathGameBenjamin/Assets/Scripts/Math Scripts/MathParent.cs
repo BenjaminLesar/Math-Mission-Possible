@@ -105,8 +105,8 @@ public class MathParent:MonoBehaviour
         Destroy(go);
         input.text = null;
         Time.timeScale = 1;
-        Invoke("DisableCanvas", 0.25f); // wait .25s for box animator finishes closing
         Player.instance.UnFreezePlayer();
+        Invoke("DisableCanvas", 0.25f); // wait .25s for box animator finishes closing
     }
 
     public virtual void DisableCanvas()
