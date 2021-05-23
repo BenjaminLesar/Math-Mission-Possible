@@ -8403,6 +8403,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5113244724312496350, guid: d2b82d19013a1a24e9d870da3b560053,
         type: 3}
+      propertyPath: Marcus
+      value: 
+      objectReference: {fileID: 21300000, guid: 0f15eca0aac5e97478e2bec5d466ba8c,
+        type: 3}
+    - target: {fileID: -5113244724312496350, guid: d2b82d19013a1a24e9d870da3b560053,
+        type: 3}
       propertyPath: myPrefab
       value: 
       objectReference: {fileID: 2716729049847329386, guid: 50fbd75a4bcb52b47bf7cbdc684d36f3,
@@ -8771,7 +8777,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.28459167, y: -0.16452217}
+  m_Offset: {x: -0.22424105, y: -0.16452217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8782,7 +8788,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18261719, y: 2.146618}
+  m_Size: {x: 0.06201595, y: 2.146618}
   m_EdgeRadius: 0
 --- !u!50 &1474122829
 Rigidbody2D:
@@ -8885,6 +8891,7 @@ MonoBehaviour:
   teleporter: {fileID: 557706072}
   finalPanel: {fileID: 197248284}
   faderScreen: {fileID: 302608866}
+  playerAnim: {fileID: 1151549934}
 --- !u!199 &1474122833
 ParticleSystemRenderer:
   serializedVersion: 6
