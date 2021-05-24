@@ -10,7 +10,6 @@ public class MasterTreasureChest : MonoBehaviour
     public Button compass;
     public GameObject teleporter;
     public Animator masterTreasure;
-    public ParticleSystem tokenBurst;
     void Awake()
     {
         treasureCanvas.SetActive(false);
@@ -26,7 +25,6 @@ public class MasterTreasureChest : MonoBehaviour
     {
         Player.instance.FreezePlayer();
         masterTreasure.SetBool("openMasterTreasure", true);
-        tokenBurst.Play();
         treasureCanvas.SetActive(true);
         popUp.SetBool("getTreasureNote", true);
     }

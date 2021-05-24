@@ -2529,7 +2529,7 @@ PrefabInstance:
     - target: {fileID: 1834443419945975426, guid: 79cad9e73798c714e9e992bf96da369b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 99.86
+      value: 93.34
       objectReference: {fileID: 0}
     - target: {fileID: 1834443419945975426, guid: 79cad9e73798c714e9e992bf96da369b,
         type: 3}
@@ -2685,6 +2685,7 @@ MonoBehaviour:
   correctAnswerPanel: {fileID: 163863113658030712}
   incorrectAnswerPanel: {fileID: 1366347347996808058}
   boxAnimator: {fileID: 4985663212393285744}
+  MyParticles: {fileID: 0}
   energyPannel: {fileID: 7565874546278997189}
 --- !u!1001 &102537731
 PrefabInstance:
@@ -60350,7 +60351,7 @@ PrefabInstance:
     - target: {fileID: 6196018152038595150, guid: 0121fbc20e46fc142a9d5ca2e271a02b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 93.34
+      value: 100.9
       objectReference: {fileID: 0}
     - target: {fileID: 6196018152038595150, guid: 0121fbc20e46fc142a9d5ca2e271a02b,
         type: 3}
