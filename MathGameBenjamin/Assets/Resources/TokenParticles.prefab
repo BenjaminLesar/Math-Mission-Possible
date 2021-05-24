@@ -746,7 +746,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 1.94
       mode: 0
       spread: 0
       speed:
@@ -4728,8 +4728,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1571574501
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
